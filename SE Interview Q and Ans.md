@@ -35,4 +35,16 @@ Ans: A process is instance of the computer program.In a single program it is pos
 29. What is the difference between stack and queue?
 Ans:    Queue is always First In, First Out
         Stack is always Last In, First Out
-30.   BONUS: https://www.linkedin.com/interview-prep/assessments/urn:li:fsd_assessment:(1,a)/question/urn:li:fsd_assessmentQuestion:(10011,aq11)/
+    
+Q: Describe the Agile methodology and its benefits. 
+Ans: Agile methodology is a project management approach that uses incremental, iterative steps paired with continuous feedback to complete a project within a relatively short time period. Many software development teams use Agile because it allows them to complete projects more quickly than traditional project management processes, which usually progress very linearly and take a significant amount of time to finish. 
+
+Q: What are the characteristics of these data structures?
+Ans: Tip: describe the characteristics of different data structures, such as arrays, stacks, trees, and graphs.
+
+Q:  What are the differences between SQL and NoSQL databases?
+Ans: If you’re working with data, then you’ll need to have a strong grasp of both Structured Query Language (SQL) and Non-Structured Query Language (NoSQL.) 
+SQL is a query language that allows users to query and manipulate data within a relational database, which organizes data in columns and rows in a table. NoSQL, meanwhile, is a type of non-relational database that is capable of storing and managing large amounts of structured, semi-structured, and unstructured data. 
+Tip: Focus on distinguishing between the two databases using examples of the kinds of scenarios you might use each for. 
+
+31.   BONUS: https://www.linkedin.com/interview-prep/assessments/urn:li:fsd_assessment:(1,a)/question/urn:li:fsd_assessmentQuestion:(10011,aq11)/
