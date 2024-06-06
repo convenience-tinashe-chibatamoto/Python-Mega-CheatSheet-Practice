@@ -104,3 +104,4 @@ Python.
 98. How do you split a string into a list of substrings in Python?
 99. What is the purpose of the try, except, else, and finally blocks in Python?
 100. How do you create a shallow copy of a list in Python?
+BONUS: https://www.edureka.co/blog/interview-questions/python-interview-questions/
