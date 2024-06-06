@@ -20,4 +20,11 @@ Answers here: https://www.geeksforgeeks.org/top-50-software-engineering-intervie
 19. Which software development model can be selected if the user is involved in all the phases of SDLC?
 20. What is COCOMO model?
 21. What is the Agile software development model?
-22. What is level-0 DFD?
+22. What is level-0 (level zero) DFD?
+23. What is the feasibility study?
+24. What is Concurrency?
+Ans: In software engineering, concurrency refers to a set of techniques and mechanisms that allow the software to do many tasks at the same time. Concurrency can be achieved by using languages like C++ or Java because these languages support the concept of thread. New hardware and software features are required to achieve concurrency.
+25. 
+
+
+Once the CEO of Amazon, Jeff Bezos said, "I'd rather interview 50 people and not hire anyone than hire the wrong person."
