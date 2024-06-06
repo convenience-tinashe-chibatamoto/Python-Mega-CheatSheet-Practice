@@ -11,3 +11,10 @@ Answers here: https://www.geeksforgeeks.org/top-50-software-engineering-intervie
 10. What is White box testing?
 11. What is a Feasibility Study?
 12. What is the Difference Between Quality Assurance and Quality Control?
+13. What is the difference between Verification and Validation?
+14. What is regression testing?
+15. Define adaptive maintenance?
+16. What is a use case diagram?
+17. What is the difference between Bug and Error?
+18. How to find the size of a software product?
+19. Which software development model can be selected if the user is involved in all the phases of SDLC?
