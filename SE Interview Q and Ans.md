@@ -18,3 +18,6 @@ Answers here: https://www.geeksforgeeks.org/top-50-software-engineering-intervie
 17. What is the difference between Bug and Error?
 18. How to find the size of a software product?
 19. Which software development model can be selected if the user is involved in all the phases of SDLC?
+20. What is COCOMO model?
+21. What is the Agile software development model?
+22. What is level-0 DFD?
