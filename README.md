@@ -29,20 +29,21 @@ lists.
 27. What is the purpose of *args and **kwargs in Python function definitions?
 28. What is the difference between instance, class, and static methods in
 Python?
-29. Explain the concept of inheritance in Python.
-30. How do you handle multi-threading in Python?
-31. What is the Global Interpreter Lock (GIL) in Python?
-32. What is a context manager in Python?
-33. How do you handle JSON data in Python?
-34. Explain the differences between ＿getattr() and ＿getattribute()
+28. How do you create simple program that calculates someone’s age using datetime module?
+30. Explain the concept of inheritance in Python.
+31. How do you handle multi-threading in Python?
+32. What is the Global Interpreter Lock (GIL) in Python?
+33. What is a context manager in Python?
+34. How do you handle JSON data in Python?
+35. Explain the differences between ＿getattr() and ＿getattribute()
 methods in Python.
-35. What are modules and packages in Python?
-36. What is the purpose of the ＿init＿ py file in Python packages?
-37. How do you handle date and time in Python?
-38. What is the purpose of _all… in Python?
-39. Explain the difference between os.path.join() and os.path.abspath() in
+36. What are modules and packages in Python?
+37. What is the purpose of the ＿init＿ py file in Python packages?
+38. How do you handle date and time in Python?
+39. What is the purpose of _all… in Python?
+40. Explain the difference between os.path.join() and os.path.abspath() in
 Python.
-40. What is the purpose of the zip() function in Python?
+41. What is the purpose of the zip() function in Python?
 40. How do you remove duplicates from a list in Python?
 41. 41. Explain the use of the map() function in Python.
 42. How do you reverse a string in Python?
