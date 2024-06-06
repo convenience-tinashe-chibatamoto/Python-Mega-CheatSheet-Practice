@@ -36,7 +36,3 @@ Ans: A process is instance of the computer program.In a single program it is pos
 Ans:    Queue is always First In, First Out
         Stack is always Last In, First Out
 30.   BONUS: https://www.linkedin.com/interview-prep/assessments/urn:li:fsd_assessment:(1,a)/question/urn:li:fsd_assessmentQuestion:(10011,aq11)/
-    
-
-
-Once the CEO of Amazon, Jeff Bezos said, "I'd rather interview 50 people and not hire anyone than hire the wrong person."
