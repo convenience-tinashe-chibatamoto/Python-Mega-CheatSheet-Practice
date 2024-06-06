@@ -103,5 +103,5 @@ Python.
 97. Explain the difference between the os.system() and subprocess.run() functions in Python.
 98. How do you split a string into a list of substrings in Python?
 99. What is the purpose of the try, except, else, and finally blocks in Python?
-100. How do you create a shallow copy of a list in Python?
+100. How do you create a shallow copy of a list in Python?<br>
 BONUS: https://www.edureka.co/blog/interview-questions/python-interview-questions/
