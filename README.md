@@ -105,4 +105,5 @@ Python.
 99. What is the purpose of the try, except, else, and finally blocks in Python?
 100. How do you create a shallow copy of a list in Python?<br>
 BONUS: https://www.edureka.co/blog/interview-questions/python-interview-questions/
-<br># Also check out the Software Engineering Interview questions.
+<br>
+# Also check out the Software Engineering Interview questions.
