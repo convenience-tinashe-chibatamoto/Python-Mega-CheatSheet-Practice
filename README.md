@@ -258,7 +258,7 @@ print(my_list)  # Output: [1, 2, 3, 4]
 Alternatively:
 The ```+``` operator:
 * You can use the ```+``` operator to concatenate two lists, effectively adding the elements of one list to the beginning of another list.
-* This creates a new list and does not modify the original lists.
+* This creates a new list and does not modify the original lists.<br>
 Code Example 2:
 ```python
 my_list = [2, 3, 4]
