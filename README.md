@@ -7,7 +7,11 @@ Ans: Python is a high-level, interpreted programming language known for its simp
 
 2. Why Python
 Ans:
-Simplicity and Readability(clean, intuitive syntax), Versatility (Python is a multi-purpose language that can be used for a wide range of applications, including web development, data analysis, machine learning, scientific computing, automation, and more), Large and Active Community (Python has a large and active community of developers who contribute to a vast ecosystem of libraries, frameworks, and tools. This makes it easy to find solutions to common problems and get support.), Cross-platform Compatibility (Python is a cross-platform language, meaning it can run on various operating systems, including Windows, macOS, and Linux, without the need for major changes to the code.), Rapid Prototyping(Since it's interpreted, this allows for faster development cycles as you can test and make changes quickly without recompiling everything.)
+* Simplicity and Readability(clean, intuitive syntax),
+* Versatility (Python is a multi-purpose language that can be used for a wide range of applications, including web development, data analysis, machine learning, scientific computing, automation, and more),
+* Large and Active Community (Python has a large and active community of developers who contribute to a vast ecosystem of libraries, frameworks, and tools. This makes it easy to find solutions to common problems and get support.),
+* Cross-platform Compatibility (Python is a cross-platform language, meaning it can run on various operating systems, including Windows, macOS, and Linux, without the need for major changes to the code.),
+* Rapid Prototyping(Since it's interpreted, this allows for faster development cycles as you can test and make changes quickly without recompiling everything.)
 
 3. What are the key features of Python?
 Ans:
