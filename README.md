@@ -6,15 +6,20 @@ Ans: Python is a high-level, interpreted programming language known for its simp
  * Interpreted: Python code is executed line by line by a program called the interpreter. This is different from compiled languages where the entire code is converted into machine code before running. Interpretation allows for faster development cycles as you can test and make changes quickly without recompiling everything.
 
 2. Why Python
-Ans: Simplicity and Readability(clean, intuitive syntax), Versatility (Python is a multi-purpose language that can be used for a wide range of applications, including web development, data analysis, machine learning, scientific computing, automation, and more), Large and Active Community (Python has a large and active community of developers who contribute to a vast ecosystem of libraries, frameworks, and tools. This makes it easy to find solutions to common problems and get support.), Cross-platform Compatibility (Python is a cross-platform language, meaning it can run on various operating systems, including Windows, macOS, and Linux, without the need for major changes to the code.), Rapid Prototyping(Since it's interpreted, this allows for faster development cycles as you can test and make changes quickly without recompiling everything.) 
+Ans:
+Simplicity and Readability(clean, intuitive syntax), Versatility (Python is a multi-purpose language that can be used for a wide range of applications, including web development, data analysis, machine learning, scientific computing, automation, and more), Large and Active Community (Python has a large and active community of developers who contribute to a vast ecosystem of libraries, frameworks, and tools. This makes it easy to find solutions to common problems and get support.), Cross-platform Compatibility (Python is a cross-platform language, meaning it can run on various operating systems, including Windows, macOS, and Linux, without the need for major changes to the code.), Rapid Prototyping(Since it's interpreted, this allows for faster development cycles as you can test and make changes quickly without recompiling everything.)
+
 3. What are the key features of Python?
-Ans: * Object-oriented: Python supports object-oriented programming concepts like classes and objects, enabling you to structure your code in a modular way.
+Ans:
+* Object-oriented: Python supports object-oriented programming concepts like classes and objects, enabling you to structure your code in a modular way.
 * Portable: Python code can run on different operating systems without modification.
 * Large third-party library ecosystem: There's a vast collection of external libraries available for various purposes, like data science (NumPy, Pandas), machine learning (TensorFlow, PyTorch), web development (Django, Flask), and more.
 * Free and open-source: Python is free to use and modify, with a large and active community that contributes to its development.
 * Dynamically typed: You don't need to declare variable types beforehand, making the code more flexible.
-4. 
-5. What is PEP 8?
+
+4. What is PEP 8?
+Ans:
+
 6. What are the differences between lists and tuples in Python?
 7. Explain the difference between == and is operators in Python.
 8. What is the purpose of ＿init＿ in Python classes?
