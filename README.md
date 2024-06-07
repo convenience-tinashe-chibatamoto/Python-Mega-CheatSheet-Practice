@@ -58,8 +58,17 @@ new_tuple = my_tuple + (6,)  # Creating a new tuple by concatenating the existin
 </ol>
 In general, you should use lists when you need to store a collection of items that may need to be modified, and use tuples when you need to represent a fixed set of values that should not be changed.
 
-7. 
-8. Explain the difference between == and is operators in Python.
+6. Explain the difference between == and is operators in Python.
+Ans:
+* In Python, the == and is operators are used to compare values, but they have different meanings and use cases.
+* == (equal to) operator:
+<li>The == operator compares the values of two objects.</li>
+<li>It checks if the two operands have the same value.</li>
+<li>It returns True if the values are the same, and False otherwise.</li>
+
+
+
+8. 
 9. What is the purpose of ＿init＿ in Python classes?
 10. What are decorators in Python?
 11. Explain the difference between append() and extend() methods in Python
