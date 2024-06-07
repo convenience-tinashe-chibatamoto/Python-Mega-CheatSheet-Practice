@@ -66,6 +66,7 @@ The == (equal to) operator:
 <li>It checks if the two operands have the same value.</li>
 <li>It returns True if the values are the same, and False otherwise.</li>
 Code Example:<br>
+
 ```python
 a = 5
 b = 5
@@ -79,8 +80,9 @@ The is operator:
 * The is operator compares the identity of two objects.
 * It checks if the two operands refer to the same object in memory.
 * It returns True if the two operands are the same object, and False otherwise.
-```
+
 Code Example:<br>
+
 ```python
 a = 5
 b = 5
