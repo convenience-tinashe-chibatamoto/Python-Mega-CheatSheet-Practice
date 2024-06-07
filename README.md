@@ -41,7 +41,7 @@ Tuples are defined using parentheses (), and their elements are also separated b
 Lists are generally used when you need to store a collection of items that may need to be modified later.
 Tuples are often used to represent a fixed set of values, such as the coordinates of a point or the fields in a database record.<br>
 Code Example: <br>
-```
+```python
 #Lists
 my_list = [1, 2, 3, 4, 5]
 my_list[2] = 10  # Modifying an element in the list
