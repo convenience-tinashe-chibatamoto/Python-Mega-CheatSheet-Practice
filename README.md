@@ -215,6 +215,10 @@ Area: 9.093 square km
 * The __init__ method is crucial in this example because it allows us to create Country objects with specific initial values for their attributes. Without the __init__ method, we would have to manually set the attributes for each Country object, which would be more error-prone and less efficient.
 
 Why is the ```self``` part always there? What is it for?
+* The ```self``` argument in Python class methods is like a pronoun pointing back to the specific object the method is being called on. It allows methods to interact with the data that belongs to that particular object instance. It is there to provide a reference to the current object instance itself. Here's why it's important:
+- Methods operate on objects: When you call a method on an object, that method needs a way to access and modify the object's attributes (variables) specific to that instance. ```self``` provides this link.
+- Differentiating between objects: Classes can create multiple objects (instances). Without ```self```, methods wouldn't be able to tell which object's attributes they're working with. ```self``` ensures methods work on the correct object's data.
+- 
 
 9. 
 10. What are decorators in Python?
