@@ -2,6 +2,9 @@
 
 1. What is Python?
 Ans: Python is a high-level, interpreted programming language known for its simplicity and readability.
+ * High-level: A high-level language is a programming language that is designed to be human-readable and abstracts away the low-level details of computer hardware. This means that the code you write in Python is closer to natural language and easier for humans to understand, rather than being closer to the machine-level language (binary code) that the computer can directly execute.
+ * Interpreted: Python code is executed line by line by a program called the interpreter. This is different from compiled languages where the entire code is converted into machine code before running. Interpretation allows for faster development cycles as you can test and make changes quickly without recompiling everything.
+ * 
 3. What are the key features of Python?
 4. What is PEP 8?
 5. What are the differences between lists and tuples in Python?
