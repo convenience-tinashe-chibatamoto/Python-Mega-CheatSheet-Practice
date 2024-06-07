@@ -39,7 +39,24 @@ Lists are defined using square brackets [], and their elements are separated by 
 Tuples are defined using parentheses (), and their elements are also separated by commas.
 * Usage:<br>
 Lists are generally used when you need to store a collection of items that may need to be modified later.
-Tuples are often used to represent a fixed set of values, such as the coordinates of a point or the fields in a database record.
+Tuples are often used to represent a fixed set of values, such as the coordinates of a point or the fields in a database record.<br>
+Code Example: <br>
+<code>
+# Lists
+my_list = [1, 2, 3, 4, 5]
+my_list[2] = 10  # Modifying an element in the list
+my_list.append(6)  # Adding an element to the list
+
+# Tuples
+my_tuple = (1, 2, 3, 4, 5)
+# my_tuple[2] = 10  # This will raise a TypeError, as tuples are immutable
+new_tuple = my_tuple + (6,)  # Creating a new tuple by concatenating the existing one
+</code>
+<br>In the example:
+<ol><li>The my_list variable is a mutable list, and we can modify its elements and add new elements to it.</li>
+<li>The my_tuple variable is an immutable tuple, and we cannot modify its elements directly. However, we can create a new tuple by concatenating the existing one.</li>
+</ol>
+In general, you should use lists when you need to store a collection of items that may need to be modified, and use tuples when you need to represent a fixed set of values that should not be changed.
 
 7. 
 8. Explain the difference between == and is operators in Python.
