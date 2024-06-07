@@ -30,32 +30,42 @@ Ans:
  
 
 5. What are the differences between lists and tuples in Python?<br>
+Ans: The main differences between lists and tuples in Python are:<br>
+* Mutability:
+Lists are mutable, which means you can modify their contents after they are created. You can add, remove, or change elements in a list.
+Tuples are immutable, which means you cannot modify their contents after they are created. Once a tuple is defined, its elements cannot be changed.
+* Syntax:
+Lists are defined using square brackets [], and their elements are separated by commas.
+Tuples are defined using parentheses (), and their elements are also separated by commas.
+* Usage:
+Lists are generally used when you need to store a collection of items that may need to be modified later.
+Tuples are often used to represent a fixed set of values, such as the coordinates of a point or the fields in a database record.
 
-6. 
-7. Explain the difference between == and is operators in Python.
-8. What is the purpose of ＿init＿ in Python classes?
-9. What are decorators in Python?
-10. Explain the difference between append() and extend() methods in Python
+7. 
+8. Explain the difference between == and is operators in Python.
+9. What is the purpose of ＿init＿ in Python classes?
+10. What are decorators in Python?
+11. Explain the difference between append() and extend() methods in Python
 lists.
-11. How are exceptions handled in Python?
-12. What is the difference between Python 2 and Python 3?
-13. What is a Python dictionary?
-14. What is a Python generator?
-15. What is the difference between range() and xrange() in Python 2?
-16. How does memory management work in Python?
-17. What is the difference between a shallow copy and a deep copy in Python?
-18. Explain the purpose of the ＿str＿ and ＿repr＿ methods in Python.
-19. How do you handle file I/O in Python?
-20. What are lambda functions in Python?
-21. What is the purpose of the if ＿name＿ == "＿main＿": statement in Python?
-22. How do you install third-party packages in Python?
-23. What are list comprehensions in Python?
-24. Explain the difference between == and != operators in Python.
-25. What is a Python set and how is it different from a list or tuple?
-26. What is the use of the pass statement in Python?
-27. How do you iterate over a dictionary in Python?
-28. What is the purpose of *args and **kwargs in Python function definitions?
-29. What is the difference between instance, class, and static methods in
+12. How are exceptions handled in Python?
+13. What is the difference between Python 2 and Python 3?
+14. What is a Python dictionary?
+15. What is a Python generator?
+16. What is the difference between range() and xrange() in Python 2?
+17. How does memory management work in Python?
+18. What is the difference between a shallow copy and a deep copy in Python?
+19. Explain the purpose of the ＿str＿ and ＿repr＿ methods in Python.
+20. How do you handle file I/O in Python?
+21. What are lambda functions in Python?
+22. What is the purpose of the if ＿name＿ == "＿main＿": statement in Python?
+23. How do you install third-party packages in Python?
+24. What are list comprehensions in Python?
+25. Explain the difference between == and != operators in Python.
+26. What is a Python set and how is it different from a list or tuple?
+27. What is the use of the pass statement in Python?
+28. How do you iterate over a dictionary in Python?
+29. What is the purpose of *args and **kwargs in Python function definitions?
+30. What is the difference between instance, class, and static methods in
 Python?
 28. How do you create simple program that calculates someone’s age using datetime module?
 30. Explain the concept of inheritance in Python.
