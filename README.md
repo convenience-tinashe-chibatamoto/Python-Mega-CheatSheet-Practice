@@ -1,27 +1,28 @@
 # Python Interview Prep: Q and Ans:
 
 1. What is Python?
-2. What are the key features of Python?
-3. What is PEP 8?
-4. What are the differences between lists and tuples in Python?
-5. Explain the difference between == and is operators in Python.
-6. What is the purpose of ＿init＿ in Python classes?
-7. What are decorators in Python?
-8. Explain the difference between append() and extend() methods in Python
+Ans: Python is a high-level, interpreted programming language known for its simplicity and readability.
+3. What are the key features of Python?
+4. What is PEP 8?
+5. What are the differences between lists and tuples in Python?
+6. Explain the difference between == and is operators in Python.
+7. What is the purpose of ＿init＿ in Python classes?
+8. What are decorators in Python?
+9. Explain the difference between append() and extend() methods in Python
 lists.
-9. How are exceptions handled in Python?
-10. What is the difference between Python 2 and Python 3?
-11. What is a Python dictionary?
-12. What is a Python generator?
-13. What is the difference between range() and xrange() in Python 2?
-14. How does memory management work in Python?
-15. What is the difference between a shallow copy and a deep copy in Python?
-16. Explain the purpose of the ＿str＿ and ＿repr＿ methods in Python.
-17. How do you handle file I/O in Python?
-18. What are lambda functions in Python?
-19. What is the purpose of the if ＿name＿ == "＿main＿": statement in Python?
-20. How do you install third-party packages in Python?
-21. What are list comprehensions in Python?
+10. How are exceptions handled in Python?
+11. What is the difference between Python 2 and Python 3?
+12. What is a Python dictionary?
+13. What is a Python generator?
+14. What is the difference between range() and xrange() in Python 2?
+15. How does memory management work in Python?
+16. What is the difference between a shallow copy and a deep copy in Python?
+17. Explain the purpose of the ＿str＿ and ＿repr＿ methods in Python.
+18. How do you handle file I/O in Python?
+19. What are lambda functions in Python?
+20. What is the purpose of the if ＿name＿ == "＿main＿": statement in Python?
+21. How do you install third-party packages in Python?
+22. What are list comprehensions in Python?
 23. Explain the difference between == and != operators in Python.
 24. What is a Python set and how is it different from a list or tuple?
 25. What is the use of the pass statement in Python?
