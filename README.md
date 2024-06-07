@@ -210,6 +210,29 @@ Decorators can be used for a variety of purposes, such as:
 
 
  9. Explain the difference between append() and extend() methods in Python lists.
+Ans: In Python, the append() and extend() methods are both used to add elements to a list, but they differ in the way they add the elements.
+```append():```
+The ```append()``` method is used to add a single element to the end of a list.
+It takes one argument, which is the element to be added.
+After calling ```append()```, the length of the list increases by 1.
+<br>
+Code Example:
+```python
+my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list)  # Output: [1, 2, 3, 4]
+```
+```extend():```
+The ```extend()``` method is used to add multiple elements to the end of a list.
+It takes an iterable (such as a list, tuple, or string) as an argument, and adds all the elements of the iterable to the end of the list.
+After calling ```extend()```, the length of the list increases by the number of elements added.
+<br>
+
+
+
+
+
+
 12. How are exceptions handled in Python?
 13. What is the difference between Python 2 and Python 3?
 14. What is a Python dictionary?
