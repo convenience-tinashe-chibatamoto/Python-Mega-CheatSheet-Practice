@@ -1,11 +1,11 @@
 # Python Interview Prep: Q and Ans:
 
-1. What is Python?
+1. What is Python?<br>
 Ans: Python is a high-level, interpreted programming language known for its simplicity and readability.
  * High-level: A high-level language is a programming language that is designed to be human-readable and abstracts away the low-level details of computer hardware. This means that the code you write in Python is closer to natural language and easier for humans to understand, rather than being closer to the machine-level language (binary code) that the computer can directly execute.
  * Interpreted: Python code is executed line by line by a program called the interpreter. This is different from compiled languages where the entire code is converted into machine code before running. Interpretation allows for faster development cycles as you can test and make changes quickly without recompiling everything.
 
-2. Why Python
+2. Why Python?<br>
 Ans:
 * Simplicity and Readability(clean, intuitive syntax),
 * Versatility (Python is a multi-purpose language that can be used for a wide range of applications, including web development, data analysis, machine learning, scientific computing, automation, and more),
@@ -13,7 +13,7 @@ Ans:
 * Cross-platform Compatibility (Python is a cross-platform language, meaning it can run on various operating systems, including Windows, macOS, and Linux, without the need for major changes to the code.),
 * Rapid Prototyping(Since it's interpreted, this allows for faster development cycles as you can test and make changes quickly without recompiling everything.)
 
-3. What are the key features of Python?
+3. What are the key features of Python?<br>
 Ans:
 * Object-oriented: Python supports object-oriented programming concepts like classes and objects, enabling you to structure your code in a modular way.
 * Portable: Python code can run on different operating systems without modification.
@@ -21,7 +21,7 @@ Ans:
 * Free and open-source: Python is free to use and modify, with a large and active community that contributes to its development.
 * Dynamically typed: You don't need to declare variable types beforehand, making the code more flexible.
 
-4. What is PEP 8?
+4. What is PEP 8?<br>
 Ans:
 
 6. What are the differences between lists and tuples in Python?
