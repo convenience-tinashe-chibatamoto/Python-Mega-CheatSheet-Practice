@@ -23,6 +23,10 @@ Ans:
 
 4. What is PEP 8?<br>
 Ans:
+* PEP 8 (Python Enhancement Proposal 8) is the official style guide for Python code. It provides guidelines and best practices for writing clean, consistent, and readable Python code.
+* This covers Naming Conventions for functions, variables, classes, etc (capital letters for constants, etc), Code Formatting (Line length should be limited to 79 characters (or 72 characters for docstrings and comments), Indentation should use 4 spaces per indentation level (no tabs), Blank lines should be used to separate logical sections of code.
+* 
+ 
 
 6. What are the differences between lists and tuples in Python?
 7. Explain the difference between == and is operators in Python.
