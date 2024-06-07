@@ -168,13 +168,40 @@ Why is the ```self``` part always there? What is it for?
  8. What are decorators in Python?
  Ans:
 * In Python, decorators are a way to modify the behavior of a function or a class without changing its source code. They are a powerful and flexible tool that allows you to add extra functionality to functions or classes in a concise and readable way.
-* They are essentially functions that take another function as an argument and return a modified version of it. Why would you want to do that? It allows you to modify the behavior of functions or methods without permanently changing their code.
+* They are essentially functions that take another function as an argument and return a modified version of it. Why would you want to do that? It allows you to modify the behavior of functions or methods without permanently changing their code. 
 * Decorator syntax: The "@" symbol is used to apply the decorator to a function. You place the decorator function name right above the function you want to decorate.
 
+Code Example: 
+```python
+def logging_decorator(func):
+  """Decorator to log function calls."""
+  def wrapper(*args, **kwargs):
+    print(f"Calling function: {func.__name__}")
+    result = func(*args, **kwargs)
+    print(f"Function returned: {result}")
+    return result
+  return wrapper
 
-A decorator is a function that takes another function as an argument, adds some functionality to it, and returns a new function. The new function can then be used in place of the original function.
+# Especially this part
 
+@logging_decorator
+def say_hello(name):
+  """A function that greets someone."""
+  return f"Hello, {name}!"
 
+# Call the decorated function
+greeting = say_hello("Alice")
+print(greeting)  # Output: Calling function: say_hello, Function returned: Hello, Alice!, Hello, Alice!
+
+```
+In this example:
+* The logging_decorator takes a function as its argument.
+* It defines a wrapper function that logs information before and after calling the original say_hello function.
+* The @logging_decorator syntax applies the decorator to the say_hello function.
+
+Benefits of using decorators:
+* Code reusability: Decorators allow you to encapsulate common functionality into reusable functions. 
+* Non-invasive modification: This reduces code duplication and improves maintainability.
 
  8. 
 11. Explain the difference between append() and extend() methods in Python
