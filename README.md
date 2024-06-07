@@ -213,7 +213,7 @@ Decorators can be used for a variety of purposes, such as:
 Ans: In Python, the append() and extend() methods are both used to add elements to a list, but they differ in the way they add the elements.
 ```append():```
 The ```append()``` method is used to add a single element to the end of a list.
-It takes one argument, which is the element to be added.
+It takes one argument, which is the element you want to add.
 After calling ```append()```, the length of the list increases by 1.
 <br>
 Code Example:
@@ -227,11 +227,23 @@ The ```extend()``` method is used to add multiple elements to the end of a list.
 It takes an iterable (such as a list, tuple, or string) as an argument, and adds all the elements of the iterable to the end of the list.
 After calling ```extend()```, the length of the list increases by the number of elements added.
 <br>
+Code Example:
+```python
+my_list = [1, 2, 3]
+my_list.extend([4, 5, 6])
+print(my_list)  # Output: [1, 2, 3, 4, 5, 6]
+```
+Another Code Example:
+```python
+fruits = ['apple', 'banana']
+fruits.append('cherry')
+print(fruits)  # Output: ['apple', 'banana', 'cherry']
+```
+Choosing between ```append()``` and ```extend()```:
+* Use ```append()``` when you want to add a single element to your list.
+* Use ```extend()``` when you want to add multiple elements from another iterable to your list.
 
-
-
-
-
+Qn: What if I want to add an item at the beginning of my my list? What do I use?
 
 12. How are exceptions handled in Python?
 13. What is the difference between Python 2 and Python 3?
