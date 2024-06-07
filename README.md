@@ -153,10 +153,10 @@ Capital: Ottawa
 Population: 37.06 million
 Area: 9.093 square km
 ```
-* In this example, the Country class has an __init__ method that takes four arguments: name, capital, population, and area. These arguments are used to initialize the corresponding attributes of the Country object.
-* When we create a new Country object, such as canada = Country("Canada", "Ottawa", 37.06, 9.093), the __init__ method is automatically called to set the initial state of the object.
-* The display_info method is then used to print out the information about the Country object.
-* The __init__ method is crucial in this example because it allows us to create Country objects with specific initial values for their attributes. Without the __init__ method, we would have to manually set the attributes for each Country object, which would be more error-prone and less efficient.
+* In this example, the ```Country``` class has an ```__init__``` method that takes four arguments: ```name```, ```capital```, ```population```, and ```area```. These arguments are used to initialize the corresponding attributes of the ```Country``` object.
+* When we create a new ```Country``` object, such as ```canada = Country("Canada", "Ottawa", 37.06, 9.093)```, the ```__init__ method``` is automatically called to set the initial state of the object.
+* The ```display_info``` method is then used to print out the information about the ```Country``` object.
+* The ```__init__``` method is crucial in this example because it allows us to create ```Country``` objects with specific initial values for their attributes. Without the ```__init__ method```, we would have to manually set the attributes for each ```Country object```, which would be more error-prone and less efficient.
 
 Why is the ```self``` part always there? What is it for?
 * The ```self``` argument in Python class methods is like a pronoun pointing back to the specific object the method is being called on. It allows methods to interact with the data that belongs to that particular object instance. It is there to provide a reference to the current object instance itself. Here's why it's important:
@@ -195,9 +195,9 @@ print(greeting)  # Output: Calling function: say_hello, Function returned: Hello
 
 ```
 In this example:
-* The logging_decorator takes a function as its argument.
-* It defines a wrapper function that logs information before and after calling the original say_hello function.
-* The @logging_decorator syntax applies the decorator to the say_hello function.
+* The ```logging_decorator``` takes a function as its argument.
+* It defines a wrapper function that logs information before and after calling the original ```say_hello``` function.
+* The ```@logging_decorator``` syntax applies the decorator to the ```say_hello``` function.
 
 Benefits of using decorators:
 * Code reusability: Decorators allow you to encapsulate common functionality into reusable functions. 
@@ -206,7 +206,7 @@ Benefits of using decorators:
 Decorators can be used for a variety of purposes, such as:
 * Enforcing access control
 * Measuring function performance
-* Retrying failed function calls
+* Retrying failed function calls <br>
 
 
  9. Explain the difference between append() and extend() methods in Python lists.
