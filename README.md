@@ -56,7 +56,7 @@ new_tuple = my_tuple + (6,)  # Creating a new tuple by concatenating the existin
 <ol><li>The my_list variable is a mutable list, and we can modify its elements and add new elements to it.</li>
 <li>The my_tuple variable is an immutable tuple, and we cannot modify its elements directly. However, we can create a new tuple by concatenating the existing one.</li>
 </ol>
-In general, you should use lists when you need to store a collection of items that may need to be modified, and use tuples when you need to represent a fixed set of values that should not be changed.
+In general, you should use lists when you need to store a collection of items that may need to be modified, and use tuples when you need to represent a fixed set of values that should not be changed.<br>
 
 6. Explain the difference between == and is operators in Python.
 Ans:
@@ -101,8 +101,12 @@ The main differences between == and is are:
 In general, you should use ```==``` for value comparison and ```is``` for identity comparison, unless you have a specific reason to do otherwise.
 
 
-8. 
-9. What is the purpose of ＿init＿ in Python classes?
+7. What is the purpose of ＿init＿ in Python classes?
+Ans:
+* 
+
+
+9. 
 10. What are decorators in Python?
 11. Explain the difference between append() and extend() methods in Python
 lists.
