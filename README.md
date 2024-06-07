@@ -65,7 +65,7 @@ The == (equal to) operator:
 <li>The == operator compares the values of two objects.</li>
 <li>It checks if the two operands have the same value.</li>
 <li>It returns True if the values are the same, and False otherwise.</li>
-Code Example:
+Code Example:<br>
 ```python
 a = 5
 b = 5
@@ -79,7 +79,24 @@ The is operator:
 * The is operator compares the identity of two objects.
 * It checks if the two operands refer to the same object in memory.
 * It returns True if the two operands are the same object, and False otherwise.
+```
+Code Example:<br>
+```python
+a = 5
+b = 5
+print(a is b)  # Output: True
 
+c = [1, 2, 3]
+d = [1, 2, 3]
+print(c is d)  # Output: False
+```
+In the first example, both ```a``` and ```b``` have the same value of 5, so ```a == b``` is True. However, ```a is b``` is also ```True``` because Python automatically caches small integer objects, so ```a``` and ```b``` refer to the same object in memory.
+In the second example,``` c``` and ```d``` have the same value of ```[1, 2, 3]```, but they are two different list objects in memory, so ```c == d``` is ```True```, but ```c``` is ```d``` is ```False```.
+The main differences between == and is are:
+* ``` ==``` compares the values of the objects, while ```is``` compares the identity (memory location) of the objects.
+* ```==``` is generally used for value comparison, while ```is``` is used to check if two variables refer to the same object in memory.
+* == can be overridden by defining the ```__eq__``` method in a class, while ```is``` cannot be overridden.
+In general, you should use ```==``` for value comparison and ```is``` for identity comparison, unless you have a specific reason to do otherwise.
 
 
 8. 
