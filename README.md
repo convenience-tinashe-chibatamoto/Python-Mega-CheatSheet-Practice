@@ -210,25 +210,21 @@ Decorators can be used for a variety of purposes, such as:
 
 
  9. Explain the difference between append() and extend() methods in Python lists.
-Ans: In Python, the append() and extend() methods are both used to add elements to a list, but they differ in the way they add the elements.
-```append():```
-The ```append()``` method is used to add a single element to the end of a list.
-It takes one argument, which is the element you want to add.
-After calling ```append()```, the length of the list increases by 1.
-<br>
+Ans: In Python, the append() and extend() methods are both used to add elements to a list, but they differ in the way they add the elements.<br>
+```append():```<br>
+* The ```append()``` method is used to add a single element to the end of a list.
+* It takes one argument, which is the element you want to add.
+* After calling ```append()```, the length of the list increases by 1.<br>
 Code Example:
-<br>
 ```python
 my_list = [1, 2, 3]
 my_list.append(4)
 print(my_list)  # Output: [1, 2, 3, 4]
 ```
-<br>
-```extend():```
-The ```extend()``` method is used to add multiple elements to the end of a list.
-It takes an iterable (such as a list, tuple, or string) as an argument, and adds all the elements of the iterable to the end of the list.
-After calling ```extend()```, the length of the list increases by the number of elements added.
-<br>
+The ```extend()``` method:<br>
+* The ```extend()``` method is used to add multiple elements to the end of a list.
+* It takes an iterable (such as a list, tuple, or string) as an argument, and adds all the elements of the iterable to the end of the list.
+* After calling ```extend()```, the length of the list increases by the number of elements added.<br>
 Code Example:
 ```python
 my_list = [1, 2, 3]
@@ -247,14 +243,13 @@ Choosing between ```append()``` and ```extend()```:
 * Use ```append()``` when you want to add a single element to your list.
 * Use ```extend()``` when you want to add multiple elements from another iterable to your list.
 
-Qn: What if I want to add an item at the beginning of my my list? What do I use?
-Ans: If you want to add an item or multiple items at the beginning of a list in Python, you can use the insert() method or the + operator.
-```insert():```
-* The insert() method is used to add an element at a specific index in the list.
+Qn: What if I want to add an item at the beginning of my my list? What do I use?<br>
+Ans: If you want to add an item or multiple items at the beginning of a list in Python, you can use the ```insert()``` method or the ```+``` operator.<br>
+The ```insert(): method```
+* The ```insert()``` method is used to add an element at a specific index in the list.
 * It takes two arguments: the index where the element should be inserted, and the element to be inserted.
-* This method shifts all the existing elements at and after the specified index to make room for the new element.
+* This method shifts all the existing elements at and after the specified index to make room for the new element.<br>
 Code Example:
-<br>
 ```python
 my_list = [2, 3, 4]
 my_list.insert(0, 1)
@@ -262,7 +257,7 @@ print(my_list)  # Output: [1, 2, 3, 4]
 ```
 Alternatively:
 The ```+``` operator:
-* You can use the + operator to concatenate two lists, effectively adding the elements of one list to the beginning of another list.
+* You can use the ```+``` operator to concatenate two lists, effectively adding the elements of one list to the beginning of another list.
 * This creates a new list and does not modify the original lists.
 Code Example 2:
 ```python
