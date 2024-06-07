@@ -217,6 +217,7 @@ It takes one argument, which is the element you want to add.
 After calling ```append()```, the length of the list increases by 1.
 <br>
 Code Example:
+<br>
 ```python
 my_list = [1, 2, 3]
 my_list.append(4)
@@ -253,12 +254,22 @@ Ans: If you want to add an item or multiple items at the beginning of a list in 
 * It takes two arguments: the index where the element should be inserted, and the element to be inserted.
 * This method shifts all the existing elements at and after the specified index to make room for the new element.
 Code Example:
+<br>
 ```python
 my_list = [2, 3, 4]
 my_list.insert(0, 1)
 print(my_list)  # Output: [1, 2, 3, 4]
 ```
-
+Alternatively:
+The ```+``` operator:
+* You can use the + operator to concatenate two lists, effectively adding the elements of one list to the beginning of another list.
+* This creates a new list and does not modify the original lists.
+Code Example 2:
+```python
+my_list = [2, 3, 4]
+new_list = [1] + my_list
+print(new_list)  # Output: [1, 2, 3, 4]
+```
 
 
 12. How are exceptions handled in Python?
