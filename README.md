@@ -129,18 +129,92 @@ In summary, the ```__init__``` method is essential for defining the initial stat
 
 Example 2:
 ```python
-class Person:
-    def __init__(self, name, age):
+class Country:
+    def __init__(self, name, capital, population, area):
         self.name = name
-        self.age = age
+        self.capital = capital
+        self.population = population
+        self.area = area
 
-    def greet(self):
-        print(f"Hello, my name is {self.name} and I'm {self.age} years old.")
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Capital: {self.capital}")
+        print(f"Population: {self.population} million")
+        print(f"Area: {self.area} square km")
 
-# Creating a Person object
-person = Person("Alice", 30)
-person.greet()  # Output: Hello, my name is Alice and I'm 30 years old.
+# Creating a Country object
+canada = Country("Canada", "Ottawa", 37.06, 9.093)
+canada.display_info()
+
+
+Space
+Workspace
+Help
+
+
+go back
+
+Claude 3 Haiku
+
+@AgentX
+
+6
+
+61
+
+Subscribe
+Share Agent
+LLM Model
+
+Anthropic Claude 3 Haiku
+
+Description
+Claude 3 Haiku, the fastest and most affordable model in its intelligence class. With state-of-the-art strong performance and lightening fast speed on industry benchmarks.
+
+
+Claude 3 Haiku
+
+
+
+
+Claude 3 Haiku
+21:15
+
+Sure, here's an example using a Country class with the __init__ method:
+
+
+python
+copy
+class Country:
+    def __init__(self, name, capital, population, area):
+        self.name = name
+        self.capital = capital
+        self.population = population
+        self.area = area
+
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Capital: {self.capital}")
+        print(f"Population: {self.population} million")
+        print(f"Area: {self.area} square km")
+
+# Creating a Country object
+canada = Country("Canada", "Ottawa", 37.06, 9.093)
+canada.display_info()
+
+Output:
+
+Name: Canada
+Capital: Ottawa
+Population: 37.06 million
+Area: 9.093 square km
 ```
+* In this example, the Country class has an __init__ method that takes four arguments: name, capital, population, and area. These arguments are used to initialize the corresponding attributes of the Country object.
+* When we create a new Country object, such as canada = Country("Canada", "Ottawa", 37.06, 9.093), the __init__ method is automatically called to set the initial state of the object.
+* The display_info method is then used to print out the information about the Country object.
+* The __init__ method is crucial in this example because it allows us to create Country objects with specific initial values for their attributes. Without the __init__ method, we would have to manually set the attributes for each Country object, which would be more error-prone and less efficient.
+
+Why is the ```self``` part always there? What is it for?
 
 9. 
 10. What are decorators in Python?
