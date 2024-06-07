@@ -122,6 +122,10 @@ car2 = Car("Honda", "Civic", "blue")
 print(car1.brand, car1.model, car1.color)  # Output: Toyota Camry red
 print(car2.brand, car2.model, car2.color)  # Output: Honda Civic blue
 ```
+In this example:
+* The Car class has an ```__init__``` method that takes three arguments (```brand```, ```model```, and ```color```).
+* When we create ```car1``` and ```car2```, we pass different values to the ```__init__ method```, initializing their attributes with unique properties.
+In summary, the ```__init__``` method is essential for defining the initial state of objects in Python classes, allowing you to create customized objects with specific attributes.
 
 Example 2:
 ```python
