@@ -165,8 +165,18 @@ Why is the ```self``` part always there? What is it for?
 - Imagine a scenario: You have a ```Car``` class with a method ```accelerate```. Without ```self```, the ```accelerate``` method wouldn't know which car's speed to increase. With ```self```, the method can access the speed attribute of the specific ```Car``` object that called the method. eg in Honda example.
 - A key point to note: While ```self``` is the convention, it's not strictly a keyword: Technically, you can name the first argument in a method anything you want. You can use any other name as long as it is consistent throughout your code. However, ```self``` is the most commonly used and expected name for the first parameter in instance methods. Following the ```self``` convention improves code readability and makes it easier for other programmers to understand your code.
 
-9. 
-10. What are decorators in Python?
+ 8. What are decorators in Python?
+ Ans:
+* In Python, decorators are a way to modify the behavior of a function or a class without changing its source code. They are a powerful and flexible tool that allows you to add extra functionality to functions or classes in a concise and readable way.
+* They are essentially functions that take another function as an argument and return a modified version of it. Why would you want to do that? It allows you to modify the behavior of functions or methods without permanently changing their code.
+* Decorator syntax: The "@" symbol is used to apply the decorator to a function. You place the decorator function name right above the function you want to decorate.
+
+
+A decorator is a function that takes another function as an argument, adds some functionality to it, and returns a new function. The new function can then be used in place of the original function.
+
+
+
+ 8. 
 11. Explain the difference between append() and extend() methods in Python
 lists.
 12. How are exceptions handled in Python?
