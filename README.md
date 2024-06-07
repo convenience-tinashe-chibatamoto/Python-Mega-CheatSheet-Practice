@@ -203,9 +203,13 @@ Benefits of using decorators:
 * Code reusability: Decorators allow you to encapsulate common functionality into reusable functions. 
 * Non-invasive modification: This reduces code duplication and improves maintainability.
 
- 8. 
-11. Explain the difference between append() and extend() methods in Python
-lists.
+Decorators can be used for a variety of purposes, such as:
+* Enforcing access control
+* Measuring function performance
+* Retrying failed function calls
+
+
+ 9. Explain the difference between append() and extend() methods in Python lists.
 12. How are exceptions handled in Python?
 13. What is the difference between Python 2 and Python 3?
 14. What is a Python dictionary?
