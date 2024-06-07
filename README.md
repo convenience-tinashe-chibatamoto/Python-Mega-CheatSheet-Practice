@@ -146,62 +146,6 @@ class Country:
 canada = Country("Canada", "Ottawa", 37.06, 9.093)
 canada.display_info()
 
-
-Space
-Workspace
-Help
-
-
-go back
-
-Claude 3 Haiku
-
-@AgentX
-
-6
-
-61
-
-Subscribe
-Share Agent
-LLM Model
-
-Anthropic Claude 3 Haiku
-
-Description
-Claude 3 Haiku, the fastest and most affordable model in its intelligence class. With state-of-the-art strong performance and lightening fast speed on industry benchmarks.
-
-
-Claude 3 Haiku
-
-
-
-
-Claude 3 Haiku
-21:15
-
-Sure, here's an example using a Country class with the __init__ method:
-
-
-python
-copy
-class Country:
-    def __init__(self, name, capital, population, area):
-        self.name = name
-        self.capital = capital
-        self.population = population
-        self.area = area
-
-    def display_info(self):
-        print(f"Name: {self.name}")
-        print(f"Capital: {self.capital}")
-        print(f"Population: {self.population} million")
-        print(f"Area: {self.area} square km")
-
-# Creating a Country object
-canada = Country("Canada", "Ottawa", 37.06, 9.093)
-canada.display_info()
-
 Output:
 
 Name: Canada
@@ -218,7 +162,8 @@ Why is the ```self``` part always there? What is it for?
 * The ```self``` argument in Python class methods is like a pronoun pointing back to the specific object the method is being called on. It allows methods to interact with the data that belongs to that particular object instance. It is there to provide a reference to the current object instance itself. Here's why it's important:
 - Methods operate on objects: When you call a method on an object, that method needs a way to access and modify the object's attributes (variables) specific to that instance. ```self``` provides this link.
 - Differentiating between objects: Classes can create multiple objects (instances). Without ```self```, methods wouldn't be able to tell which object's attributes they're working with. ```self``` ensures methods work on the correct object's data.
-- 
+- Imagine a scenario: You have a ```Car``` class with a method ```accelerate```. Without ```self```, the ```accelerate``` method wouldn't know which car's speed to increase. With ```self```, the method can access the speed attribute of the specific ```Car``` object that called the method. eg in Honda example.
+- A key point to note: While ```self``` is the convention, it's not strictly a keyword: Technically, you can name the first argument in a method anything you want. You can use any other name as long as it is consistent throughout your code. However, ```self``` is the most commonly used and expected name for the first parameter in instance methods. Following the ```self``` convention improves code readability and makes it easier for other programmers to understand your code.
 
 9. 
 10. What are decorators in Python?
