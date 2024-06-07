@@ -4,34 +4,37 @@
 Ans: Python is a high-level, interpreted programming language known for its simplicity and readability.
  * High-level: A high-level language is a programming language that is designed to be human-readable and abstracts away the low-level details of computer hardware. This means that the code you write in Python is closer to natural language and easier for humans to understand, rather than being closer to the machine-level language (binary code) that the computer can directly execute.
  * Interpreted: Python code is executed line by line by a program called the interpreter. This is different from compiled languages where the entire code is converted into machine code before running. Interpretation allows for faster development cycles as you can test and make changes quickly without recompiling everything.
- * 
-3. What are the key features of Python?
-4. What is PEP 8?
-5. What are the differences between lists and tuples in Python?
-6. Explain the difference between == and is operators in Python.
-7. What is the purpose of ＿init＿ in Python classes?
-8. What are decorators in Python?
-9. Explain the difference between append() and extend() methods in Python
+
+2. Why Python
+Ans: Simplicity and Readability(clean, intuitive syntax), Versatility (Python is a multi-purpose language that can be used for a wide range of applications, including web development, data analysis, machine learning, scientific computing, automation, and more), Large and Active Community (Python has a large and active community of developers who contribute to a vast ecosystem of libraries, frameworks, and tools. This makes it easy to find solutions to common problems and get support.), Cross-platform Compatibility (Python is a cross-platform language, meaning it can run on various operating systems, including Windows, macOS, and Linux, without the need for major changes to the code.), Rapid Prototyping()
+3. 
+4. What are the key features of Python?
+5. What is PEP 8?
+6. What are the differences between lists and tuples in Python?
+7. Explain the difference between == and is operators in Python.
+8. What is the purpose of ＿init＿ in Python classes?
+9. What are decorators in Python?
+10. Explain the difference between append() and extend() methods in Python
 lists.
-10. How are exceptions handled in Python?
-11. What is the difference between Python 2 and Python 3?
-12. What is a Python dictionary?
-13. What is a Python generator?
-14. What is the difference between range() and xrange() in Python 2?
-15. How does memory management work in Python?
-16. What is the difference between a shallow copy and a deep copy in Python?
-17. Explain the purpose of the ＿str＿ and ＿repr＿ methods in Python.
-18. How do you handle file I/O in Python?
-19. What are lambda functions in Python?
-20. What is the purpose of the if ＿name＿ == "＿main＿": statement in Python?
-21. How do you install third-party packages in Python?
-22. What are list comprehensions in Python?
-23. Explain the difference between == and != operators in Python.
-24. What is a Python set and how is it different from a list or tuple?
-25. What is the use of the pass statement in Python?
-26. How do you iterate over a dictionary in Python?
-27. What is the purpose of *args and **kwargs in Python function definitions?
-28. What is the difference between instance, class, and static methods in
+11. How are exceptions handled in Python?
+12. What is the difference between Python 2 and Python 3?
+13. What is a Python dictionary?
+14. What is a Python generator?
+15. What is the difference between range() and xrange() in Python 2?
+16. How does memory management work in Python?
+17. What is the difference between a shallow copy and a deep copy in Python?
+18. Explain the purpose of the ＿str＿ and ＿repr＿ methods in Python.
+19. How do you handle file I/O in Python?
+20. What are lambda functions in Python?
+21. What is the purpose of the if ＿name＿ == "＿main＿": statement in Python?
+22. How do you install third-party packages in Python?
+23. What are list comprehensions in Python?
+24. Explain the difference between == and != operators in Python.
+25. What is a Python set and how is it different from a list or tuple?
+26. What is the use of the pass statement in Python?
+27. How do you iterate over a dictionary in Python?
+28. What is the purpose of *args and **kwargs in Python function definitions?
+29. What is the difference between instance, class, and static methods in
 Python?
 28. How do you create simple program that calculates someone’s age using datetime module?
 30. Explain the concept of inheritance in Python.
