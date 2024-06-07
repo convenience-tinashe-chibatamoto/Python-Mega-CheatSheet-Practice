@@ -247,6 +247,19 @@ Choosing between ```append()``` and ```extend()```:
 * Use ```extend()``` when you want to add multiple elements from another iterable to your list.
 
 Qn: What if I want to add an item at the beginning of my my list? What do I use?
+Ans: If you want to add an item or multiple items at the beginning of a list in Python, you can use the insert() method or the + operator.
+```insert():```
+* The insert() method is used to add an element at a specific index in the list.
+* It takes two arguments: the index where the element should be inserted, and the element to be inserted.
+* This method shifts all the existing elements at and after the specified index to make room for the new element.
+Code Example:
+```python
+my_list = [2, 3, 4]
+my_list.insert(0, 1)
+print(my_list)  # Output: [1, 2, 3, 4]
+```
+
+
 
 12. How are exceptions handled in Python?
 13. What is the difference between Python 2 and Python 3?
