@@ -222,6 +222,7 @@ my_list = [1, 2, 3]
 my_list.append(4)
 print(my_list)  # Output: [1, 2, 3, 4]
 ```
+<br>
 ```extend():```
 The ```extend()``` method is used to add multiple elements to the end of a list.
 It takes an iterable (such as a list, tuple, or string) as an argument, and adds all the elements of the iterable to the end of the list.
@@ -234,10 +235,12 @@ my_list.extend([4, 5, 6])
 print(my_list)  # Output: [1, 2, 3, 4, 5, 6]
 ```
 Another Code Example:
+
 ```python
 fruits = ['apple', 'banana']
 fruits.append('cherry')
 print(fruits)  # Output: ['apple', 'banana', 'cherry']
+
 ```
 Choosing between ```append()``` and ```extend()```:
 * Use ```append()``` when you want to add a single element to your list.
