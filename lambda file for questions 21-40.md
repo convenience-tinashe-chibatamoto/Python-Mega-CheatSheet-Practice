@@ -116,10 +116,28 @@ print(my_tuple)  # Output: (1, 2, 3, 2, 4)
 my_set = {1, 2, 3, 2, 4}
 print(my_set)  # Output: {1, 2, 3, 4}
 ```
-* As you can see, the set automatically removes the duplicate element ```2``` and stores only unique elements.
+* As you can see, the set automatically removes the duplicate element ```2``` and stores only unique elements.<br>
 
+24. What is the use of the pass statement in Python?<br>
+Ans: In Python, the pass statement is a placeholder that essentially tells Python to do nothing when it encounters the pass statement.
+* As a placeholder, it is used when a statement is required syntactically, but you don't want any command or code to be executed.
+*  It allows you to write syntactically valid code without having to implement the actual functionality immediately. It can help you structure your code, handle empty blocks, and prepare for future development.
+* It can be used as a placeholder for future code<br>
+Code Example:
+```python
+# For a function
+def my_function():
+    pass
 
-28. What is the use of the pass statement in Python?
+# For a for-loop
+for i in range(5):
+    pass
+
+# For an empty class definition:
+class Car:
+    pass
+```
+
 29. How do you iterate over a dictionary in Python?
 30. What is the purpose of *args and **kwargs in Python function definitions?
 31. What is the difference between instance, class, and static methods in
