@@ -512,8 +512,36 @@ Ans: In Python, the``` __str__ ```and ```__repr__``` methods are special methods
 * ```__repr__()``` (representation): This method aims to return an unambiguous string representation that can be used to recreate the object. It's geared towards developers and debugging. (it's for developers)
 * You don't call these methods directly. Instead, Python uses them behind the scenes when you use functions like ```str()``` or ```print()```. However, it's good practice to define both ```__str__``` and ```__repr__``` in your custom classes to control how your objects are represented.
 
-17. 
-21. How do you handle file I/O in Python?
+17. How do you handle file I/O in Python?<br>
+Ans: In Python, file I/O (Input/Output) is handled using the built-in ```open()``` function.
+* It takes two main arguments: the filename and the mode. filename: The name (including path if necessary) of the file you want to work with. mode: This argument specifies how you intend to interact with the file. Different modes are available such as:
+* ```"r"``` (read): Opens the file for reading. This is the default mode if no mode is specified.
+* ```"w"``` (write): Opens the file for writing. Existing content will be erased!
+* ```"a"``` (append): Opens the file for appending content to the end.
+* ```"x"``` (create): Creates a new file and opens it for writing. Fails if the file already exists.
+* ```"b"``` (binary): Used for working with binary files (e.g., images).
+* ```'r+'```: Read and write mode.
+
+Reading from a File:
+* Use the read(), readline(), or readlines() methods to read data from the file.
+* read() reads the entire file as a single string.
+* readline() reads a single line from the file.
+* readlines() reads all the lines in the file and returns them as a list of strings.<br>
+Code Example:
+```python
+with open('data.txt', 'r') as myfile:
+    content = myfile.read()
+    print(content)
+```
+
+Writing to a File:
+* Use the write() method to write data to the file.<br>
+Code Example:
+```python
+with open("data.txt", "w") as myfile:
+  myfile.write("This is some new text for the file.")
+```
+
 22. What are lambda functions in Python?
 23. What is the purpose of the if ＿name＿ == "＿main＿": statement in Python?
 24. How do you install third-party packages in Python?
