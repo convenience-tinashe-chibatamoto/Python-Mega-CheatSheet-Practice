@@ -265,9 +265,23 @@ my_list = [2, 3, 4]
 new_list = [1] + my_list
 print(new_list)  # Output: [1, 2, 3, 4]
 ```
+<br>
+
+10. How are exceptions handled in Python?
+Ans: Python handles exceptions using a combination of try, except, and optionally, finally statements. Here's a breakdown of how they work together:
+
+1. try Block:
+
+This block contains the code that might potentially raise an exception.
+If no exceptions occur within the try block, the code executes normally, and the program continues.
 
 
-12. How are exceptions handled in Python?
+
+
+
+
+
+11. 
 13. What is the difference between Python 2 and Python 3?
 14. What is a Python dictionary?
 15. What is a Python generator?
