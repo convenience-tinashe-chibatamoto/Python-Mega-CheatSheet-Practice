@@ -97,8 +97,28 @@ print(dict1 != dict2)  # Output: True
 # dict1 != dict2 would return True, because the two dictionaries are not equal due to the different values for the "age" key.
 ```
 
-24. 
-27. What is a Python set and how is it different from a list or tuple?
+23. What is a Python set and how is it different from a list or tuple?<br>
+Ans: A Python set is an unordered collection of unique elements. It is a data structure that stores a collection of items, but with the following key differences from lists and tuples:
+* Uniqueness: Sets only store unique elements. If you try to add a duplicate element to a set, it will be ignored.
+* Unordered: Sets do not maintain the order of the elements. The elements in a set are not indexed, and you cannot access them by index like you can with lists and tuples.
+* Mutable: Sets are mutable, meaning you can add or remove elements from a set after it has been created.<br>
+Code Example:
+```python
+# List
+my_list = [1, 2, 3, 2, 4]
+print(my_list)  # Output: [1, 2, 3, 2, 4]
+
+# Tuple
+my_tuple = (1, 2, 3, 2, 4)
+print(my_tuple)  # Output: (1, 2, 3, 2, 4)
+
+# Set
+my_set = {1, 2, 3, 2, 4}
+print(my_set)  # Output: {1, 2, 3, 4}
+```
+* As you can see, the set automatically removes the duplicate element ```2``` and stores only unique elements.
+
+
 28. What is the use of the pass statement in Python?
 29. How do you iterate over a dictionary in Python?
 30. What is the purpose of *args and **kwargs in Python function definitions?
