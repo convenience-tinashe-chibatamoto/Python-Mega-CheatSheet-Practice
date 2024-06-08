@@ -454,10 +454,13 @@ Ans: ```xrange()```'s functonality has been incorporated into ```range()``` in P
 * So, if you're coding for both Python 2 and 3, it's generally recommended to use ```range()``` for consistency and better memory management.<br>
 
 14. How does memory management work in Python?<br>
+Ans:
+* Python's memory management is handled automatically by the Python interpreter, using a combination of several techniques like object caching and garbage collection. Python takes care of memory management automatically. (unlike in other languages like C and C++)
+* This frees you, the programmer, from the burden of manually allocating and deallocating memory for your objects. Python's memory management system is designed to be efficient and user-friendly, allowing developers to focus on writing code without having to worry about the low-level details of memory management.<br>
+
+15. What is the difference between a shallow copy and a deep copy in Python?
 Ans: 
 
-
-19. What is the difference between a shallow copy and a deep copy in Python?
 20. Explain the purpose of the ＿str＿ and ＿repr＿ methods in Python.
 21. How do you handle file I/O in Python?
 22. What are lambda functions in Python?
