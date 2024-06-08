@@ -545,12 +545,12 @@ Closing Files:
 * It's crucial to close files after you're done using them. This ensures proper resource management and prevents data corruption. You can either use the ```close()``` method explicitly, or always use the ```with``` context manager at the start of file I/O operation to automatically take care of closing the file, even if exceptions occur during processing. Using the ```with``` context manager is the recommended approach.<br>
 Code Example:
 ```python
-#Example 1
+# Example 1
 myfile = open("data.txt", "r")
 # Do something with the file
 myfile.close()
 
-Example 2
+# Example 2
 with open("data.txt", "r") as myfile:
   # Do something with the file (myfile is guaranteed to be closed here)
 
@@ -569,7 +569,40 @@ except FileNotFoundError:
     print("File not found.")
 ```
 
-22. What are lambda functions in Python?
+18. What are lambda functions in Python?<br>
+Ans: In Python, ```lambda``` functions, also known as anonymous functions, are small, one-line functions that can be defined without a name. They are typically used when you need a simple function for a short period of time, and you don't want to define a separate function using the ```def``` keyword.
+* They are a concise way to define small, anonymous functions.
+* They are useful for short, throwaway functions that are used only once or a few times within your code.<br>
+Code Example:
+```python
+# Basic Syntax
+lambda arguments: expression
+
+# Example 1
+square = lambda x: x * x
+
+result = square(5)
+print(result)  # Output: 25
+
+
+# Example 2
+# A lambda function that adds two numbers
+add = lambda x, y: x + y
+print(add(2, 3))  # Output: 5
+
+# A lambda function that squares a number
+square = lambda x: x ** 2
+print(square(5))  # Output: 25
+
+# Using a lambda function as a key in the sorted() function
+numbers = [5, 2, 8, 1, 9]
+sorted_numbers = sorted(numbers, key=lambda x: x % 3)
+print(sorted_numbers)  # Output: [2, 5, 8, 1, 9]
+```
+* Lambda functions are often used in combination with other Python functions, such as ```map()```, ```filter()```, and ```reduce()```, to perform simple operations on data. They can make your code more concise and readable in certain situations.
+* However, it's important to note that lambda functions are limited to a single expression and cannot contain statements like ```if```-```else``` or ```for``` loops. For more complex functions, it's generally better to use the ```def``` keyword to define a regular function.
+
+18. 
 23. What is the purpose of the if ＿name＿ == "＿main＿": statement in Python?
 24. How do you install third-party packages in Python?
 25. What are list comprehensions in Python?
