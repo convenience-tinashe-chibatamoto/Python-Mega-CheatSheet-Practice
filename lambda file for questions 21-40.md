@@ -84,7 +84,7 @@ print(dict1 != dict2)  # Output: False
 print(dict1 == dict3)  # Output: False
 print(dict1 != dict3)  # Output: True
 
-Interesting: One Value Changed - Let's say I compare dict1 and dict2, what would the result be?
+# Interesting: One Value Changed - Let's say I compare dict1 and dict2, what would the result be?
 dict1 = {"name": "Alice", "age": 25}
 dict2 = {"name": "Alice", "age": 30}
 
