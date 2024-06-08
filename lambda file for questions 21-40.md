@@ -88,7 +88,39 @@ The main differences are:
 
 
 28. How do you create simple program that calculates someone’s age using datetime module?
-Ans: 
+Ans:
+```python
+from datetime import date
+
+def calculate_age(birth_year, birth_month, birth_day):
+    today = date.today()
+    birth_date = date(birth_year, birth_month, birth_day)
+    age = today.year - birth_date.year
+    
+    # Adjust age if the birthday has not happened yet this year
+    if today.month < birth_date.month or (today.month == birth_date.month and today.day < birth_date.day):
+        age -= 1
+    
+    return age
+
+# Example usage
+birth_year = int(input("Enter your birth year: "))
+birth_month = int(input("Enter your birth month: "))
+birth_day = int(input("Enter your birth day: "))
+
+age = calculate_age(birth_year, birth_month, birth_day)
+print(f"Your age is: {age}")
+```
+* The program imports the ```date``` class from the ```datetime``` module.
+* The ```calculate_age``` function takes three arguments: ```birth_year```, ```birth_month```, and ```birth_day```, which represent the user's date of birth.
+* Inside the function, the ```date.today()``` method is used to get the current date.
+* The ```date``` class is used to create a ```birth_date``` object using the provided birth year, month, and day.
+* The age is calculated by subtracting the birth year from the current year.
+* However, if the current month is less than the birth month, or if the current month is the same as the birth month but the current day is less than the birth day, the age is decremented by 1 to account for the fact that the user's birthday has not happened yet this year.
+* The calculated age is returned by the function.
+* In the example usage, the user is prompted to enter their birth year, month, and day, and the calculate_age function is called with these values. The resulting age is then printed to the console.
+* Remember to always use ```try```-```except``` when capturing user input or whenever there is user input.
+
 29. 
 30. Explain the concept of inheritance in Python.
 31. How do you handle multi-threading in Python?
