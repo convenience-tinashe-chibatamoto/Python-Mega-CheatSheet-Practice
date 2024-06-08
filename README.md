@@ -523,10 +523,10 @@ Ans: In Python, file I/O (Input/Output) is handled using the built-in ```open()`
 * ```'r+'```: Read and write mode.
 
 Reading from a File:
-* Use the read(), readline(), or readlines() methods to read data from the file.
-* read() reads the entire file as a single string.
-* readline() reads a single line from the file.
-* readlines() reads all the lines in the file and returns them as a list of strings.<br>
+* Use the ```read()```, ```readline()```, or ```readlines()``` methods to read data from the file.
+* ```read()``` reads the entire file as a single string.
+* ```readline()``` reads a single line from the file.
+* ```readlines()``` reads all the lines in the file and returns them as a list of strings.<br>
 Code Example:
 ```python
 with open('data.txt', 'r') as myfile:
@@ -540,6 +540,33 @@ Code Example:
 ```python
 with open("data.txt", "w") as myfile:
   myfile.write("This is some new text for the file.")
+```
+Closing Files:
+* It's crucial to close files after you're done using them. This ensures proper resource management and prevents data corruption. You can either use the ```close()``` method explicitly, or always use the ```with``` context manager at the start of file I/O operation to automatically take care of closing the file, even if exceptions occur during processing. Using the ```with``` context manager is the recommended approach.<br>
+Code Example:
+```python
+#Example 1
+myfile = open("data.txt", "r")
+# Do something with the file
+myfile.close()
+
+Example 2
+with open("data.txt", "r") as myfile:
+  # Do something with the file (myfile is guaranteed to be closed here)
+
+```
+Error Handling:
+* Always consider error handling when working with files.
+* File I/O operations can raise various exceptions, such as ```FileNotFoundError```, ```PermissionError```, or ```IOError```.
+* It's a good practice to wrap your file I/O code in a ```try```-```except``` block to handle these exceptions.<br>
+Code Example:
+```python
+try:
+    with open('data.txt', 'r') as file:
+        content = file.read()
+        print(content)
+except FileNotFoundError:
+    print("File not found.")
 ```
 
 22. What are lambda functions in Python?
