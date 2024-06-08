@@ -655,9 +655,200 @@ Ans: There is a subtle difference between !pip and pip in Python:
 * ```!pip```: Used within environments like Jupyter Notebooks where code and shell commands are intermixed. The exclamation mark (```!```)  indicates that the following command is intended for the shell or operating system rather than the Python interpreter.<br>
 
 
-21. 
-25. What are list comprehensions in Python?
-26. Explain the difference between == and != operators in Python.
+21. What are list comprehensions in Python?<br>
+Ans: List comprehensions in Python are a powerful and concise way to create new lists based on existing iterables (like lists, strings, tuples) in a single line of code. They offer a more compact alternative to traditional for loops with if statements.
+* They offer a more compact alternative to traditional for loops with if statements.
+* Here's a breakdown of what list comprehensions can do:
+* Create new lists: You can use them to generate new lists based on transformations or filtering of elements from an existing iterable.
+* Filter elements: You can include conditions (like if statements) to filter out elements you don't want in the new list.
+* Modify elements: You can apply expressions to modify elements during the creation of the new list.
+* The syntax for a list comprehension is:
+```python
+[expression for item in iterable if condition]
+```
+* The expression is the value that will be added to the new list for each iteration.
+* The item is the current element being processed from the iterable.
+* The if condition is an optional filter that determines whether the expression should be included in the new list.<br>
+Code Example 1:
+```python
+numbers = [1, 2, 3, 4, 5]
+squares = [number * number for number in numbers]  # squares will be [1, 4, 9, 16, 25]
+```
+* This example creates a new list ```squares``` containing the squares of each number in the original ```numbers``` list.<br>
+Code Example 2:
+```python
+# Let's say we want to create a list of squares of the numbers from 1 to 10. We can do this using a list comprehension:
+squares = [x**2 for x in range(1, 11)]
+print(squares)  # Output: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+# In this case, the expression is x**2, the item is x, and the iterable is range(1, 11).
+
+# List comprehensions can also include conditional logic. For example, to create a list of even numbers from 1 to 10:
+
+even_numbers = [x for x in range(1, 11) if x % 2 == 0]
+print(even_numbers)  # Output: [2, 4, 6, 8, 10]
+
+# Here, the if condition is x % 2 == 0, which checks if the current number x is even.
+```
+* Notice we didn't have to predefine ```squares``` in Example 2. We did it on the fly.
+* List comprehensions are a versatile tool for manipulating iterables in Python.<br>
+
+22. Explain the difference between == and != operators in Python.<br>
+Ans: Both == and != are comparison operators in Python used to compare values, but they serve opposite purposes:
+* == (equal to): This operator checks if two values on either side are equal. It returns True if they are equal, and False otherwise.
+* != (not equal to): This operator checks if two values on either side are not equal. It returns True if they are not equal, and False otherwise.<br>
+Code Example:
+```python
+x = 5
+y = 5
+print(x != y)  # Output: False
+
+x = 5
+y = 10
+print(x != y)  # Output: True
+```
+* Both == and != operators can be used with various data types in Python, such as numbers, strings, lists, dictionaries, and more.<br>
+Code Example 2:
+```python
+# Comparing lists
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+list3 = [3, 2, 1]
+
+print(list1 == list2)  # Output: True
+print(list1 != list2)  # Output: False
+print(list1 == list3)  # Output: False
+print(list1 != list3)  # Output: True
+
+# Comparing strings
+str1 = "hello"
+str2 = "hello"
+str3 = "world"
+
+print(str1 == str2)  # Output: True
+print(str1 != str2)  # Output: False
+print(str1 == str3)  # Output: False
+print(str1 != str3)  # Output: True
+
+# Comparing dictionaries
+dict1 = {"name": "Alice", "age": 25}
+dict2 = {"name": "Alice", "age": 25}
+dict3 = {"name": "Bob", "age": 30}
+
+print(dict1 == dict2)  # Output: True
+print(dict1 != dict2)  # Output: False
+print(dict1 == dict3)  # Output: False
+print(dict1 != dict3)  # Output: True
+
+# Interesting: One Value Changed - Let's say I compare dict1 and dict2, what would the result be?
+dict1 = {"name": "Alice", "age": 25}
+dict2 = {"name": "Alice", "age": 30}
+
+# Ans:
+print(dict1 == dict2)  # Output: False
+print(dict1 != dict2)  # Output: True
+
+# dict1 == dict2 would return False, because even though the "name" key has the same value in both dictionaries, the "age" key has different values
+# i.e. (25 in dict1 and 30 in dict2).
+# dict1 != dict2 would return True, because the two dictionaries are not equal due to the different values for the "age" key.
+```
+
+23. What is a Python set and how is it different from a list or tuple?<br>
+Ans: A Python set is an unordered collection of unique elements. It is a data structure that stores a collection of items, but with the following key differences from lists and tuples:
+* Uniqueness: Sets only store unique elements. If you try to add a duplicate element to a set, it will be ignored.
+* Unordered: Sets do not maintain the order of the elements. The elements in a set are not indexed, and you cannot access them by index like you can with lists and tuples.
+* Mutable: Sets are mutable, meaning you can add or remove elements from a set after it has been created.<br>
+Code Example:
+```python
+# List
+my_list = [1, 2, 3, 2, 4]
+print(my_list)  # Output: [1, 2, 3, 2, 4]
+
+# Tuple
+my_tuple = (1, 2, 3, 2, 4)
+print(my_tuple)  # Output: (1, 2, 3, 2, 4)
+
+# Set
+my_set = {1, 2, 3, 2, 4}
+print(my_set)  # Output: {1, 2, 3, 4}
+```
+* As you can see, the set automatically removes the duplicate element ```2``` and stores only unique elements.<br>
+
+24. What is the use of the pass statement in Python?<br>
+Ans: In Python, the pass statement is a placeholder that essentially tells Python to do nothing when it encounters the pass statement.
+* As a placeholder, it is used when a statement is required syntactically, but you don't want any command or code to be executed.
+*  It allows you to write syntactically valid code without having to implement the actual functionality immediately. It can help you structure your code, handle empty blocks, and prepare for future development.
+* It can be used as a placeholder for future code<br>
+Code Example:
+```python
+# For a function
+def my_function():
+    pass
+
+# For a for-loop
+for i in range(5):
+    pass
+
+# For an empty class definition:
+class Car:
+    pass
+```
+<br>
+
+25. How do you iterate over a dictionary in Python? (Hint: Iterate means for loop)
+Ans: There are several ways to iterate over a dictionary in Python, depending on what you want to access from the dictionary:
+* Looping through keys: This method iterates over the dictionary keys directly. You can access each key within the loop.<br>
+Code Example:
+```python
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+
+for key in my_dict:
+  print(key)  # Output: name, age, city
+
+# Another example
+my_dict = {'apple': 2, 'banana': 3, 'cherry': 1}
+
+for key in my_dict:
+    print(key)
+# Sidenote: Double quotes are good for dictionaries because they allow nesting.
+
+person = {"name": "John 'Doe'", "quote": 'He said, "Hello, world!"'}
+```
+
+* Looping through values: This method iterates over the dictionary values directly. You can access each value within the loop.<br>
+Code Example:
+```python
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+
+for value in my_dict.values():
+  print(value)  # Output: Alice, 30, New York
+```
+* Looping through key-value pairs: This method, using the ```items()``` method, iterates over both keys and values together as tuples. You can unpack the tuples within the loop to access both the key and value.<br>
+Code Example:
+```python
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+
+for key, value in my_dict.items():
+  print(f"{key}: {value}")  # Output: name: Alice, age: 30, city: New York
+
+
+# Another interesting example
+
+my_dict = {'apple': 2, 'banana': 3, 'cherry': 1}
+
+for item in my_dict.items():
+    print(item)
+
+# Output:
+
+('apple', 2)
+('banana', 3)
+('cherry', 1)
+
+# In the last example, the output shows each item as a tuple containing the key and value.
+```
+* Remember that iterating over dictionaries typically doesn't guarantee the order in which the elements are accessed (due to the hashing mechanism used).
+
 27. What is a Python set and how is it different from a list or tuple?
 28. What is the use of the pass statement in Python?
 29. How do you iterate over a dictionary in Python?
