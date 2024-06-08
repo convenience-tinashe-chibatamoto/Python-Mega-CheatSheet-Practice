@@ -35,10 +35,69 @@ print(even_numbers)  # Output: [2, 4, 6, 8, 10]
 # Here, the if condition is x % 2 == 0, which checks if the current number x is even.
 ```
 * Notice we didn't have to predefine ```squares``` in Example 2. We did it on the fly.
-* List comprehensions are a versatile tool for manipulating iterables in Python.
+* List comprehensions are a versatile tool for manipulating iterables in Python.<br>
 
+22. Explain the difference between == and != operators in Python.<br>
+Ans: Both == and != are comparison operators in Python used to compare values, but they serve opposite purposes:
+* == (equal to): This operator checks if two values on either side are equal. It returns True if they are equal, and False otherwise.
+* != (not equal to): This operator checks if two values on either side are not equal. It returns True if they are not equal, and False otherwise.<br>
+Code Example:
+```python
+x = 5
+y = 5
+print(x != y)  # Output: False
 
-26. Explain the difference between == and != operators in Python.
+x = 5
+y = 10
+print(x != y)  # Output: True
+```
+* Both == and != operators can be used with various data types in Python, such as numbers, strings, lists, dictionaries, and more.<br>
+Code Example 2:
+```python
+# Comparing lists
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+list3 = [3, 2, 1]
+
+print(list1 == list2)  # Output: True
+print(list1 != list2)  # Output: False
+print(list1 == list3)  # Output: False
+print(list1 != list3)  # Output: True
+
+# Comparing strings
+str1 = "hello"
+str2 = "hello"
+str3 = "world"
+
+print(str1 == str2)  # Output: True
+print(str1 != str2)  # Output: False
+print(str1 == str3)  # Output: False
+print(str1 != str3)  # Output: True
+
+# Comparing dictionaries
+dict1 = {"name": "Alice", "age": 25}
+dict2 = {"name": "Alice", "age": 25}
+dict3 = {"name": "Bob", "age": 30}
+
+print(dict1 == dict2)  # Output: True
+print(dict1 != dict2)  # Output: False
+print(dict1 == dict3)  # Output: False
+print(dict1 != dict3)  # Output: True
+
+Interesting: One Value Changed - Let's say I compare dict1 and dict2, what would the result be?
+dict1 = {"name": "Alice", "age": 25}
+dict2 = {"name": "Alice", "age": 30}
+
+# Ans:
+print(dict1 == dict2)  # Output: False
+print(dict1 != dict2)  # Output: True
+
+# dict1 == dict2 would return False, because even though the "name" key has the same value in both dictionaries, the "age" key has different values
+# i.e. (25 in dict1 and 30 in dict2).
+# dict1 != dict2 would return True, because the two dictionaries are not equal due to the different values for the "age" key.
+```
+
+24. 
 27. What is a Python set and how is it different from a list or tuple?
 28. What is the use of the pass statement in Python?
 29. How do you iterate over a dictionary in Python?
