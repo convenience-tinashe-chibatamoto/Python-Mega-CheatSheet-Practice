@@ -448,8 +448,15 @@ for num in fib_gen:
 ```
 Generators are a powerful tool in Python, and they are often used in data processing, file I/O, and other applications where memory usage is a concern.<br>
 
-13. What is the difference between range() and xrange() in Python 2?(skip)
-18. How does memory management work in Python?
+13. What is the difference between ```range()``` and ```xrange()``` in Python 2? <br>
+Ans: ```xrange()```'s functonality has been incorporated into ```range()``` in Python 3. But here's something to note: ```xrange()``` did not allow list slicing.
+* ```range(n)```: This returns a list object. You can perform list operations like slicing, indexing, and applying list comprehension on the returned list unlike ```xrange()```. ```range``` in Python 3, it returns an iterator object that generates numbers on demand, making it memory-efficient.
+* So, if you're coding for both Python 2 and 3, it's generally recommended to use ```range()``` for consistency and better memory management.<br>
+
+14. How does memory management work in Python?<br>
+Ans: 
+
+
 19. What is the difference between a shallow copy and a deep copy in Python?
 20. Explain the purpose of the ＿str＿ and ＿repr＿ methods in Python.
 21. How do you handle file I/O in Python?
