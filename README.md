@@ -602,8 +602,47 @@ print(sorted_numbers)  # Output: [2, 5, 8, 1, 9]
 * Lambda functions are often used in combination with other Python functions, such as ```map()```, ```filter()```, and ```reduce()```, to perform simple operations on data. They can make your code more concise and readable in certain situations.
 * However, it's important to note that lambda functions are limited to a single expression and cannot contain statements like ```if```-```else``` or ```for``` loops. For more complex functions, it's generally better to use the ```def``` keyword to define a regular function.
 
-18. 
-23. What is the purpose of the if ＿name＿ == "＿main＿": statement in Python?
+19. What is the purpose of the if ＿name＿ == "＿main＿": statement in Python?<br>
+Ans: The statement ```if __name__ == "__main__":``` in Python is used to control code execution based on whether the script is being run directly or imported as a module.
+* When a Python script is executed directly: The special variable ```__name__``` is set to the value ```"__main__"```. This means that the code inside the ```if __name__ == "__main__":``` block will be executed.
+* When a Python script is imported as a module: The special variable ```__name__``` is set to the name of the module, not ```"__main__"```. In this case, the code inside the ```if __name__ == "__main__":``` block will not be executed.
+* This is useful when you have a Python script that can be both executed as a standalone program and imported as a module. By using the ```if __name__ == "__main__":``` statement, you can separate the code that should be executed when the script is run directly from the code that should be executed when the script is imported as a module.<br>
+Code Example:
+```python
+def my_function():
+  print("This is a function in the module")
+
+if __name__ == "__main__":
+  print("This code runs only when the script is executed directly")
+  my_function()  # Calling the function here
+```
+In this example:
+* If you run the script directly, you'll see both ```print``` statements.
+* If you import the script as a module and call ```my_function``` from another script, only the function's output will be printed, as the code within the if block won't be executed.<br>
+Code Example 2:
+```python
+# my_module.py
+def my_function():
+    print("This is a function from the module.")
+
+if __name__ == "__main__":
+    print("This code will only run when the script is executed directly.")
+    my_function()
+```
+
+* If you run the my_module.py script directly, the output will be:
+```
+This code will only run when the script is executed directly.
+This is a function from the module.
+```
+* However, if you import the my_module in another Python script, the output will only be:
+```
+This is a function from the module.
+The code inside the if __name__ == "__main__": block will not be executed when the script is imported as a module.
+```
+* This pattern is commonly used to include test code, example usage, or other functionality that should only be executed when the script is the main program, not when it's imported as a module.
+
+
 24. How do you install third-party packages in Python?
 25. What are list comprehensions in Python?
 26. Explain the difference between == and != operators in Python.
