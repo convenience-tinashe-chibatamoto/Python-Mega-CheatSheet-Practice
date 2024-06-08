@@ -30,7 +30,7 @@ print_info(name="Alice", age=30, city="New York")
 # age: 30
 # city: New York
 ```
-* It's important to note that *args and **kwargs can be used together in a function definition, with *args collecting the positional arguments and **kwargs collecting the keyword arguments.<br>
+* It's important to note that ```*args``` and ```**kwargs``` can be used together in a function definition, with ```*args``` collecting the positional arguments and ```**kwargs``` collecting the keyword arguments.<br>
 
 27. What is the difference between instance, class, and static methods in Python?<br>
 Ans: In Python, there are three main types of methods: instance methods, class methods, and static methods. The key differences between them are:<br><br>
@@ -139,9 +139,76 @@ class Subclass(Superclass):
 class NewClass(OldClass):
     pass
 ```
+The key aspects of inheritance in Python are:
+* Hierarchical Relationships: The BaseClass is also known as the parent, super, or base class, while the DerivedClass is the child, sub, or derived class.
+* Code Reuse: Inheritance allows you to reuse code from the base class in the derived class, reducing duplication and making the code more maintainable.
+* Polymorphism: Derived classes can override or extend the methods of the base class, allowing for polymorphic behavior.
+* Access to Base Class Members: Derived classes can access and use the attributes and methods of the base class, unless they are marked as private (using the double underscore prefix, ```__```).<br>
+Code Example 2:
+```python
+class Animal:
+    def __init__(self, name):
+        self.name = name
 
-31. 
-32. How do you handle multi-threading in Python?
+    def speak(self):
+        print("The animal makes a sound.")
+
+class Dog(Animal):
+    def __init__(self, name):
+        super().__init__(name)
+
+    def speak(self):
+        print("The dog barks.")
+
+# Create instances and use inheritance
+animal = Animal("Generic Animal")
+animal.speak()  # Output: The animal makes a sound.
+
+dog = Dog("Buddy")
+dog.speak()  # Output: The dog barks.
+```
+* In this example, the Dog class inherits from the Animal class. The Dog class inherits the name attribute and the speak method from the Animal class. The Dog class also overrides the speak method to provide its own implementation.
+* Inheritance can also be multi-level, where a class can inherit from another derived class, and so on. Python also supports multiple inheritance, where a class can inherit from multiple base classes.
+* Inheritance is a powerful feature in Python that allows for code reuse, polymorphism, and the creation of hierarchical relationships between classes, making the code more organized and maintainable.<br>
+
+30. How do you handle multi-threading in Python?<br>
+Ans: In Python, you can handle multi-threading using the ```threading``` module. The ```threading``` module provides a way to create and manage threads, which are lightweight processes that can run concurrently within a single program.<br>
+Code Example:
+```python
+import threading
+import time
+
+def worker():
+    print(f"Worker started: {threading.current_thread().name}")
+    time.sleep(2)  # Simulating some work
+    print(f"Worker finished: {threading.current_thread().name}")
+
+# Create and start threads
+thread1 = threading.Thread(target=worker, name="Thread 1")
+thread2 = threading.Thread(target=worker, name="Thread 2")
+thread1.start()
+thread2.start()
+
+# Wait for threads to finish
+thread1.join()
+thread2.join()
+
+print("All threads have finished.")
+```
+* In this example, we define a ```worker``` function that simulates some work by sleeping for 2 seconds. We then create two threads, ```thread1``` and ```thread2```, and start them.
+* The ```threading.current_thread().name``` function is used to get the name of the current thread.
+* The ```join()``` method is used to wait for the threads to finish before the main program continues.
+* When you run this code, you should see output similar to the following:
+
+```
+Worker started: Thread 1
+Worker started: Thread 2
+Worker finished: Thread 1
+Worker finished: Thread 2
+All threads have finished.
+```
+
+
 33. What is the Global Interpreter Lock (GIL) in Python?
 34. What is a context manager in Python?
 35. How do you handle JSON data in Python?
