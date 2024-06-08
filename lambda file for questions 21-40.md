@@ -137,8 +137,30 @@ for i in range(5):
 class Car:
     pass
 ```
+<br>
 
-29. How do you iterate over a dictionary in Python?
+25. How do you iterate over a dictionary in Python? (Hint: Iterate means for loop)
+Ans: There are several ways to iterate over a dictionary in Python, depending on what you want to access from the dictionary:
+* Looping through keys: This method iterates over the dictionary keys directly. You can access each key within the loop.<br>
+Code Example:
+```python
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+
+for key in my_dict:
+  print(key)  # Output: name, age, city
+
+# Another example
+my_dict = {'apple': 2, 'banana': 3, 'cherry': 1}
+
+for key in my_dict:
+    print(key)
+# Sidenote: Double quotes are good for dictionaries because they allow nesting.
+
+person = {"name": "John 'Doe'", "quote": 'He said, "Hello, world!"'}
+```
+
+* 
+
 30. What is the purpose of *args and **kwargs in Python function definitions?
 31. What is the difference between instance, class, and static methods in
 Python?
