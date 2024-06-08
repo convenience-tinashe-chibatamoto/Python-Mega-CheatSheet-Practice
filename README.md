@@ -365,8 +365,21 @@ Here's a summary of key points about dictionaries:
 * Values: Values can be any data type - numbers, strings, lists, or even other dictionaries.
 * Mutable: You can change the dictionary after it's created by adding, removing, or modifying key-value pairs.
 * Ordered (Python 3.7+) : Unlike lists, the order in which items are added is not significant and cannot be relied upon when iterating through a dictionary.
-* You generally want to use a dictionary for storing Heterogeneous items, and a list when dealing with homogenous items.<br>
+* You generally want to use a dictionary for storing heterogeneous items, and a list when dealing with homogenous items.<br>
 Code example:
+```python
+person = {
+    "name": "John Doe",
+    "age": 35,
+    "city": "New York"
+# You can access the values in a dictionary using the corresponding keys, like this:
+
+print(person["name"])  # Output: "John Doe"
+print(person["age"])   # Output: 35
+}
+```
+Code Example 2:
+
 ```python
 # Create a dictionary to store information about a book
 book = {
@@ -389,8 +402,8 @@ book["characters"] = ["Arthur Dent", "Ford Prefect"]
 print(f"Some of the characters are: {book['characters']}")  # Output: Some of the characters are: ['Arthur Dent', 'Ford Prefect']
 
 ```
+<br>
 
-* 
 
 16. What is a Python generator?
 17. What is the difference between range() and xrange() in Python 2?
