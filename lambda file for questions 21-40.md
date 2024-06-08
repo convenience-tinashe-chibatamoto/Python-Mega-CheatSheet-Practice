@@ -159,7 +159,23 @@ for key in my_dict:
 person = {"name": "John 'Doe'", "quote": 'He said, "Hello, world!"'}
 ```
 
-* 
+* Looping through values: This method iterates over the dictionary values directly. You can access each value within the loop.<br>
+Code Example:
+```python
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+
+for value in my_dict.values():
+  print(value)  # Output: Alice, 30, New York
+```
+* Looping through key-value pairs: This method, using the ```items()``` method, iterates over both keys and values together as tuples. You can unpack the tuples within the loop to access both the key and value.<br>
+Code Example:
+```python
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+
+for key, value in my_dict.items():
+  print(f"{key}: {value}")  # Output: name: Alice, age: 30, city: New York
+```
+* Remember that iterating over dictionaries typically doesn't guarantee the order in which the elements are accessed (due to the hashing mechanism used).
 
 30. What is the purpose of *args and **kwargs in Python function definitions?
 31. What is the difference between instance, class, and static methods in
