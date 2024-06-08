@@ -345,7 +345,15 @@ except CustomError:
 <br>
 
 11. What is the difference between Python 2 and Python 3?
-Ans: 
+Ans: Python 2 and Python 3 are two major versions of the Python programming language with significant differences.
+* While Python 2 was the dominant version for a long time, Python 3 is now the standard and recommended choice for new projects. Here's a breakdown of some key differences:
+* Python 2: Uses a ```print``` statement as a built-in statement. Python 3: Uses print as a function ```print("Hello, world!")```.
+*  Division: Python 2: Integer division (```/```) returns an integer if both operands are integers (e.g., ```10 / 2``` evaluates to ```5```). Python 3: Division (```/```) always returns a ```float``` (e.g., ```10 / 2``` evaluates to ```5.0```). You can use ```//``` for integer division that leads to integer results.
+*  Major.minor.patch
+*  Python 3 has several performance improvements, such as more efficient memory management and faster string operations.
+*  Python 3 is the actively developed version with a larger and more active community. Python 2 reached its end-of-life in 2020 and is no longer officially supported. ((Python 2.7) was the last iteration, having been in use since 2010.
+*  Python 3 has a larger standard and third party library than Python 2
+
 
 14. What is a Python dictionary?
 15. What is a Python generator?
