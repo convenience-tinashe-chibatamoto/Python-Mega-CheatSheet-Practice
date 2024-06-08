@@ -175,12 +175,19 @@ my_dict = {"name": "Alice", "age": 30, "city": "New York"}
 for key, value in my_dict.items():
   print(f"{key}: {value}")  # Output: name: Alice, age: 30, city: New York
 
+
 # Another interesting example
 
 my_dict = {'apple': 2, 'banana': 3, 'cherry': 1}
 
 for item in my_dict.items():
     print(item)
+
+# Output:
+
+('apple', 2)
+('banana', 3)
+('cherry', 1)
 
 # In the last example, the output shows each item as a tuple containing the key and value.
 ```
