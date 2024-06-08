@@ -849,9 +849,7 @@ for item in my_dict.items():
 ```
 * Remember that iterating over dictionaries typically doesn't guarantee the order in which the elements are accessed (due to the hashing mechanism used).
 
-27. What is a Python set and how is it different from a list or tuple?
-28. What is the use of the pass statement in Python?
-29. How do you iterate over a dictionary in Python?
+
 30. What is the purpose of *args and **kwargs in Python function definitions?
 31. What is the difference between instance, class, and static methods in
 Python?
