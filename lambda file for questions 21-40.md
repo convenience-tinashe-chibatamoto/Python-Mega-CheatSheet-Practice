@@ -10,6 +10,33 @@ Ans: List comprehensions in Python are a powerful and concise way to create new 
 ```python
 [expression for item in iterable if condition]
 ```
+* The expression is the value that will be added to the new list for each iteration.
+* The item is the current element being processed from the iterable.
+* The if condition is an optional filter that determines whether the expression should be included in the new list.<br>
+Code Example 1:
+```python
+numbers = [1, 2, 3, 4, 5]
+squares = [number * number for number in numbers]  # squares will be [1, 4, 9, 16, 25]
+```
+* This example creates a new list ```squares``` containing the squares of each number in the original ```numbers``` list.<br>
+Code Example 2:
+```python
+# Let's say we want to create a list of squares of the numbers from 1 to 10. We can do this using a list comprehension:
+squares = [x**2 for x in range(1, 11)]
+print(squares)  # Output: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+# In this case, the expression is x**2, the item is x, and the iterable is range(1, 11).
+
+# List comprehensions can also include conditional logic. For example, to create a list of even numbers from 1 to 10:
+
+even_numbers = [x for x in range(1, 11) if x % 2 == 0]
+print(even_numbers)  # Output: [2, 4, 6, 8, 10]
+
+# Here, the if condition is x % 2 == 0, which checks if the current number x is even.
+```
+* Notice we didn't have to predefine ```squares``` in Example 2. We did it on the fly.
+* List comprehensions are a versatile tool for manipulating iterables in Python.
+
 
 26. Explain the difference between == and != operators in Python.
 27. What is a Python set and how is it different from a list or tuple?
