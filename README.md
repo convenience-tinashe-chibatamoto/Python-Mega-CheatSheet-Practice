@@ -273,7 +273,7 @@ Ans: Python handles exceptions using a combination of ```try```, ```except```, a
 a. ```try``` Block:
 * This block contains the code that might potentially raise an exception.
 * If no exceptions occur within the try block, the code executes normally, and the program continues.
-* They are are a way to handle errors and unexpected situations that may occur during the execution of a program. When an exception occurs, the normal flow of the program is interrupted, and the interpreter tries to find a suitable exception handler to deal with the problem.
+* Exceptions are are a way to handle errors and unexpected situations that may occur during the execution of a program. When an exception occurs, the normal flow of the program is interrupted, and the interpreter tries to find a suitable exception handler to deal with the problem. This allows you to write more robust and maintainable code.
 
 b. ```except``` Block:
 * This block defines how to handle exceptions.
@@ -301,19 +301,46 @@ except Exception:
 # Alternatively, also
 except (ValueError, TypeError):
   print("Invalid input type.")
-
 ```
 
-c. ```finally``` Block (Optional):
+c. The ```finally``` Block (Optional):
 * The ```finally``` block (if present) always executes after the ```try``` block.
 * This block is typically used to release resources or perform cleanup tasks, regardless of whether an exception occurred.
 * The finally block is used to ensure that certain code is executed, regardless of whether an exception was raised or not.
 * This is useful for cleaning up resources, such as closing a file or a database connection.
 Code Example:
 ```python
-
+try:
+    file = open("file.txt", "r")
+    content = file.read()
+    print(content)
+except FileNotFoundError:
+    print("File not found")
+finally:
+    file.close()
 ```
 
+Raising an exception deliberately:
+* The raise statement allows you to deliberately raise an exception:
+```python
+def check_age(age):
+  if age < 18:
+    raise ValueError("Age must be 18 or older.")
+```
+
+Custom Exceptions
+* You can define your own custom exception types by creating a new class that inherits from the Exception class or one of its subclasses.
+* This allows you to create more specific and meaningful exception types for your application.
+Code Example:
+```python
+class CustomError(Exception):
+    pass
+
+try:
+    # Some code that might raise a CustomError
+except CustomError:
+    print("A custom error occurred")
+```
 
 
 
