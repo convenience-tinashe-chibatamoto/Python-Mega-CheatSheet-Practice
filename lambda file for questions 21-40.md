@@ -121,21 +121,39 @@ print(f"Your age is: {age}")
 * In the example usage, the user is prompted to enter their birth year, month, and day, and the calculate_age function is called with these values. The resulting age is then printed to the console.
 * Remember to always use ```try```-```except``` when capturing user input or whenever there is user input.
 
-29. 
-30. Explain the concept of inheritance in Python.
-31. How do you handle multi-threading in Python?
-32. What is the Global Interpreter Lock (GIL) in Python?
-33. What is a context manager in Python?
-34. How do you handle JSON data in Python?
-35. Explain the differences between ＿getattr() and ＿getattribute()
+29. Explain the concept of inheritance in Python.<br>
+Ans: nheritance is a fundamental concept in object-oriented programming (OOP) that allows a new class to be based on an existing class.
+*  It facilitates code reusability and promotes code organization.
+*  The new classes are called subclasses and the existing classes are called superclasses.
+*  The new class inherits the attributes (variables) and methods from the existing class, and can also add new attributes and methods or modify the inherited ones.
+*  In Python, inheritance is achieved using the following syntax:
+ ```python
+class DerivedClass(BaseClass):
+    # class body
+
+# Which is the same as:
+
+class Subclass(Superclass):
+    # Subclass definition
+
+class NewClass(OldClass):
+    pass
+```
+
+31. 
+32. How do you handle multi-threading in Python?
+33. What is the Global Interpreter Lock (GIL) in Python?
+34. What is a context manager in Python?
+35. How do you handle JSON data in Python?
+36. Explain the differences between ＿getattr() and ＿getattribute()
 methods in Python.
-36. What are modules and packages in Python?
-37. What is the purpose of the ＿init＿ py file in Python packages?
-38. How do you handle date and time in Python?
-39. What is the purpose of _all… in Python?
-40. Explain the difference between os.path.join() and os.path.abspath() in
+37. What are modules and packages in Python?
+38. What is the purpose of the ＿init＿ py file in Python packages?
+39. How do you handle date and time in Python?
+40. What is the purpose of _all… in Python?
+41. Explain the difference between os.path.join() and os.path.abspath() in
 Python.
-41. What is the purpose of the zip() function in Python?
+42. What is the purpose of the zip() function in Python?
 40. How do you remove duplicates from a list in Python?
 41. 41. Explain the use of the map() function in Python.
 42. How do you reverse a string in Python?
