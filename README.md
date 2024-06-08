@@ -280,10 +280,11 @@ b. ```except``` Block:
 * Each ```except``` block specifies the exception type it can handle.
 * When an exception occurs within the ```try``` block, Python checks if the exception type matches any of the ```except``` blocks.
 * If a match is found, the code within the corresponding ```except``` block executes.
-* 
 
+c. ```finally``` Block (Optional):
 
-
+The ```finally``` block (if present) always executes after the ```try``` block.
+This block is typically used to release resources or perform cleanup tasks, regardless of whether an exception occurred.
 
 
 
