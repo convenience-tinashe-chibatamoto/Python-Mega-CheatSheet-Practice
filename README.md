@@ -458,7 +458,7 @@ Ans:
 * Python's memory management is handled automatically by the Python interpreter, using a combination of several techniques like object caching and garbage collection. Python takes care of memory management automatically. (unlike in other languages like C and C++)
 * This frees you, the programmer, from the burden of manually allocating and deallocating memory for your objects. Python's memory management system is designed to be efficient and user-friendly, allowing developers to focus on writing code without having to worry about the low-level details of memory management.<br>
 
-15. What is the difference between a shallow copy and a deep copy in Python?
+15. What is the difference between a shallow copy and a deep copy in Python?<br>
 Ans:
 Shallow Copy:
 * A shallow copy creates a new object that contains references to the same elements as the original object.
