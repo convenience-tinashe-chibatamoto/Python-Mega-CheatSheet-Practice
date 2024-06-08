@@ -638,12 +638,15 @@ This is a function from the module.
 * However, if you import the my_module in another Python script, the output will only be:
 ```
 This is a function from the module.
-The code inside the if __name__ == "__main__": block will not be executed when the script is imported as a module.
 ```
+* The code inside the if __name__ == "__main__": block will not be executed when the script is imported as a module.
 * This pattern is commonly used to include test code, example usage, or other functionality that should only be executed when the script is the main program, not when it's imported as a module.
 
+20. How do you install third-party packages in Python?
+Ans: 
 
-24. How do you install third-party packages in Python?
+
+21. 
 25. What are list comprehensions in Python?
 26. Explain the difference between == and != operators in Python.
 27. What is a Python set and how is it different from a list or tuple?
