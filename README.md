@@ -505,7 +505,14 @@ Deep copy after modification: [[10, 2], [3, 4]]
 ```
 As you can see, in the shallow copy example, modifying the first element of the inner list in the shallow copy also modifies the corresponding element in the original list. In the deep copy example, modifying the first element of the inner list in the deep copy does not affect the original list.
 
-20. Explain the purpose of the ＿str＿ and ＿repr＿ methods in Python.
+16. Explain the purpose of the ＿str＿ and ＿repr＿ methods in Python.<br>
+Ans: In Python, the``` __str__ ```and ```__repr__``` methods are special methods that control how objects are converted into strings. They might seem interchangeable at first, but they serve different purposes:
+
+* ```__str__()``` (string representation): This method is designed to return a human-readable representation of an object. It's meant to be informative for the user and provide a clear understanding of the object's content. For instance, it might display a date object in a user-friendly format like "2024-06-08". (it's for users)
+* ```__repr__()``` (representation): This method aims to return an unambiguous string representation that can be used to recreate the object. It's geared towards developers and debugging. (it's for developers)
+* You don't call these methods directly. Instead, Python uses them behind the scenes when you use functions like ```str()``` or ```print()```. However, it's good practice to define both ```__str__``` and ```__repr__``` in your custom classes to control how your objects are represented.
+
+17. 
 21. How do you handle file I/O in Python?
 22. What are lambda functions in Python?
 23. What is the purpose of the if ＿name＿ == "＿main＿": statement in Python?
