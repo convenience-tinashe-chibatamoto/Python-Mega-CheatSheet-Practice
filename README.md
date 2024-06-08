@@ -280,6 +280,14 @@ b. ```except``` Block:
 * Each ```except``` block specifies the exception type it can handle.
 * When an exception occurs within the ```try``` block, Python checks if the exception type matches any of the ```except``` blocks.
 * If a match is found, the code within the corresponding ```except``` block executes.
+Code Example:
+```python
+try:
+  result = 10 / 0
+except ZeroDivisionError:
+  print("Oops! Cannot divide by zero.")
+```
+In this example, the division by zero inside the try block will raise a ZeroDivisionError exception. Since we have an except block for this specific exception type, the program won't crash. Instead, the code within the except block will print an informative message.
 
 c. ```finally``` Block (Optional):
 
