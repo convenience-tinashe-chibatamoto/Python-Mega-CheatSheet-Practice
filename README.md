@@ -273,6 +273,7 @@ Ans: Python handles exceptions using a combination of ```try```, ```except```, a
 a. ```try``` Block:
 * This block contains the code that might potentially raise an exception.
 * If no exceptions occur within the try block, the code executes normally, and the program continues.
+* They are are a way to handle errors and unexpected situations that may occur during the execution of a program. When an exception occurs, the normal flow of the program is interrupted, and the interpreter tries to find a suitable exception handler to deal with the problem.
 
 b. ```except``` Block:
 * This block defines how to handle exceptions.
@@ -287,12 +288,31 @@ try:
 except ZeroDivisionError:
   print("Oops! Cannot divide by zero.")
 ```
-In this example, the division by zero inside the try block will raise a ZeroDivisionError exception. Since we have an except block for this specific exception type, the program won't crash. Instead, the code within the except block will print an informative message.
+In this example, the division by zero inside the try block will raise a ZeroDivisionError exception. Since we have an except block for this specific exception type, the program won't crash. Instead, the code within the except block will print an informative message.<br>
+Example 2: Handling Multiple Exceptions at once:
+```python
+try:
+    # Some code
+except ValueError:
+    print("A value error occurred")
+except Exception:
+    print("An unexpected error occurred")
+
+# Alternatively, also
+except (ValueError, TypeError):
+  print("Invalid input type.")
+
+```
 
 c. ```finally``` Block (Optional):
+* The ```finally``` block (if present) always executes after the ```try``` block.
+* This block is typically used to release resources or perform cleanup tasks, regardless of whether an exception occurred.
+* The finally block is used to ensure that certain code is executed, regardless of whether an exception was raised or not.
+* This is useful for cleaning up resources, such as closing a file or a database connection.
+Code Example:
+```python
 
-The ```finally``` block (if present) always executes after the ```try``` block.
-This block is typically used to release resources or perform cleanup tasks, regardless of whether an exception occurred.
+```
 
 
 
