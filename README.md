@@ -404,8 +404,32 @@ print(f"Some of the characters are: {book['characters']}")  # Output: Some of th
 ```
 <br>
 
+12. What is a Python generator?
+Ans: A Python generator is a special type of function that allows you to generate a sequence of values, one at a time, rather than creating and returning a complete list all at once. Generators are useful when you need to work with large or infinite sequences of data, as they can save memory by only generating the values that are needed, rather than storing the entire sequence in memory.
+* Here's a breakdown of key points about Python generators:
+* Function-like: Defined similarly to regular functions using def, but use the yield keyword instead of return.
+* Iterator generation: When called, the generator function doesn't return a single value but returns an iterator object.
+* Yielding values: The yield keyword is used within the function to generate values one at a time. The function remembers its state between yields, allowing you to pick up where it left off.
+* Memory efficient: Generators are memory-efficient because they don't create the entire sequence in memory at once. This is especially beneficial for large datasets.<br>
+Code Example 1:
+```python
+def square_numbers(n):
+  """
+  Generator that yields squares up to a given number n.
+  """
+  for i in range(n):
+    yield i * i  # Yield the square of the current number
 
-16. What is a Python generator?
+# Get an iterator object from the generator function
+numbers = square_numbers(5)
+
+# Iterate through the generated values using a for loop
+for num in numbers:
+  print(num)  # Output: 0 1 4 9 16
+
+```
+
+14. 
 17. What is the difference between range() and xrange() in Python 2?
 18. How does memory management work in Python?
 19. What is the difference between a shallow copy and a deep copy in Python?
