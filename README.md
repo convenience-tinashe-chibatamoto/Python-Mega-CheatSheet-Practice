@@ -270,17 +270,17 @@ print(new_list)  # Output: [1, 2, 3, 4]
 10. How are exceptions handled in Python?
 Ans: Python handles exceptions using a combination of ```try```, ```except```, and optionally, ```finally``` statements. Here's a breakdown of how they work together:
 
-a. ```try``` Block:
+a. The ```try``` Block:
 * This block contains the code that might potentially raise an exception.
 * If no exceptions occur within the try block, the code executes normally, and the program continues.
 * Exceptions are are a way to handle errors and unexpected situations that may occur during the execution of a program. When an exception occurs, the normal flow of the program is interrupted, and the interpreter tries to find a suitable exception handler to deal with the problem. This allows you to write more robust and maintainable code.
 
-b. ```except``` Block:
+b. The ```except``` Block:
 * This block defines how to handle exceptions.
 * You can have multiple ```except``` blocks to catch different types of exceptions.
 * Each ```except``` block specifies the exception type it can handle.
 * When an exception occurs within the ```try``` block, Python checks if the exception type matches any of the ```except``` blocks.
-* If a match is found, the code within the corresponding ```except``` block executes.
+* If a match is found, the code within the corresponding ```except``` block executes.<br>
 Code Example:
 ```python
 try:
@@ -307,7 +307,7 @@ c. The ```finally``` Block (Optional):
 * The ```finally``` block (if present) always executes after the ```try``` block.
 * This block is typically used to release resources or perform cleanup tasks, regardless of whether an exception occurred.
 * The finally block is used to ensure that certain code is executed, regardless of whether an exception was raised or not.
-* This is useful for cleaning up resources, such as closing a file or a database connection.
+* This is useful for cleaning up resources, such as closing a file or a database connection.<br>
 Code Example:
 ```python
 try:
@@ -330,7 +330,7 @@ def check_age(age):
 
 Custom Exceptions
 * You can define your own custom exception types by creating a new class that inherits from the Exception class or one of its subclasses.
-* This allows you to create more specific and meaningful exception types for your application.
+* This allows you to create more specific and meaningful exception types for your application.<br>
 Code Example:
 ```python
 class CustomError(Exception):
