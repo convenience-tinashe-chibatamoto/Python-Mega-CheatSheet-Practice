@@ -1,6 +1,13 @@
 
-21. 
-25. What are list comprehensions in Python?
+21. What are list comprehensions in Python?<br>
+Ans: List comprehensions in Python are a powerful and concise way to create new lists based on existing iterables (like lists, strings, tuples) in a single line of code. They offer a more compact alternative to traditional for loops with if statements.
+* They offer a more compact alternative to traditional for loops with if statements.
+* Here's a breakdown of what list comprehensions can do:
+* Create new lists: You can use them to generate new lists based on transformations or filtering of elements from an existing iterable.
+* Filter elements: You can include conditions (like if statements) to filter out elements you don't want in the new list.
+* Modify elements: You can apply expressions to modify elements during the creation of the new list.
+* The syntax for a list comprehension is: ```python [expression for item in iterable if condition]```
+
 26. Explain the difference between == and != operators in Python.
 27. What is a Python set and how is it different from a list or tuple?
 28. What is the use of the pass statement in Python?
