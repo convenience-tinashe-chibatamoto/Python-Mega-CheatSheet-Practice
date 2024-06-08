@@ -66,7 +66,21 @@ class Person:
     def get_population(cls):
         return cls.population
 ```
+Static Methods:
+* Static methods are defined within a class but do not take the instance (self) or the class (cls) as the first argument.
+* They are essentially functions that are logically related to the class, but do not need to access the class or instance attributes.
+* They are used when you want to group utility functions within a class, without the need to access the class or instance state.<br>
+Code Example:
+```python
+class Math:
+    @staticmethod
+    def add(a, b):
+        return a + b
 
+    @staticmethod
+    def multiply(a, b):
+        return a * b
+```
 
 
 
