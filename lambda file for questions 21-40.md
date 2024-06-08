@@ -1,6 +1,16 @@
 26. What is the purpose of *args and **kwargs in Python function definitions?<br>
 Ans: The ```*args``` and ```**kwargs``` are special syntaxes used in Python function definitions to handle a variable number of arguments. They provide flexibility to your functions in how they receive input.
-* The purpose of *args and **kwargs in Python function definitions is to allow for a variable number of arguments to be passed to the function.
+* The purpose of *args and **kwargs in Python function definitions is to allow for a variable number of arguments to be passed to the function.<br><br>
+ ```*args``` (arbitrary positional arguments):
+* Used when you don't know beforehand how many positional arguments might be passed to the function.
+* Captures all remaining positional arguments as a tuple within the function.<br><br>
+```**kwargs``` (arbitrary keyword arguments):
+* Used when you want to accept a variable number of keyword arguments.
+* Captures all remaining keyword arguments as a dictionary within the function.<br>
+Code example:
+```python
+
+```
 
 
 
