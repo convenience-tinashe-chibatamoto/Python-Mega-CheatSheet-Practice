@@ -404,13 +404,14 @@ print(f"Some of the characters are: {book['characters']}")  # Output: Some of th
 ```
 <br>
 
-12. What is a Python generator?
+12. What is a Python generator?<br>
 Ans: A Python generator is a special type of function that allows you to generate a sequence of values, one at a time, rather than creating and returning a complete list all at once. Generators are useful when you need to work with large or infinite sequences of data, as they can save memory by only generating the values that are needed, rather than storing the entire sequence in memory.
 * Here's a breakdown of key points about Python generators:
-* Function-like: Defined similarly to regular functions using def, but use the yield keyword instead of return.
-* Iterator generation: When called, the generator function doesn't return a single value but returns an iterator object.
-* Yielding values: The yield keyword is used within the function to generate values one at a time. The function remembers its state between yields, allowing you to pick up where it left off.
-* Memory efficient: Generators are memory-efficient because they don't create the entire sequence in memory at once. This is especially beneficial for large datasets.<br>
+* Function-like, but use ```yield``` Keyword: Defined similarly to regular functions using ```def```, but use the ```yield``` keyword instead of ```return```. 
+* Instead of using the ```return``` keyword to return a value, generators use the ```yield``` keyword. 
+* Lazy Evaluation: Generators use lazy evaluation, which means they only generate the next value in the sequence when it is requested, rather than generating the entire sequence upfront. This allows the generator function to pause its execution, save its state, and resume later when the next value is requested. The function remembers its state between yields, allowing you to pick up where it left off.
+* Memory Efficient: Generators are memory-efficient because they only store the state needed to generate the next value, rather than storing the entire sequence in memory. This is especially beneficial for large datasets.
+* Iterability: Generators are iterable, which means you can use them in ```for``` loops, list comprehensions, and other constructs that work with iterables.<br>
 Code Example 1:
 ```python
 def square_numbers(n):
@@ -428,9 +429,26 @@ for num in numbers:
   print(num)  # Output: 0 1 4 9 16
 
 ```
+Code Example 2:
+```python
+# An example of a simple generator function that generates the first n Fibonacci numbers:
 
-14. 
-17. What is the difference between range() and xrange() in Python 2?
+def fibonacci(n):
+    a, b = 0, 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+# You can use this generator like this:
+
+fib_gen = fibonacci(10)
+for num in fib_gen:
+    print(num)
+
+# This will output the first 10 Fibonacci numbers, one at a time, without storing the entire sequence in memory.
+```
+Generators are a powerful tool in Python, and they are often used in data processing, file I/O, and other applications where memory usage is a concern.<br>
+
+13. What is the difference between range() and xrange() in Python 2?(skip)
 18. How does memory management work in Python?
 19. What is the difference between a shallow copy and a deep copy in Python?
 20. Explain the purpose of the ＿str＿ and ＿repr＿ methods in Python.
