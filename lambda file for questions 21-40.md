@@ -81,10 +81,15 @@ class Math:
     def multiply(a, b):
         return a * b
 ```
+The main differences are:
+* Instance methods can access and modify the instance's attributes, while class methods and static methods cannot.
+* Class methods can access and modify the class's attributes, while instance methods and static methods cannot.
+* Static methods are independent of the class and instance, and they are used for utility functions that don't need to access the class or instance state.
 
 
-
-29. How do you create simple program that calculates someone’s age using datetime module?
+28. How do you create simple program that calculates someone’s age using datetime module?
+Ans: 
+29. 
 30. Explain the concept of inheritance in Python.
 31. How do you handle multi-threading in Python?
 32. What is the Global Interpreter Lock (GIL) in Python?
