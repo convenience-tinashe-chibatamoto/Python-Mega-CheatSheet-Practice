@@ -1,17 +1,36 @@
 26. What is the purpose of *args and **kwargs in Python function definitions?<br>
 Ans: The ```*args``` and ```**kwargs``` are special syntaxes used in Python function definitions to handle a variable number of arguments. They provide flexibility to your functions in how they receive input.
-* The purpose of *args and **kwargs in Python function definitions is to allow for a variable number of arguments to be passed to the function.<br><br>
+* The purpose of ```*args``` and ```**kwargs``` in Python function definitions is to allow for a variable number of arguments to be passed to the function.<br><br>
  ```*args``` (arbitrary positional arguments):
-* Used when you don't know beforehand how many positional arguments might be passed to the function.
-* Captures all remaining positional arguments as a tuple within the function.<br><br>
-```**kwargs``` (arbitrary keyword arguments):
-* Used when you want to accept a variable number of keyword arguments.
-* Captures all remaining keyword arguments as a dictionary within the function.<br>
-Code example:
+* This is useful when you don't know in advance how many arguments the function will need to accept.
+* The arguments are collected into a tuple, which can then be iterated over or accessed by index within the function..<br><br>
+Code Example:
 ```python
+def print_numbers(*args):
+    for arg in args:
+        print(arg)
 
+print_numbers(1, 2, 3)  # Output: 1 2 3
+print_numbers(4, 5, 6, 7, 8)  # Output: 4 5 6 7 8
 ```
 
+```**kwargs``` (arbitrary keyword arguments):
+* Used when you want to accept a varying number of keyword arguments.
+* The arguments are collected into a dictionary, where the keys are the argument names, and the values are the corresponding argument values.
+* This is useful when you want to provide the function with additional options or configuration settings.<br>
+Code example:
+```python
+def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_info(name="Alice", age=30, city="New York")
+# Output:
+# name: Alice
+# age: 30
+# city: New York
+```
+* It's important to note that *args and **kwargs can be used together in a function definition, with *args collecting the positional arguments and **kwargs collecting the keyword arguments.
 
 
 28. 
