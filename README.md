@@ -645,14 +645,14 @@ This is a function from the module.
 20. How do you install third-party packages in Python?
 Ans: The primary way to install third-party packages in Python is using a tool called ```pip```.
 * ```pip``` is a package installer that comes bundled with most recent versions of Python. It acts like a package manager for Python, allowing you to easily download and install software libraries from a repository of ready-made Python code called the Python Package Index (PyPI) (https://pypi.org/).
-* Here's how to install third-party packages using pip: Open your terminal or command prompt. Use the following command:
+* Here's how to install third-party packages using ```pip```: Open your terminal or command prompt. Use the following command:
 ```python
 pip install <package_name> #e.g. numpy, pandas, streamlit, etc etc
 ```
-Qn: What is the difference between ```!pip``` and ```pip```?
+Qn: What is the difference between ```!pip``` and ```pip```?<br>
 Ans: There is a subtle difference between !pip and pip in Python:
 * ```pip```: Works directly in the terminal or command prompt.
-* ```!pip```: Used within environments like Jupyter Notebooks where code and shell commands are intermixed. The exclamation mark (```!```)  indicates that the following command is intended for the shell or operating system rather than the Python interpreter.
+* ```!pip```: Used within environments like Jupyter Notebooks where code and shell commands are intermixed. The exclamation mark (```!```)  indicates that the following command is intended for the shell or operating system rather than the Python interpreter.<br>
 
 
 21. 
