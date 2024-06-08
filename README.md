@@ -459,7 +459,51 @@ Ans:
 * This frees you, the programmer, from the burden of manually allocating and deallocating memory for your objects. Python's memory management system is designed to be efficient and user-friendly, allowing developers to focus on writing code without having to worry about the low-level details of memory management.<br>
 
 15. What is the difference between a shallow copy and a deep copy in Python?
-Ans: 
+Ans:
+Shallow Copy:
+* A shallow copy creates a new object that contains references to the same elements as the original object.
+* When you modify an element in the new object, the corresponding element in the original object is also modified, and vice versa.
+* Shallow copies are created using the ```copy()``` method or the slice operator ```[:]```.
+* Shallow copies are useful when the elements in the object are immutable (e.g., numbers, strings, tuples), but can lead to unexpected behavior when the elements are mutable (e.g., lists, dictionaries, custom objects).
+
+Deep Copy:
+* A deep copy creates a new object with a completely independent copy of the data from the original object.
+* When you modify an element in the new object, the original object is not affected, and vice versa.
+* Deep copies are created using the ```deepcopy()``` function from the copy module.
+* Deep copies are useful when the elements in the object are mutable and you want to ensure that changes in the new object do not affect the original object.<br>
+Code Example:
+```python
+import copy
+
+# Shallow copy
+original_list = [[1, 2], [3, 4]]
+shallow_copy = copy.copy(original_list)
+
+print("Original list:", original_list)
+print("Shallow copy:", shallow_copy)
+
+shallow_copy[0][0] = 10
+print("Original list after modification:", original_list)
+print("Shallow copy after modification:", shallow_copy)
+
+# Deep copy
+original_list = [[1, 2], [3, 4]]
+deep_copy = copy.deepcopy(original_list)
+
+deep_copy[0][0] = 10
+print("Original list after modification:", original_list)
+print("Deep copy after modification:", deep_copy)
+
+# Output
+
+Original list: [[1, 2], [3, 4]]
+Shallow copy: [[1, 2], [3, 4]]
+Original list after modification: [[10, 2], [3, 4]]
+Shallow copy after modification: [[10, 2], [3, 4]]
+Original list after modification: [[1, 2], [3, 4]]
+Deep copy after modification: [[10, 2], [3, 4]]
+```
+As you can see, in the shallow copy example, modifying the first element of the inner list in the shallow copy also modifies the corresponding element in the original list. In the deep copy example, modifying the first element of the inner list in the deep copy does not affect the original list.
 
 20. Explain the purpose of the ＿str＿ and ＿repr＿ methods in Python.
 21. How do you handle file I/O in Python?
