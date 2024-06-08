@@ -32,24 +32,59 @@ print_info(name="Alice", age=30, city="New York")
 ```
 * It's important to note that *args and **kwargs can be used together in a function definition, with *args collecting the positional arguments and **kwargs collecting the keyword arguments.<br>
 
-27. What is the difference between instance, class, and static methods in Python?
+27. What is the difference between instance, class, and static methods in Python?<br>
+Ans: In Python, there are three main types of methods: instance methods, class methods, and static methods. The key differences between them are:<br><br>
+Instance Methods:
+* Instance methods are defined within a class and take the instance (```self```) as the first argument.
+* They can access and modify the instance's attributes (the object's state).
+* They are typically used to define the behavior of an object.<br>
+Code Example:
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print(f"Hello, my name is {self.name} and I'm {self.age} years old.")
+```
+Class Methods:
+* Class methods are defined within a class and take the class (```cls```) as the first argument.
+* They can access and modify the class's attributes, but they cannot access the instance's attributes directly.
+* They are typically used for operations that are related to the class itself, rather than a specific instance.<br>
+Code Example:
+```python
+class Person:
+    population = 0
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        Person.population += 1
+
+    @classmethod
+    def get_population(cls):
+        return cls.population
+```
 
 
-28. How do you create simple program that calculates someone’s age using datetime module?
-29. Explain the concept of inheritance in Python.
-30. How do you handle multi-threading in Python?
-31. What is the Global Interpreter Lock (GIL) in Python?
-32. What is a context manager in Python?
-33. How do you handle JSON data in Python?
-34. Explain the differences between ＿getattr() and ＿getattribute()
+
+
+29. How do you create simple program that calculates someone’s age using datetime module?
+30. Explain the concept of inheritance in Python.
+31. How do you handle multi-threading in Python?
+32. What is the Global Interpreter Lock (GIL) in Python?
+33. What is a context manager in Python?
+34. How do you handle JSON data in Python?
+35. Explain the differences between ＿getattr() and ＿getattribute()
 methods in Python.
-35. What are modules and packages in Python?
-36. What is the purpose of the ＿init＿ py file in Python packages?
-37. How do you handle date and time in Python?
-38. What is the purpose of _all… in Python?
-39. Explain the difference between os.path.join() and os.path.abspath() in
+36. What are modules and packages in Python?
+37. What is the purpose of the ＿init＿ py file in Python packages?
+38. How do you handle date and time in Python?
+39. What is the purpose of _all… in Python?
+40. Explain the difference between os.path.join() and os.path.abspath() in
 Python.
-40. What is the purpose of the zip() function in Python?
+41. What is the purpose of the zip() function in Python?
 40. How do you remove duplicates from a list in Python?
 41. 41. Explain the use of the map() function in Python.
 42. How do you reverse a string in Python?
