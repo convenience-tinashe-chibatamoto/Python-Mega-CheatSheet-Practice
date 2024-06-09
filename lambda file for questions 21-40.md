@@ -5,12 +5,69 @@ Ans: The ```__init__.py``` file in Python serves two main purposes for Python pa
 * Without ```__init__.py```, Python wouldn't treat the directory as a package and wouldn't be able to find modules within it.
 * In essence, the ```__init__.py``` file acts like an entry point for your Python package, defining its structure and potentially initializing its behavior(optional).
 
-37.  
-38. How do you handle date and time in Python?
-39. What is the purpose of _all… in Python?
-40. Explain the difference between os.path.join() and os.path.abspath() in
+37. How do you handle date and time in Python?
+Ans: In Python, you can handle date and time using the built-in ```datetime``` module. The ```datetime``` module provides several classes and functions to work with dates, times, time intervals and even time zones.<br><br>
+
+```datetime``` class:
+* The ```datetime``` class represents a specific date and time.
+* It has attributes like ```year```, ```month```, ```day```, ```hour```, ```minute```, ```second```, and ```microsecond```.
+* You can create a ```datetime``` object using the ```datetime()``` function.<br>
+
+```date``` class:
+* The ```date``` class represents a specific date without time information.
+* It has attributes like ```year```, ```month```, and ```day```.
+* You can create a ```date``` object using the ```date()``` function.
+
+```time``` class:
+* The ```time``` class represents a specific time without date information.
+* It has attributes like ```hour```, ```minute```, ```second```, and ```microsecond```.
+* You can create a ```time``` object using the ```time()``` function.<br>
+Code Example:
+```python
+import datetime
+
+# Get current date and time
+now = datetime.datetime.now()
+print("Current date and time:", now)  # Output: Current date and time: 2024-06-09 13:44:38.523456
+
+# Format date and time
+formatted_datetime = now.strftime("%Y-%m-%d %H:%M:%S")
+print("Formatted:", formatted_datetime)  # Output: Formatted: 2024-06-09 13:44:38
+
+# Get specific parts of the date/time
+year = now.year
+month = now.month
+day = now.day
+hour = now.hour
+minute = now.minute
+second = now.second
+
+print("Year:", year)
+print("Month:", month)
+print("Day:", day)
+
+# Create a date object from a string
+date_str = "2023-12-25"
+date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+print("Date object from string:", date_obj)
+
+# Time deltas
+one_day = datetime.timedelta(days=1)
+future_date = now + one_day
+print("Tomorrow:", future_date)
+```
+This code showcases:
+* Getting current date and time with ```datetime.now()```.
+* Formatting the datetime object using ```strftime()```.
+* Extracting individual components like year, month, etc.
+* Parsing a date string into a ```datetime``` object with ```datetime.strptime()```.
+* Creating time deltas and adding them to dates.
+
+39. 
+40. What is the purpose of _all… in Python?
+41. Explain the difference between os.path.join() and os.path.abspath() in
 Python.
-41. What is the purpose of the zip() function in Python?
+42. What is the purpose of the zip() function in Python?
 40. How do you remove duplicates from a list in Python?
 41. 41. Explain the use of the map() function in Python.
 42. How do you reverse a string in Python?
