@@ -175,9 +175,19 @@ Key Points:
 * In some cases, using dot notation (e.g., ```person.age = 30```) might be more readable for setting existing attributes. However, ```setattr``` provides more flexibility for dynamic scenarios.
 
 35. What are modules and packages in Python?<br>
-Ans:
+Ans: In Python, modules and packages are fundamental building blocks for organizing your code. They promote code reusability and maintainability.<br>
+Modules:
+* A module is a single Python file (```.py```) containing functions, classes, variables, and executable statements.
+* You can import modules into other Python files to use the functionalities they provide.
+* Importing a module makes its contents available in your current namespace.<br>
 
-36. 
+Packages:
+* A package is a collection of related modules organized into a directory structure.
+* A directory containing a special file named ```__init__.py``` (can be empty) is considered a package.
+* Packages allow for hierarchical organization using dot notation (e.g., ```package.module.function```).
+
+
+37. 
 38. What is the purpose of the ＿init＿ py file in Python packages?
 39. How do you handle date and time in Python?
 40. What is the purpose of _all… in Python?
