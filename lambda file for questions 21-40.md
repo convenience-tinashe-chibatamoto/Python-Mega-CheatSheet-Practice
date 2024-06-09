@@ -1,7 +1,13 @@
 
 
 31. What is the Global Interpreter Lock (GIL) in Python?
-32. What is a context manager in Python?
+Ans: The Global Interpreter Lock (GIL) is a safety mechanism in the most common implementation of Python, called CPython.
+* The GIL is a mutex (mutual exclusion) lock that allows only one Python thread to execute at a time, even on multi-core or multi-CPU systems.
+* This ensures thread safety and simplifies memory management in Python by making it thread-safe. Multiple threads won't interfere with each other when accessing or modifying Python objects.
+
+
+33. 
+34. What is a context manager in Python?
 35. How do you handle JSON data in Python?
 36. Explain the differences between ＿getattr() and ＿getattribute()
 methods in Python.
