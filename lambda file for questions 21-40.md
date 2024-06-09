@@ -87,11 +87,50 @@ _private_function()  # This will raise an error, as _private_function is not imp
 ```
 * In this example, when you use from ```my_module import *```, only the ```public_function``` will be imported, and ```_private_function``` will be kept private.
 * Remember: Using ```__all__``` is optional, but it's a good practice to explicitly control what gets imported, especially for larger modules or packages.
+<br>
 
-40. 
-41. Explain the difference between os.path.join() and os.path.abspath() in
-Python.
-42. What is the purpose of the zip() function in Python?
+39. Explain the difference between ```os.path.join()``` and ```os.path.abspath()``` in Python.
+Ans: In Python, the ```os.path``` module provides several functions for working with file paths. Two of the commonly used functions are ```os.path.join()``` and ```os.path.abspath()```, and they serve different purposes:
+
+```os.path.join():```
+* The ```os.path.join()``` function is used to construct a path from one or more path components intelligently.
+* It takes one or more path components as arguments and returns a single path string.
+* The function handles the appropriate path separators (e.g., forward slashes on Unix-like systems, backslashes on Windows) based on the operating system.
+* It also handles the case where one of the components is an absolute path, in which case it will discard the previous path components and start a new path.<br>
+Code Example:
+```python
+import os
+
+path1 = "dir1"
+path2 = "dir2"
+path3 = "file.txt"
+full_path = os.path.join(path1, path2, path3)
+print(full_path)  # Output: dir1/dir2/file.txt
+```
+```os.path.abspath():```
+* The ```os.path.abspath()``` function is used to get the absolute path of a file or directory.
+* It takes a single path component as an argument and returns the absolute path of that component.
+* The absolute path is the full path from the root directory of the file system.
+* The function resolves any symbolic links and handles the appropriate path separators based on the operating system.<br>
+Code Example:
+```python
+import os
+
+current_dir = os.getcwd()
+relative_path = "dir1/file.txt"
+absolute_path = os.path.abspath(relative_path)
+print(current_dir)  # Output: /home/user/current/directory
+print(absolute_path)  # Output: /home/user/current/directory/dir1/file.txt
+```
+In essence:
+*  ```os.path.join``` is used to construct a path from separate path components in a safe and platform-independent way.
+*  ```os.path.abspath``` is used to convert a relative path to its absolute path, ensuring you're working with the complete path to the file or directory.<br>
+
+
+40. What is the purpose of the zip() function in Python?<br>
+Ans:
+
+41. 
 40. How do you remove duplicates from a list in Python?
 41. 41. Explain the use of the map() function in Python.
 42. How do you reverse a string in Python?
