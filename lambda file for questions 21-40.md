@@ -178,9 +178,26 @@ zipped_data = zip(names, person_info.values())
 print(list(zipped_data))
 # Output: [('Alice', 25), ('Bob', 'New York'), ('Charlie', 'York')]   # Note that the output is a list of tuples
 ```
+* If you want to include the keys of the dictionary in the resulting tuples, you can use the items() method of the dictionary instead of values():<br>
+Code Example:
+```python
+names = ['Alice', 'Bob', 'Charlie']
+person_info = {
+    'name': 'Alice',
+    'age': 25,
+    'city': 'New York'
+}
+
+zipped_data = zip(names, person_info.items())
+print(list(zipped_data))
+# Output: [('Alice', ('name', 'Alice')), ('Bob', ('age', 25)), ('Charlie', ('city', 'New York'))]
+
+# In this case, the resulting tuples contain the element from the names list and a tuple with the key-value pair from the person_info dictionary.
+```
+
+* The ```zip()``` function is a versatile tool that allows you to work with different types of iterables, including lists and dictionaries, to create new data structures or perform various data processing tasks.
 
 
-When you zip a list and a dictionary together, the zip() function will pair the elements from the list with the keys of the dictionary.
 
 41. 
 40. How do you remove duplicates from a list in Python?
