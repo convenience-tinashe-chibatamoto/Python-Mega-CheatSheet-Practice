@@ -6,11 +6,23 @@ Ans: The Global Interpreter Lock (GIL) is a safety mechanism in the most common 
 * This ensures thread safety and simplifies memory management in Python by making it thread-safe. Multiple threads won't interfere with each other when accessing or modifying Python objects.
 * The main purpose of the GIL is to protect the interpreter's internal data structures from being corrupted by multiple threads and it does this by ensuring that only one thread can execute Python bytecode at a time, effectively serializing the execution of Python code.
 * However, this limits the ability of Python programs to take advantage of multiple CPU cores or processors, as only one thread can execute Python bytecode at a time. This can be a problem for CPU-bound tasks, where the program could potentially benefit from parallel execution.
-* To mitigate the limitations of the GIL, Python provides several alternatives for achieving concurrency, such as using the ```multiprocessing``` module, which allows you to create separate Python processes that can run in parallel, each with its own GIL.
+* To mitigate the limitations of the GIL, Python provides several alternatives for achieving concurrency, such as using the ```multiprocessing``` module, which allows you to create separate Python processes that can run in parallel, each with its own GIL.<br>
+
+32.  What is a context manager in Python?
+Ans: A context manager in Python is a way to automate the management of resources with the help of the ```with``` statement.
+* It is a way to ensure that resources are properly acquired and released, even in the face of exceptions or other control flow changes. This helps prevent resource leaks and errors.
+* The context manager pattern is particularly useful when working with resources that need to be properly acquired and released, such as File objects, Database connections, Locks, Network sockets, Graphical user interface (GUI) elements.<br>
+Code Example:
+```python
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)
+```
 
 
-33. 
-34. What is a context manager in Python?
+
+
+34. 
 35. How do you handle JSON data in Python?
 36. Explain the differences between ＿getattr() and ＿getattribute()
 methods in Python.
