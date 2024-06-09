@@ -18,10 +18,7 @@ with open('example.txt', 'r') as file:
     content = file.read()
     print(content)
 ```
-
-
-
-
+* Note that you can also create your own custom context managers by defining a class with ``` __enter__()``` and ```__exit__()``` methods, or by using the ```@contextmanager``` decorator from the ```contextlib``` module.
 34. 
 35. How do you handle JSON data in Python?
 36. Explain the differences between ＿getattr() and ＿getattribute()
