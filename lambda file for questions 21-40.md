@@ -56,11 +56,49 @@ print(squared_numbers)  # Output: [1, 4, 9, 16]
 * In this example, the ```square``` function is applied to each number in the ```numbers``` list, resulting in a new list containing the squares.
 * ```map()``` doesn't calculate all results at once. It generates them on-demand, making it memory-efficient for large iterables.
 * list comprehensions can sometimes achieve the same result with a more readable syntax, especially for simpler transformations.
+<br>
+
+43. How do you reverse a string in Python?<br>
+Ans: There are several ways to reverse a string in Python. Here are two methods I like, among the so many:<br><br>
+
+Slicing with a Step of ```-1``` (Efficient and Concise):
+* Python strings are immutable, meaning you cannot modify a string in-place. Reversing a string creates a new string.
+* Slicing with a step of ```-1``` efficiently reverses the string.<br>
+Code Example:
+```python
+text = "Hello, world!"
+reversed_text = text[::-1]
+print(reversed_text)  # Output: !dlrow ,olleH
+```
+
+Using the ```reversed()``` Function:
+* The ```reversed()``` function returns an iterator that iterates over the elements of the string in reverse order. We then use the ```join()``` function to convert the iterator back into a string.<br>
+Code Example:
+```python
+my_string = "Hello, World!"
+reversed_string = "".join(reversed(my_string))
+print(reversed_string)  # Output: "!dlroW ,olleH"
+```
+<br>
+
+44. What is the purpose of the re module in Python?
+Ans: The ```re``` module in Python is used for working with regular expressions. Regular expressions are a powerful way to perform pattern matching and text manipulation tasks.
+* This is useful for tasks like: validating user input (e.g., email addresses, phone numbers), extracting specific data from text (e.g., dates, prices), finding all occurrences of a pattern in a string, etc etc<br>
+Code Example:
+```python
+import re
+
+text = "The quick brown fox jumps over the lazy dog."
+pattern = r"\b\w+\b"  # Match whole words
+
+matches = re.findall(pattern, text)
+print(matches)  # Output: ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
+```
+* In this example, the ```re.findall()``` function is used to find all the whole words in the given text, using the regular expression pattern ```\b\w+\b```. This pattern is commonly used when you want to match whole words, rather than just substrings that happen to contain the same characters as a word. It's a useful tool for tasks like word counting, text extraction, and more. Here's a breakdown of how this pattern works: The first ```\b``` ensures that the match starts at the beginning of a word. The ```\w+``` matches one or more word characters, capturing the actual word. The second ```\b``` ensures that the match ends at the end of the word, and the word is not part of a larger word.
+* The ```re``` module provides a wide range of functions and methods for working with regular expressions, such as ```re.search()```, ```re.sub()```, ```re.split()```, and more. It also supports advanced features like named capture groups, lookahead/lookbehind assertions, and recursive patterns.
 
 
-44. 
-42. How do you reverse a string in Python?
-43. What is the purpose of the re module in Python?
+<br
 44. How do you create and use virtual environments in Python?
 45. Explain the difference between ＿iter＿() and ＿next＿() methods iterators. in Python
 46. What is the purpose of the collections module in Python?
