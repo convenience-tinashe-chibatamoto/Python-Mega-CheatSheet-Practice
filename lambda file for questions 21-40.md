@@ -63,8 +63,32 @@ This code showcases:
 * Parsing a date string into a ```datetime``` object with ```datetime.strptime()```.
 * Creating time deltas and adding them to dates.
 
-39. 
-40. What is the purpose of _all… in Python?
+38. What is the purpose of __all__ in Python?<br>
+Ans: In Python, the ```__all__``` variable is used to control which names are imported when using the ```from module import *``` syntax. It is a list of strings that defines the public interface of a module.
+* The ```from module import *``` syntax (also called a wildcard syntax) imports all public names (functions, variables, classes) from the module into your current namespace.
+* Wildcard imports can be problematic if a module contains many internal helper functions or variables not intended for external use. Importing everything can clutter your namespace and potentially lead to naming conflicts. This is where the ```__all__``` variable comes to the rescue.
+* It helps prevent naming conflicts, improves documentation and allows selective imports when wildcard imports are used. Python will use selective imports under the hood when ```__all__``` is used.<br>
+Code Example:
+```python
+# my_module.py
+def public_function():
+    print("This is a public function.")
+
+def _private_function():
+    print("This is a private function.")
+
+__all__ = ["public_function"]
+
+# In the workspace where the import was performed:
+
+from my_module import *
+public_function()  # This will work
+_private_function()  # This will raise an error, as _private_function is not imported
+```
+* In this example, when you use from ```my_module import *```, only the ```public_function``` will be imported, and ```_private_function``` will be kept private.
+* Remember: Using ```__all__``` is optional, but it's a good practice to explicitly control what gets imported, especially for larger modules or packages.
+
+40. 
 41. Explain the difference between os.path.join() and os.path.abspath() in
 Python.
 42. What is the purpose of the zip() function in Python?
