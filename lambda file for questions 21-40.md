@@ -1,14 +1,16 @@
 
+36.  What is the purpose of the ＿init＿ py file in Python packages?
+Ans: The ```__init__.py``` file in Python serves two main purposes for Python packages:
+* Marks a directory as a package:  A directory containing an ```__init__.py``` file is recognized by Python as a package. This allows you to organize your code into modules and sub-packages within the directory structure.
+* Without ```__init__.py```, Python wouldn't treat the directory as a package and wouldn't be able to find modules within it.
+* In essence, the ```__init__.py``` file acts like an entry point for your Python package, defining its structure and potentially initializing its behavior(optional).
 
-
-
-36.  
-38. What is the purpose of the ＿init＿ py file in Python packages?
-39. How do you handle date and time in Python?
-40. What is the purpose of _all… in Python?
-41. Explain the difference between os.path.join() and os.path.abspath() in
+37.  
+38. How do you handle date and time in Python?
+39. What is the purpose of _all… in Python?
+40. Explain the difference between os.path.join() and os.path.abspath() in
 Python.
-42. What is the purpose of the zip() function in Python?
+41. What is the purpose of the zip() function in Python?
 40. How do you remove duplicates from a list in Python?
 41. 41. Explain the use of the map() function in Python.
 42. How do you reverse a string in Python?
