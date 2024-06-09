@@ -162,7 +162,27 @@ for name, color in zipped:
 * The ```zip()``` is a powerful function for iterating over elements from multiple sequences in a synchronized manner
 * It is commonly used in combination with other Python functions, such as ```map()```, ```filter()```, and list comprehensions, to perform various data processing tasks.
 
-42. 
+Qn: Is it possible to use zip where one sequence is a list and the other one is a dictionary?<br>
+Ans: Yes, it is possible to use the zip() function where one sequence is a list and the other one is a dictionary. The zip() function can work with any iterable, including lists and dictionaries.
+* When you zip a list and a dictionary together, the ```zip()``` function will pair the elements from the list with the keys of the dictionary.<br>
+Code Example:
+```python
+names = ['Alice', 'Bob', 'Charlie']
+person_info = {
+    'name': 'Alice',
+    'age': 25,
+    'city': 'New York'
+}
+
+zipped_data = zip(names, person_info.values())
+print(list(zipped_data))
+# Output: [('Alice', 25), ('Bob', 'New York'), ('Charlie', 'York')]   # Note that the output is a list of tuples
+```
+
+
+When you zip a list and a dictionary together, the zip() function will pair the elements from the list with the keys of the dictionary.
+
+41. 
 40. How do you remove duplicates from a list in Python?
 41. 41. Explain the use of the map() function in Python.
 42. How do you reverse a string in Python?
