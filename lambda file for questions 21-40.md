@@ -148,9 +148,36 @@ The main differences between ```__getattr__()``` and ```__getattribute__()``` ar
 * Scope of control:``` __getattribute__()``` provides more control over the entire attribute access mechanism, while ```__getattr__()``` is limited to handling missing attributes.
 * In general, ```__getattr__()``` is more commonly used, as it is simpler to implement and less prone to infinite recursion. ```__getattribute__()``` is more powerful but requires more careful implementation to avoid issues.
 
-Qn: What about setAttribute, what is it? What does it do?
+Qn: What about setAttribute, what is it? What does it do?<br>
+AnS: In Python, ```setattr``` is not a dunder method like ```__getattr__``` and ```__getattribute__```, but a built-in function used to set the value of an attribute on an object. It provides a dynamic way to modify existing attributes or even create new ones on an object at runtime.
+* Syntax: ```setattr(object, name, value)``` where ```object```: is the object instance on which you want to set the attribute, ```name```: is the name of the attribute (as a string), ```value```: is the value you want to assign to the attribute.<br>
+Code Example:
+```python
+class Person:
+  def __init__(self, name):
+    self.name = name
 
-37. What are modules and packages in Python?
+person = Person("Bob")
+
+# Modify existing attribute
+setattr(person, "age", 30)
+
+# Create a new attribute
+setattr(person, "occupation", "Software Engineer")
+
+print(person.name)  # Output: Bob
+print(person.age)    # Output: 30
+print(person.occupation)  # Output: Software Engineer
+```
+Key Points:
+* ```setattr``` is a versatile tool for dynamic attribute manipulation.
+* It's important to use it cautiously, as modifying attributes can potentially have unintended consequences on object behavior.
+* In some cases, using dot notation (e.g., ```person.age = 30```) might be more readable for setting existing attributes. However, ```setattr``` provides more flexibility for dynamic scenarios.
+
+35. What are modules and packages in Python?<br>
+Ans:
+
+36. 
 38. What is the purpose of the ＿init＿ py file in Python packages?
 39. How do you handle date and time in Python?
 40. What is the purpose of _all… in Python?
