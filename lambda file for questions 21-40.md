@@ -98,7 +98,7 @@ print(matches)  # Output: ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the
 * The ```re``` module provides a wide range of functions and methods for working with regular expressions, such as ```re.search()```, ```re.sub()```, ```re.split()```, and more. It also supports advanced features like named capture groups, lookahead/lookbehind assertions, and recursive patterns.
 
 
-<br
+<br>
 44. How do you create and use virtual environments in Python?
 45. Explain the difference between ＿iter＿() and ＿next＿() methods iterators. in Python
 46. What is the purpose of the collections module in Python?
