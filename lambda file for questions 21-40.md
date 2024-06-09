@@ -95,11 +95,19 @@ matches = re.findall(pattern, text)
 print(matches)  # Output: ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
 ```
 * In this example, the ```re.findall()``` function is used to find all the whole words in the given text, using the regular expression pattern ```\b\w+\b```. This pattern is commonly used when you want to match whole words, rather than just substrings that happen to contain the same characters as a word. It's a useful tool for tasks like word counting, text extraction, and more. Here's a breakdown of how this pattern works: The first ```\b``` ensures that the match starts at the beginning of a word. The ```\w+``` matches one or more word characters, capturing the actual word. The second ```\b``` ensures that the match ends at the end of the word, and the word is not part of a larger word.
-* The ```re``` module provides a wide range of functions and methods for working with regular expressions, such as ```re.search()```, ```re.sub()```, ```re.split()```, and more. It also supports advanced features like named capture groups, lookahead/lookbehind assertions, and recursive patterns.
+* The ```re``` module provides a wide range of functions and methods for working with regular expressions, such as ```re.search()```, ```re.sub()```, ```re.split()```, and more. It also supports advanced features like named capture groups, lookahead/lookbehind assertions, and recursive patterns. <br>
+
+45. How do you create and use virtual environments in Python?<br>
+Ans: In Python virtual environments are a way to create isolated Python environments, each with their own set of installed packages and dependencies. This is useful for managing project-specific dependencies and avoiding conflicts between different projects on the same system.
+* you can create and use virtual environments in Python by installing the ```venv``` module.
+* The ```venv``` module is part of the Python standard library and is used to create virtual environments.
+* If you're using Python 3.3 or later, the venv module is already installed and you can see it when you open a terminal or command prompt.
+* If you're using an older version of Python, you may need to install the ```virtualenv``` package using ```pip install virtualenv```.
 
 
 <br>
-44. How do you create and use virtual environments in Python?
+
+46. 
 45. Explain the difference between ＿iter＿() and ＿next＿() methods iterators. in Python
 46. What is the purpose of the collections module in Python?
 47. How do you concatenate strings in Python?
