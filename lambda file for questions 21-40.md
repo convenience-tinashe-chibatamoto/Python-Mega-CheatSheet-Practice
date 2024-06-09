@@ -1,6 +1,6 @@
 
 
-31. What is the Global Interpreter Lock (GIL) in Python?
+31. What is the Global Interpreter Lock (GIL) in Python?<br>
 Ans: The Global Interpreter Lock (GIL) is a safety mechanism in the most common implementation of Python, called CPython.
 * The GIL is a mutex (mutual exclusion) lock that allows only one Python thread to execute at a time, even on multi-core or multi-CPU systems.
 * This ensures thread safety and simplifies memory management in Python by making it thread-safe. Multiple threads won't interfere with each other when accessing or modifying Python objects.
@@ -8,7 +8,7 @@ Ans: The Global Interpreter Lock (GIL) is a safety mechanism in the most common 
 * However, this limits the ability of Python programs to take advantage of multiple CPU cores or processors, as only one thread can execute Python bytecode at a time. This can be a problem for CPU-bound tasks, where the program could potentially benefit from parallel execution.
 * To mitigate the limitations of the GIL, Python provides several alternatives for achieving concurrency, such as using the ```multiprocessing``` module, which allows you to create separate Python processes that can run in parallel, each with its own GIL.<br>
 
-32.  What is a context manager in Python?
+32.  What is a context manager in Python?<br>
 Ans: A context manager in Python is a way to automate the management of resources with the help of the ```with``` statement.
 * It is a way to ensure that resources are properly acquired and released, even in the face of exceptions or other control flow changes. This helps prevent resource leaks and errors.
 * The context manager pattern is particularly useful when working with resources that need to be properly acquired and released, such as File objects, Database connections, Locks, Network sockets, Graphical user interface (GUI) elements.<br>
@@ -18,11 +18,60 @@ with open('example.txt', 'r') as file:
     content = file.read()
     print(content)
 ```
-* Note that you can also create your own custom context managers by defining a class with ``` __enter__()``` and ```__exit__()``` methods, or by using the ```@contextmanager``` decorator from the ```contextlib``` module.
-34. 
-35. How do you handle JSON data in Python?
-36. Explain the differences between ＿getattr() and ＿getattribute()
-methods in Python.
+* Note that you can also create your own custom context managers by defining a class with ``` __enter__()``` and ```__exit__()``` methods, or by using the ```@contextmanager``` decorator from the ```contextlib``` module.<br>
+
+33. How do you handle JSON data in Python?<br>
+Ans: In Python, handling JSON (JavaScript Object Notation) data is a straightforward process, thanks to the built-in ```json``` module. The json module provides functions for encoding and decoding JSON data.
+* Parsing JSON data: Use the ```json.loads()``` function to parse a JSON-formatted string into a Python dictionary or list.
+* Serializing Python data to JSON: Use the ```json.dumps()``` function to convert a Python dictionary or list into a JSON-formatted string.
+Code Example:
+```python
+#Parsing JSON data
+
+import json
+
+json_data = '{"name": "John Doe", "age": 30, "city": "New York"}'
+python_data = json.loads(json_data)
+print(python_data)
+# Output: {'name': 'John Doe', 'age': 30, 'city': 'New York'}
+
+# =====================================
+
+#Serializing Python data to JSON
+
+import json
+
+python_data = {"name": "John Doe", "age": 30, "city": "New York"}
+json_data = json.dumps(python_data)
+print(json_data)
+# Output: '{"name": "John Doe", "age": 30, "city": "New York"}'
+```
+* Reading and writing JSON files: Use the ```json.load()``` function to read JSON data from a file. Use the ```json.dump()``` function to write Python data to a JSON file.<br>
+Code Example:
+```python
+import json
+
+# Reading from a JSON file
+with open("data.json", "r") as file:
+    data = json.load(file)
+    print(data)
+
+# Writing to a JSON file
+python_data = {"name": "John Doe", "age": 30, "city": "New York"}
+with open("data.json", "w") as file:
+    json.dump(python_data, file)
+```
+* The ```json``` module in Python provides a straightforward and efficient way to work with JSON data, allowing you to easily convert between Python data structures and their JSON representations.
+
+Qn: Is it json.loads() or json.load()?
+Ans: You'll use  ```json.loads()```  when you're dealing with JSON data stored in a string format. In contrast,  ```json.load()```  is used specifically for reading JSON data from a file.
+
+
+  
+34. Explain the differences between ＿getattr() and ＿getattribute() methods in Python.
+
+
+
 37. What are modules and packages in Python?
 38. What is the purpose of the ＿init＿ py file in Python packages?
 39. How do you handle date and time in Python?
