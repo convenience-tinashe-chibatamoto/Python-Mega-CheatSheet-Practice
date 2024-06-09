@@ -65,12 +65,90 @@ with open("data.json", "w") as file:
 
 Qn: Is it json.loads() or json.load()?
 Ans: You'll use  ```json.loads()```  when you're dealing with JSON data stored in a string format. In contrast,  ```json.load()```  is used specifically for reading JSON data from a file.
+* If you have JSON data as a string (e.g., received from an API or user input), use ```json.loads()```. If you have JSON data stored in a file, use ```json.load()```.
 
 
   
-34. Explain the differences between ＿getattr() and ＿getattribute() methods in Python.
+34. Explain the differences between ＿getattr() and ＿getattribute() methods in Python.<br>
+Ans: In Python, the __getattr__() and __getattribute__() methods are both used to customize attribute access, but they have some key differences:<br>
+```getattr(self, name):```
+* The ```__getattr__()``` method is called when an attribute is not found in an object's instance dictionary or class.
+* It is a fallback method that is invoked when the normal attribute lookup process fails.
+* The ```__getattr__()``` method is only called for attributes that are not found, not for attributes that are found but have a value of None.
+* It is useful for providing a custom behavior for missing attributes, such as returning a default value or raising a specific exception.
+* Both ```__getattr__()``` and ```__getattribute__()``` are dunder methods (methods whose name starts and ends with double underscores) in Python that deal with attribute access.
 
+```getattribute(self, name):```
+* The ```__getattribute__()``` method is called for every attribute access, regardless of whether the attribute exists or not.
+* It is the first method called during the attribute lookup process, and it can be used to control the entire attribute access mechanism.
+* The ```__getattribute__()``` method can lead to infinite recursion if not implemented carefully, as it is called for every attribute access, including the access to the ```__getattribute__()``` method itself.
+* It is generally more powerful than ```__getattr__()```, but it requires more care in implementation to avoid infinite recursion.<br><br><br>
+Code Example ```__getattr__:```
+```python
+class MyClass:
+    def __init__(self, data):
+        self.data = data
 
+    def __getattr__(self, name):
+        if name == 'upper_data':
+            return self.data.upper()
+        else:
+            raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+
+obj = MyClass('hello')
+print(obj.upper_data)  # Output: HELLO
+print(obj.non_existent_attr)  # Raises AttributeError
+```
+
+Code Example: ```__getattribute__()```
+```python
+class MyClass:
+    def __init__(self, data):
+        self.data = data
+
+    def __getattribute__(self, name):
+        if name == 'upper_data':
+            return self.data.upper()
+        else:
+            return super().__getattribute__(name)
+
+obj = MyClass('hello')
+print(obj.upper_data)  # Output: HELLO
+print(obj.data)  # Output: hello
+```
+Code Example incorporating both at once:
+```python
+class MyClass:
+  def __init__(self):
+    self.name = "Alice"
+
+  def __getattribute__(self, attr):
+    print(f"Accessing attribute: {attr}")
+    return object.__getattribute__(self, attr)  # Fallback to normal lookup
+
+  def __getattr__(self, attr):
+    print(f"Attribute '{attr}' not found")
+    return None  # Return None for missing attributes
+
+obj = MyClass()
+
+print(obj.name)  # Output: Accessing attribute: name
+                  #        name
+print(obj.age)  # Output: Accessing attribute: age
+                  #        Attribute 'age' not found
+                  #        None
+```
+In this example:
+* ```__getattribute__()``` prints a message whenever an attribute is accessed and then falls back to normal lookup using object. ```__getattribute__()```.
+* ```__getattr__()``` is called for the non-existent attribute age and prints a message indicating it's not found, then returns ```None```.
+
+The main differences between ```__getattr__()``` and ```__getattribute__()``` are:
+* Timing of invocation: ```__getattr__()``` is called only when the normal attribute lookup process fails, while ```__getattribute__()``` is called for every attribute access.
+* Potential for infinite recursion: ```__getattribute__()``` is more prone to infinite recursion if not implemented carefully, as it is called for every attribute access.
+* Scope of control:``` __getattribute__()``` provides more control over the entire attribute access mechanism, while ```__getattr__()``` is limited to handling missing attributes.
+* In general, ```__getattr__()``` is more commonly used, as it is simpler to implement and less prone to infinite recursion. ```__getattribute__()``` is more powerful but requires more careful implementation to avoid issues.
+
+Qn: What about setAttribute, what is it? What does it do?
 
 37. What are modules and packages in Python?
 38. What is the purpose of the ＿init＿ py file in Python packages?
