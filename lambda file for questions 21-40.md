@@ -44,7 +44,7 @@ for index, fruit in enumerate(fruits, start=1):
 ```
 * The ```enumerate()``` function is particularly useful when you need to access both the index and the value of elements in an iterable, such as when you're working with a list of items and need to display their positions or use the indices for some other purpose.
 
-53. Explain the difference between del, remove(), and pop() methods for removing elements from lists in Python.<br>
+52. Explain the difference between del, remove(), and pop() methods for removing elements from lists in Python.<br>
 Ans: ```del```, ```remove()```, and ```pop()``` are three main ways to remove elements from a list. Here's the difference between them:<br><br>
 
 ```del```:
@@ -103,9 +103,56 @@ print(numbers)  # Output: [1, 2, 4]
 Usage:
 * Use ```del``` when you want to remove elements by index or slice.
 * Use ```remove()``` when you want to remove the first occurrence of a specific value.
-* Use ```pop()``` when you want to remove an element by index and also get the value back. Be cautious about using ```pop()``` without an argument as it removes the last element and might not be what you intend.
+* Use ```pop()``` when you want to remove an element by index and also get the value back. Be cautious about using ```pop()``` without an argument as it removes the last element and might not be what you intend.<br>
 
-54. How do you convert a string to lowercase or uppercase in Python?
+53. How do you convert a string to lowercase or uppercase in Python?<br>
+Ans: To convert a string to lowercase or uppercase in Python, you can use the built-in methods lower() and upper(), respectively.<br><br>
+Converting to Lowercase
+* Using the ```lower()``` method:
+* The ```lower()``` method converts all uppercase characters in a string into lowercase characters and returns the result.<br>
+Code Example:
+```python
+message = 'PYTHON IS fun'
+print(message.lower())  # Output: python is fun
+```
+
+Converting to Uppercase
+* Using the ```upper()``` method:
+* The ```upper()``` method converts all lowercase characters in a string into uppercase characters and returns the result.<br>
+Code Example:
+```python
+message = 'python is fun'
+print(message.upper())  # Output: PYTHON IS FUN
+```
+* Both in use together:<br>
+Code Example:
+```python
+# Original string
+s = 'pYThon proGramminG laNguAge'
+
+# Convert to lowercase
+s_lower = s.lower()
+print(s_lower)  # Output: python programming language
+
+# Convert to uppercase
+s_upper = s.upper()
+print(s_upper)  # Output: PYTHON PROGRAMMING LANGUAGE
+```
+
+* Additionally, you can use the ```capitalize()``` method to capitalize the first character of a string, and the ```title()``` method to capitalize the first character of each word in a string:<br>
+Code Example:
+```python
+text = "hello, world!"
+capitalized_text = text.capitalize()
+print(capitalized_text)  # Output: Hello, world!
+
+text = "hello, world!"
+title_text = text.title()
+print(title_text)  # Output: Hello, World!
+```
+* These string manipulation methods are very useful for formatting and standardizing text data in your Python applications.<br>
+
+
 55. What is the purpose of the sys module in Python?
 56. How do you sort a dictionary by its values in Python?
 57. Explain the purpose of the with statement in Python.
