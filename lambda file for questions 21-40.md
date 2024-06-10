@@ -123,18 +123,35 @@ In this example:
 * We use ```namedtuple``` to create a custom data type called ```Point``` with named fields ```x``` and ```y```. This allows us to create and access point objects more conveniently compared to using regular tuples.
 
 Qn: Is collections a third party library you have to install? <br>
-Ans: No, the collections module is not a third-party library that needs to be installed separately. It is part of Python's standard library and comes pre-installed with Python.
+Ans: No, the ```collections``` module is not a third-party library that needs to be installed separately. It is part of Python's standard library and comes pre-installed with Python.
 * To use the ```collections``` module, you simply need to import it at the beginning of your Python script:
 ```python
 from collections import Counter, defaultdict, namedtuple
 ```
 
+<br>
 
+48. How do you concatenate strings in Python?<br>
+Ans: There are several ways to concatenate strings in Python:<br>
+Using the + operator:
+* The most common and straightforward method.<br>
+Code Example:
+```python
+first_name = "Alice"
+last_name = "Smith"
+full_name = first_name + " " + last_name  # Add a space as separator
 
+print(full_name)  # Output: Alice Smith
+```
+* Another way to concatenate strings in Python is by using f-strings (introduced in Python 3.6):<br>
+Code Example:
+```python
+first_name = "John"
+last_name = "Doe"
+full_name = f"{first_name} {last_name}"
+print(full_name)  # Output: John Doe
+```
 
-46. 
-47. What is the purpose of the collections module in Python?
-48. How do you concatenate strings in Python?
 49. What is the purpose of the itertools module in Python?
 50. How do you find the index of an element in a list in Python?
 51. What is the purpose of the enumerate() function in Python?
