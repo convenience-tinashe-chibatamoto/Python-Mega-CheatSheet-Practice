@@ -132,7 +132,7 @@ from collections import Counter, defaultdict, namedtuple
 <br>
 
 48. How do you concatenate strings in Python?<br>
-Ans: There are several ways to concatenate strings in Python:<br>
+Ans: There are several ways to concatenate strings in Python:<br><br>
 Using the + operator:
 * The most common and straightforward method.<br>
 Code Example:
