@@ -30,7 +30,7 @@ for index, fruit in enumerate(fruits):
 # Index: 2, Value: cherry
 ```
 
-* The enumerate() function can also take an optional start parameter to specify the starting index (default is 0):<br>
+* The enumerate() function can also take an optional ```start``` parameter to specify the starting index (default is ```0```):<br>
 Code Example:
 ```python
 fruits = ['apple', 'banana', 'cherry']
