@@ -90,7 +90,46 @@ In summary, the ```__iter__()``` method initializes the iterator, while the ```_
 
 
 47. Explain the purpose of the collections module in Python:<br>
-Ans: 
+Ans: The ```collections``` module in Python provides a collection of specialized container data types that extend the functionality of Python's built-in containers like lists, tuples, dictionaries, and sets.
+* These data types offer additional features or optimized performance for specific use cases.
+* These data structures are designed to be more efficient and flexible than the built-in data types like lists, dictionaries, and sets.<br>
+Code Example:
+```python
+from collections import Counter, defaultdict, namedtuple
+
+# Using Counter to count the frequency of elements in a list
+fruits = ['apple', 'banana', 'cherry', 'apple', 'banana', 'apple']
+fruit_count = Counter(fruits)
+print(fruit_count)
+# Output: Counter({'apple': 3, 'banana': 2, 'cherry': 1})
+
+# Using defaultdict to handle missing keys
+sentence = "The quick brown fox jumps over the lazy dog"
+word_count = defaultdict(int)
+for word in sentence.split():
+    word_count[word] += 1
+print(dict(word_count))
+# Output: {'The': 1, 'quick': 1, 'brown': 1, 'fox': 1, 'jumps': 1, 'over': 1, 'the': 1, 'lazy': 1, 'dog': 1}
+
+# Using namedtuple to create a custom data type
+Point = namedtuple('Point', ['x', 'y'])
+p1 = Point(10, 20)
+print(p1.x, p1.y)
+# Output: 10 20
+```
+In this example:
+* We use ```Counter``` to count the frequency of elements in a list of fruits. The ```Counter``` object provides a convenient way to count unique items and retrieve the most common elements.
+* We use ```defaultdict``` to handle missing keys when counting words in a sentence. The ```defaultdict``` automatically initializes missing keys with the specified default value (in this case, 0).
+* We use ```namedtuple``` to create a custom data type called ```Point``` with named fields ```x``` and ```y```. This allows us to create and access point objects more conveniently compared to using regular tuples.
+
+Qn: Is collections a third party library you have to install? <br>
+Ans: No, the collections module is not a third-party library that needs to be installed separately. It is part of Python's standard library and comes pre-installed with Python.
+* To use the ```collections``` module, you simply need to import it at the beginning of your Python script:
+```python
+from collections import Counter, defaultdict, namedtuple
+```
+
+
 
 
 46. 
