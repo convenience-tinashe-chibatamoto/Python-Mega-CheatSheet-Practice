@@ -40,24 +40,70 @@ print(sorted_dict)
 ```
 <br>
 
-56. Explain the purpose of the with statement in Python.
+56. Explain the purpose of the with statement in Python.<br>
 Ans: The ```with``` statement in Python is a context manager used for resource management.
 * It ensures that resources are properly acquired and released in a specific order, even in the presence of exceptions.
 * This helps prevent resource leaks and makes your code cleaner, secure and more readable.<br>
-Code Example:
+Code Example: File I/O
 ```python
 with open('example.txt', 'r') as file:
     content = file.read()
     print(content)
 ```
 
+Example 2: Database Operations
+```python
+with sqlite3.connect('db.db') as connection:
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM table")
 
-
-
+```
+* Without the ```with``` statement, you would have to explicitly call the ```close()``` method on the file object to ensure that it is properly closed.
+* The ```with``` statement makes the code more concise and easier to read, and it also helps prevent common mistakes, such as forgetting to close the file or failing to handle exceptions properly.
 
 <br>
-57. 
-58. How do you check if a key exists in a dictionary in Python?
+57. How do you check if a key exists in a dictionary in Python?<br>
+Ans: There are several ways to check if a key exists in a dictionary, but here's my favourite two:
+
+Using ```in``` <br>
+* This is the simplest and most straightforward way to check for key existence.
+* The ```in``` operator returns ```True``` if the key is present in the dictionary, and ```False``` otherwise.<br>
+Code Example:
+```python
+my_dict = {'apple': 2, 'banana': 1, 'cherry': 3}
+
+if 'apple' in my_dict:
+    print("The key 'apple' exists in the dictionary.")
+else:
+    print("The key 'apple' does not exist in the dictionary.")
+
+# Output
+
+# The key 'apple' exists in the dictionary.
+```
+Using the ```get()``` method:
+* The ```get()``` method returns the value associated with the key if the key is present in the dictionary, or ```None``` if the key is not present. You can also provide a default value to be returned if the key is not found.
+* It takes two arguments: The key to be checked, and an optional default value to return if the key is not found.<br>
+Code Example:
+```python
+my_dict = {'apple': 2, 'banana': 1, 'cherry': 3}
+
+if my_dict.get('apple') is not None:
+    print("The key 'apple' exists in the dictionary.")
+else:
+    print("The key 'apple' does not exist in the dictionary.")
+
+#  You can also provide a default value to be returned if the key is not found:
+
+value = my_dict.get('pear', 0)
+print(value)  # Output: 0 (since 'pear' is not a key in the dictionary)
+```
+
+<br>
+
+Qn: Can I use these on a list too?
+
+
 59. What is the purpose of the random module in Python?
 60. How do you find the length of a list in Python?
 59.Explain the purpose of the classmethod decorator in Python.
