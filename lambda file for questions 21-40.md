@@ -156,8 +156,35 @@ Some of the commonly used functions in the ```random``` module include:
 * ```shuffle(seq)```: Shuffles the elements of the sequence ```seq``` in-place. Meaning (the meaning applies to all programming, not just here) that the operation modifies the original sequence (list, tuple, etc.) directly, without creating a new copy of the sequence.
 * ```sample(seq, k)```: Selects ```k``` unique random elements from the sequence ```seq```.
 
-60. How do you find the length of a list in Python?
-59.Explain the purpose of the classmethod decorator in Python.
+59. How do you find the length of a list in Python?<br>
+Ans: There are multiple ways for finding the length of a list in Python, but using the built-in ```len()``` function is the most straightforward, efficient, and recommended approach.<br>
+Code Example:
+```python
+my_list = [1, 2, 3, 4, 5]
+length = len(my_list)
+print(length)  # Output: 5
+```
+
+* You can use the ```len()``` function with any iterable object in Python, not just lists. For example, you can also use it with strings, tuples, and dictionaries:
+
+```python
+my_string = "Hello, world!"
+my_tuple = (1, 2, 3, 4, 5)
+my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+print(len(my_string))  # Output: 13
+print(len(my_tuple))   # Output: 5
+print(len(my_dict))    # Output: 3
+```
+<br>
+
+60.Explain the purpose of the classmethod decorator in Python.<br>
+Ans:
+
+
+<br>
+
+
 61. How do you round a floating-point number to a specified number of decimal places in Python?
 62. What is the purpose of the isinstance() function in Python?
 63. How do you concatenate two lists in Python?
