@@ -102,7 +102,36 @@ print(value)  # Output: 0 (since 'pear' is not a key in the dictionary)
 <br>
 
 Qn: Can I use these on a list too?
+Ans: Yes,you can check if a key exists in a list using the ```in``` operator. The ```in``` operator checks if a value is present in any sequence (such as a list, tuple, or string) and returns ```True``` if it is, and ```False``` otherwise.<br>
+Code Example:
+```python
+my_list = [1, 2, 3, 'apple', 'banana']
 
+# Check if 3 is in the list
+if 3 in my_list:
+    print("3 is in the list")
+else:
+    print("3 is not in the list")
+
+# Check if 'apple' is in the list
+if 'apple' in my_list:
+    print("'apple' is in the list")
+else:
+    print("'apple' is not in the list")
+
+# Check if 'orange' is in the list
+if 'orange' in my_list:
+    print("'orange' is in the list")
+else:
+    print("'orange' is not in the list")
+
+# 3 is in the list
+# 'apple' is in the list
+# 'orange' is not in the list
+```
+
+* Note that the ```in``` operator checks for the presence of the value, not the index or position of the value in the list. If you want to check the index of a value in the list, you can use the ```index()``` method.
+<br>
 
 59. What is the purpose of the random module in Python?
 60. How do you find the length of a list in Python?
