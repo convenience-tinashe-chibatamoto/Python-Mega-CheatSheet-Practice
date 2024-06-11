@@ -1,7 +1,43 @@
 
 
 55. How do you sort a dictionary by its values in Python?<br>
-Ans: 
+Ans: In Python, you can sort a dictionary by its values using the ```sorted()``` function alongside a ```lambda``` function to define the sorting criteria.
+* The ```sorted()``` function takes an iterable (in this case, the items() method of the dictionary) and returns a sorted list of tuples.
+* If you want to get the sorted dictionary back, you can convert the sorted list of tuples back into a dictionary using the ```dict()``` function. <br>
+Code Example:
+```python
+# Example dictionary
+my_dict = {'apple': 2, 'banana': 1, 'cherry': 3}
+
+# Sort the dictionary by values
+sorted_dict = sorted(my_dict.items(), key=lambda x: x[1])
+
+# Print the sorted dictionary
+print(sorted_dict)
+
+# Output
+
+# [('banana', 1), ('apple', 2), ('cherry', 3)]
+
+# Converting the sorted list of tuples back into a dictionary using the dict() function:
+
+sorted_dict = dict(sorted(my_dict.items(), key=lambda x: x[1]))
+print(sorted_dict)
+
+# Output
+
+# {'banana': 1, 'apple': 2, 'cherry': 3}
+```
+You can also sort the dictionary in reverse order (i.e. descending order) by adding the ```reverse=True``` parameter as the third parameter to the sorted() function:<br>
+Code Example:
+```python
+sorted_dict = sorted(my_dict.items(), key=lambda x: x[1], reverse=True)
+print(sorted_dict)
+
+# Output
+
+# [('cherry', 3), ('apple', 2), ('banana', 1)]
+```
 
 
 58. Explain the purpose of the with statement in Python.
