@@ -179,10 +179,35 @@ print(len(my_dict))    # Output: 3
 <br>
 
 60.Explain the purpose of the classmethod decorator in Python.<br>
-Ans:
+Ans: The ```@classmethod``` decorator allows the methods to operate on the class itself, rather than on a specific instance of the class.
+* This means that the method can be called on the class itself, without the need to create an instance of the class.
+* The main purpose of the ```@classmethod``` decorator is to provide a way to create alternative constructors or utility functions that are related to the class, but don't necessarily need to be tied to a specific instance of the class.<br>
+Code Example:
 
+```python
+class Circle:
+  pi = 3.14159  # Class attribute
 
-<br>
+  @classmethod
+  def from_radius(cls, radius):
+    """Creates a Circle object from a given radius."""
+    return cls(radius)  # Call the constructor using cls
+
+  def __init__(self, radius):
+    self.radius = radius
+
+  def area(self):
+    return Circle.pi * self.radius * self.radius  # Access class attribute
+
+circle1 = Circle.from_radius(5)
+circle2 = circle1.from_radius(3)  # Both calls create circles using the classmethod
+
+```
+
+* In this example, the ```from_radius``` classmethod is used as an alternative constructor to create ```Circle``` objects from a ```radius``` value. It demonstrates how classmethods can be called using both the class and an instance.
+* Classmethods can be reused across different instances of the class, promoting code reusability.
+
+<br>           
 
 
 61. How do you round a floating-point number to a specified number of decimal places in Python?
