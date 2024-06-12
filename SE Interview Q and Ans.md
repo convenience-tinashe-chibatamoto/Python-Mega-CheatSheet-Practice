@@ -5,7 +5,7 @@ Answers here: https://www.geeksforgeeks.org/top-50-software-engineering-intervie
 4. Which SDLC model is the best?
 5. What is the waterfall method and what are its use cases?
 6. What is Cohesion and Coupling?
-7. What activities come under the umbrella activities?
+7. What activities come under the umbrella activities? (Question)
 8. What is Debugging?
 9. What is Black box testing?
 10. What is White box testing?
@@ -18,7 +18,7 @@ Answers here: https://www.geeksforgeeks.org/top-50-software-engineering-intervie
 17. What is the difference between Bug and Error?
 18. How to find the size of a software product?
 19. Which software development model can be selected if the user is involved in all the phases of SDLC?
-20. What is COCOMO model?
+20. What is COCOMO model? 
 21. What is the Agile software development model?
 22. What is level-0 (level zero) DFD?
 23. What is the feasibility study?
