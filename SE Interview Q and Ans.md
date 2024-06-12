@@ -1,5 +1,5 @@
 Answers here: https://www.geeksforgeeks.org/top-50-software-engineering-interview-questions-and-answers/
-1. What is SDLC?
+1. What is SDLC? (Question)
 2. What is the difference between Procedural, Functional and Object-Oriented Programming?
 3. What are different SDLC models available?
 4. Which SDLC model is the best?
