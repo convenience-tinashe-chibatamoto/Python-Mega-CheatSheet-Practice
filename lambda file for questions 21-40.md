@@ -59,8 +59,59 @@ print("Trunc:", math.trunc(number))    # Output: 3
 <br>
 61. What is the purpose of the isinstance() function in Python?<br>
 
+Ans: The ```isinstance()``` function in Python is a built-in function used for type checking. 
+* It verifies if an object is of a specified type, returning ```True``` if it is, and ```False``` otherwise. <br>
+Code Example:
+```python
+# syntax
+isinstance(object, classinfo)
+
+object: This is the object you want to check the type of.
+classinfo: This can be a class type, a tuple of class types, or a built-in type like int, str, etc.
+
+# Example 1
+
+# Check if a variable is an integer
+x = 42
+if isinstance(x, int):
+    print("x is an integer")
+else:
+    print("x is not an integer")
+# Output: x is an integer
+
+# Check if a variable is a string or a float
+y = "hello"
+if isinstance(y, (str, float)):
+    print("y is a string or a float")
+else:
+    print("y is not a string or a float")
+# Output: y is a string or a float
+```
+
+* Example 2
+```python
+class Animal:
+  pass
+
+class Dog(Animal):
+  pass
+
+animal = Animal()
+dog = Dog()
+
+# isinstance() with a class
+print(isinstance(animal, Animal))  # True
+print(isinstance(dog, Animal))    # True (Dog is a subclass of Animal)
+
+# isinstance() with a tuple of classes
+print(isinstance(animal, (int, str, Animal)))  # True
+
+```
+
+* In summary, ```isinstance()``` is a versatile tool for ensuring your code behaves as expected by checking object types during runtime.
+
 <br>
-63. How do you concatenate two lists in Python?
+62. How do you concatenate two lists in Python?
 64. Explain the purpose of the filter() function in Python.
 65. How do you create a dictionary from two lists in Python?
 66. What is the purpose of the os module in Python?
