@@ -109,12 +109,17 @@ print(isinstance(animal, (int, str, Animal)))  # True
 ```
 
 * In summary, ```isinstance()``` is a versatile tool for ensuring your code behaves as expected by checking object types during runtime.
+* the ```isinstance()``` function allows you to write more robust and flexible code by checking the type of an object before performing operations on it, which can be particularly useful when you're working with functions that can accept arguments of different types, or when you're dealing with user input that may be of an unexpected type.
 
 <br>
-62. How do you concatenate two lists in Python?
-64. Explain the purpose of the filter() function in Python.
-65. How do you create a dictionary from two lists in Python?
-66. What is the purpose of the os module in Python?
+62. How do you concatenate two lists in Python? <br>
+
+
+
+<br>
+63. Explain the purpose of the filter() function in Python.
+64. How do you create a dictionary from two lists in Python?
+65. What is the purpose of the os module in Python?
 67. How do you check if a string contains a substring in Python?
 68. Explain the use of the assert statement in Python.
 69. How do you create an empty list, tuple, or dictionary in Python?
