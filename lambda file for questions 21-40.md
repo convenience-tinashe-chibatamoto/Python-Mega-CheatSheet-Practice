@@ -164,9 +164,53 @@ print(empty_dict)  # Output: {'key1': 'value1', 'key2': 'value2'}
 * Alternatively, you can also create an empty list, tuple, or dictionary directly without starting with a populated version like in the first example.
 
 <br>
-69. What is the purpose of the sum() function in Python?
-69. How do you convert a list to a string in Python?
-70. Explain the difference between shallow and deep copy in Python dictionaries.
+
+69. What is the purpose of the sum() function in Python?<br>
+Ans: The ```sum()``` function in Python is a built-in function that efficiently calculates the sum of elements from an iterable object (such as a list, tuple, or set).
+* It takes an iterable as its argument and returns the sum of all the elements in that iterable.
+* The general syntax for using the ``` sum()``` function is:
+
+```python
+sum(iterable, start=0)
+
+# start is an optional parameter that represents the initial value of the sum. If the start parameter is not provided, it defaults to 0.
+```
+<br>
+
+Code Example:
+
+```python
+# Summing a list of numbers
+numbers = [1, 2, 3, 4, 5]
+total = sum(numbers)
+print(total)  # Output: 15
+
+# Summing a tuple of numbers
+numbers = (10, 20, 30, 40)
+total = sum(numbers)
+print(total)  # Output: 100
+
+# Summing a set of numbers
+numbers = {1, 2, 3, 4, 5}
+total = sum(numbers)
+print(total)  # Output: 15
+
+# Summing a list with a starting value
+numbers = [10, 20, 30, 40]
+total = sum(numbers, 50)
+print(total)  # Output: 150
+```
+
+* The ```sum()``` function is particularly useful when you need to calculate the total or cumulative sum of a sequence of numbers. It can also be used with custom data types that support the ```+``` operator, as long as the elements in the iterable are of the same type. For example, ```sum("123")``` would return ```123```.
+* It's worth noting that the ```sum()``` function can also be used with iterables that contain non-numeric values, but in such cases, the ```+``` operator must be defined for the data type of the elements in the iterable.
+
+<br>
+70. How do you convert a list to a string in Python?<br>
+Ans: 
+
+
+
+71. Explain the difference between shallow and deep copy in Python dictionaries.
 71. How do you convert a string to an integer or a float in Python?
 72. What is the purpose of the format() method in Python strings?
 73. How do you check if a file exists in Python?
