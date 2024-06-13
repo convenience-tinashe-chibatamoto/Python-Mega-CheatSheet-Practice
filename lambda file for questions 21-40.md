@@ -168,43 +168,83 @@ print(list(even_numbers))  # Output: [2, 4, 6]
 
 
 * The ```filter()``` function is a powerful tool for data processing and manipulation, as it allows you to easily select a subset of items from a larger sequence based on a specific criteria. It's often used in combination with other functions like map() and lambda to create concise and efficient code.
+<br>
+
+
+64. How do you create a dictionary from two lists in Python?<br>
+Ans: In Python, you can create a dictionary from two lists using the ```zip()``` function and the ```dict()``` function. Here's how you can do it:<br>
+Code Example:
+```python
+keys = ["name", "age", "city"]
+values = ["Alice", 30, "New York"]
+
+# Combine keys and values using zip()
+combined = zip(keys, values)
+
+# Create a dictionary from the zipped tuples using dict()
+my_dict = dict(combined)
+print(my_dict)  # Output: {'name': 'Alice', 'age': 30, 'city': 'New York'}
+
+```
+* ```The zip()``` function takes two or more iterables (in this case, the keys and values lists) and returns an iterator of tuples, where each tuple contains the corresponding elements from each iterable.
+* The ```dict()``` function is then used to convert the iterator of tuples (created by ```zip()```) into a dictionary, where the keys are taken from the first element of each tuple, and the values are taken from the second element of each tuple.<br>
+
+* You can also create a dictionary directly from two lists using a dictionary comprehension:<br>
+Code Example 2:
+```python
+keys = ["name", "age", "city"]
+values = ["Alice", 30, "New York"]
+
+my_dict = {key: value for key, value in zip(keys, values)}
+print(my_dict)  # Output: {'name': 'Alice', 'age': 30, 'city': 'New York'}
+
+```
+This code:
+* Uses a dictionary comprehension with ```{}```.
+* Iterates through the zipped keys and values using ```for key, value in zip(keys, values)```.
+* Assigns each key-value pair to the dictionary using ```key: value```.<br>
+
+* If readability is your priority, the first approach with ```zip()``` and ```dict()``` might be clearer, especially for beginners.
+* For a more concise approach that is preferred by many programmers, the dictionary comprehension is the way to go.<br>
+
+65. What is the purpose of the os module in Python?<br>
+Ans: 
+
 
 <br>
-65. How do you create a dictionary from two lists in Python?
-66. What is the purpose of the os module in Python?
-67. How do you check if a string contains a substring in Python?
-68. Explain the use of the assert statement in Python.
-69. How do you create an empty list, tuple, or dictionary in Python?
-70. What is the purpose of the sum() function in Python?
-71. How do you convert a list to a string in Python?
-72. Explain the difference between shallow and deep copy in Python dictionaries.
-73. How do you convert a string to an integer or a float in Python?
-74. What is the purpose of the format() method in Python strings?
-75. How do you check if a file exists in Python?
-76. Explain the difference between os.path.exists() and os.path.isfile() in Python
-77. What is the purpose of the pickle module in Python?
-78. How do you get the current working directory in Python?
-79. Explain the difference between a list and a tuple comprehension in Python…
-80. What is the purpose of the is operator in Python?
-81. How do you convert a list of strings to a single string in Python?
-82. Explain the use of the reduce() function in Python.
-83. How do you convert a string to a list in Python?
-84. What is the purpose of the min() and max() functions in Python?
-85. How do you convert a string to a datetime object in Python?
-86. Explain the difference between shallow and deep copy in Python lists.
-87. What is the purpose of the locals() and globals() functions in Python?
-88. How do you write a multiline string in Python?
-89. What is the purpose of the split() method in Python strings?
-90. How do you check if a number is even or odd in Python?
-91. Explain the purpose of the bytes and bytearray data types in Python.
-92. What is the purpose of the round() function in Python?
-93. How do you create a dictionary with default values in Python?
-94. Explain the difference between os.path.isdir() and os.path.isfile() in Python.
-95. What is the purpose of the finally block in Python exception handling?
-96. How do you reverse a list in Python?
-97. What is the purpose of the del statement in Python?
-98. Explain the difference between the os.system() and subprocess.run() functions in Python.
-99. How do you split a string into a list of substrings in Python?
-100. What is the purpose of the try, except, else, and finally blocks in Python?
-101. How do you create a shallow copy of a list in Python?<br>
+65. How do you check if a string contains a substring in Python?
+66. Explain the use of the assert statement in Python.
+67. How do you create an empty list, tuple, or dictionary in Python?
+68. What is the purpose of the sum() function in Python?
+69. How do you convert a list to a string in Python?
+70. Explain the difference between shallow and deep copy in Python dictionaries.
+71. How do you convert a string to an integer or a float in Python?
+72. What is the purpose of the format() method in Python strings?
+73. How do you check if a file exists in Python?
+74. Explain the difference between os.path.exists() and os.path.isfile() in Python
+75. What is the purpose of the pickle module in Python?
+76. How do you get the current working directory in Python?
+77. Explain the difference between a list and a tuple comprehension in Python…
+78. What is the purpose of the is operator in Python?
+79. How do you convert a list of strings to a single string in Python?
+80. Explain the use of the reduce() function in Python.
+81. How do you convert a string to a list in Python?
+82. What is the purpose of the min() and max() functions in Python?
+83. How do you convert a string to a datetime object in Python?
+84. Explain the difference between shallow and deep copy in Python lists.
+85. What is the purpose of the locals() and globals() functions in Python?
+86. How do you write a multiline string in Python?
+87. What is the purpose of the split() method in Python strings?
+88. How do you check if a number is even or odd in Python?
+89. Explain the purpose of the bytes and bytearray data types in Python.
+90. What is the purpose of the round() function in Python?
+91. How do you create a dictionary with default values in Python?
+92. Explain the difference between os.path.isdir() and os.path.isfile() in Python.
+93. What is the purpose of the finally block in Python exception handling?
+94. How do you reverse a list in Python?
+95. What is the purpose of the del statement in Python?
+96. Explain the difference between the os.system() and subprocess.run() functions in Python.
+97. How do you split a string into a list of substrings in Python?
+98. What is the purpose of the try, except, else, and finally blocks in Python?
+99. How do you create a shallow copy of a list in Python?<br>
 BONUS: https://www.edureka.co/blog/interview-questions/python-interview-questions/
