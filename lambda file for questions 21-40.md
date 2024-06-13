@@ -1,5 +1,85 @@
 
-66. How do you check if a string contains a substring in Python?
+66. How do you check if a string contains a substring in Python?<br>
+Ans: There are three main ways to check if a substring exists within a string in Python:<br>
+
+Using the ```in``` operator:
+* This is the simplest and most efficient way to check for a substring.
+* The ```in``` operator returns ```True``` if the substring is found within the string, and ```False``` otherwise.<br>
+Code Example:
+
+```python
+my_string = "This is a string"
+substring = "is"
+
+if substring in my_string:
+  print("Substring found!")
+else:
+  print("Substring not found.")
+
+# Output: Substring found!
+
+# Another Example
+
+string = "Hello, world!"
+if "world" in string:
+    print("Substring found")
+else:
+    print("Substring not found")
+
+# Output: Substring found
+```
+
+Using the ```find()``` method:
+
+```python
+my_string = "This is a string"
+substring = "is"
+
+index = my_string.find(substring)
+
+if index != -1:
+  print("Substring found at index", index)
+else:
+  print("Substring not found.")
+
+# Output: Substring found at index 2
+
+
+# Another Example:
+
+string = "Hello, world!"
+if string.find("world") != -1:
+    print("Substring found")
+else:
+    print("Substring not found")
+
+# Output: Substring found
+```
+
+Using regular expressions (case-insensitive):
+
+```python
+import re
+
+my_string = "This is a String"
+substring = "is"
+
+matches = re.findall(substring, my_string, flags=re.IGNORECASE)
+
+if matches:
+  print("Substring found:", matches)
+else:
+  print("Substring not found.")
+
+# Output: Substring found: ['is', 'IS']
+```
+
+* All three methods achieve the goal.
+* The ```in``` operator simply confirms its presence, while ```find()``` provides the starting index, and regular expressions with the ```re.IGNORECASE``` flag identify all occurrences regardless of case.
+
+
+<br>
+
 67. Explain the use of the assert statement in Python.
 68. How do you create an empty list, tuple, or dictionary in Python?
 69. What is the purpose of the sum() function in Python?
