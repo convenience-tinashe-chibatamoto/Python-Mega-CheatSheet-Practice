@@ -50,8 +50,8 @@ print(f"Rounding {number} to nearest with round(): {rounded_nearest}")  # Output
 print("Trunc:", math.trunc(number))    # Output: 3
 
 ```
-* ```math.ceil(number)```: This function returns the smallest integer that is greater than or equal to the given ```number```. In this case, ```math.ceil(3.14159)``` returns ```4```.
-* ```math.floor(number)```: This function returns the largest integer that is less than or equal to the given ```number```. In this case, ```math.floor(3.14159)``` returns ```3```.
+* ```math.ceil(number)```: This function rounds the  ```number``` up to the nearest integer. In this case, ```math.ceil(3.14159)``` returns ```4```.
+* ```math.floor(number)```: This function rounds the ```number``` down to the nearest integer. In this case, it rounds ```3.14159``` down to ```3.```
 * ```math.trunc(number)```: This function returns the integral part of the ```number```, discarding any fractional digits. In this case, ```math.trunc(3.14159)``` returns ```3```.
 * ```round(number)``` (always used without the ```math``` module) uses banker's rounding to round the number to the nearest integer. Here, it also rounds to ```3```.
 * Although ```round()``` provides control over decimal places, it's for rounding to nearest integer by default. The ```ceil()``` and ```floor()``` functions from the ```math``` module offer a way to strictly round up or down to the nearest whole number.
