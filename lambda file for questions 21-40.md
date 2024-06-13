@@ -77,11 +77,57 @@ else:
 * All three methods achieve the goal.
 * The ```in``` operator simply confirms its presence, while ```find()``` provides the starting index, and regular expressions with the ```re.IGNORECASE``` flag identify all occurrences regardless of case.
 
+<br>
+
+67. Explain the use of the assert statement in Python.<br>
+Ans: In Python, the ```assert``` statement is a debugging and validation tool used to check through assumptions about conditions during development.
+* If the condition is true, the ```assert``` statement does nothing, but if the condition is false, the ```assert``` statement raises an ```AssertionError``` exception.
+* The general syntax for the assert statement is: ```assert condition, message```. The message is optional.<br>
+Code Example:
+
+```python
+def is_positive(number):
+  assert number > 0, "Number must be positive"
+  # Rest of the function's logic
+
+# Example usage with valid input
+is_positive(5)  # No error, program continues
+
+# Example usage with invalid input (causes assertion error)
+is_positive(-2)  # Raises AssertionError with the message "Number must be positive"
+
+# Example 2
+
+# Checking a condition
+x = 10
+assert x > 0, "x must be a positive number"
+
+# Checking a function's precondition
+def divide(a, b):
+    assert b != 0, "Divisor cannot be zero"
+    return a / b
+
+divide(10, 0)  # Raises AssertionError: Divisor cannot be zero
+
+# Checking a function's postcondition
+def square(x):
+    result = x * x
+    assert result >= 0, "Result must be non-negative"
+    return result
+
+square(-5)  # Raises AssertionError: Result must be non-negative
+```
+
+*It's important to note that ```assert``` statements are not a replacement for proper error handling, but rather a tool for catching and debugging issues during development. In production code, it's generally better to use explicit exception handling or other error-handling mechanisms.
+* Assertions are meant for development and debugging, not for production code. In production environments, assertions can slow down the program's execution. You can disable them using techniques like ```-O``` optimization flag during compilation.
 
 <br>
 
-67. Explain the use of the assert statement in Python.
-68. How do you create an empty list, tuple, or dictionary in Python?
+
+68. How do you create an empty list, tuple, or dictionary in Python?<br>
+Ans:
+
+<br>
 69. What is the purpose of the sum() function in Python?
 69. How do you convert a list to a string in Python?
 70. Explain the difference between shallow and deep copy in Python dictionaries.
