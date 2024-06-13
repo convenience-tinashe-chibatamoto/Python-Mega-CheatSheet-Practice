@@ -125,7 +125,43 @@ square(-5)  # Raises AssertionError: Result must be non-negative
 
 
 68. How do you create an empty list, tuple, or dictionary in Python?<br>
-Ans:
+Ans: The simplest way is to directly use the general syntax, ```[]``` for lists, ```{}``` for dictionaries, and ```()``` for tuples, with each being empty. Like this:<br>
+Code Example:
+
+```python
+empty_list = []
+print(empty_list)  # Output: []
+
+empty_tuple = ()
+print(empty_tuple)  # Output: ()
+
+empty_dict = {}
+print(empty_dict)  # Output: {}
+```
+
+* Let's start with one that is already populated, have one that is empty and make that populated:<br>
+Code Example:
+
+```python
+populated_list = [1, 2, 3, 4, 5]
+empty_list = []
+empty_list.extend(populated_list)  # or empty_list = populated_list[:]
+print(empty_list)  # Output: [1, 2, 3, 4, 5]
+
+
+populated_tuple = (1, 2, 3, 4, 5)
+empty_tuple = ()
+empty_tuple = tuple(populated_tuple)
+print(empty_tuple)  # Output: (1, 2, 3, 4, 5)
+
+
+populated_dict = {"key1": "value1", "key2": "value2"}
+empty_dict = {}
+empty_dict.update(populated_dict)
+print(empty_dict)  # Output: {'key1': 'value1', 'key2': 'value2'}
+
+```
+* Alternatively, you can also create an empty list, tuple, or dictionary directly without starting with a populated version like in the first example.
 
 <br>
 69. What is the purpose of the sum() function in Python?
