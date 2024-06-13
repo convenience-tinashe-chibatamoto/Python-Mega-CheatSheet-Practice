@@ -132,11 +132,46 @@ print(combined_list)  # Output: [1, 2, 3, 4, 5, 6]
 <br>
 
 63. Explain the purpose of the filter() function in Python.<br>
-Ans:
+Ans: The ```filter()``` function in Python is used to create a new iterator that contains elements from an existing iterable (like a list, tuple, or string) which pass a certain condition.
+* It essentially acts as a filtering tool for your data.
+* Syntax: ```filter(function, iterable)```.<br>
+* It creates a new iterator, not a list by default. You can convert the created iterator to a list using ```list()``` if needed.
+Code Example:
+```python
+# Filter out all even numbers from a list
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Define a function to check if a number is odd
+def is_odd(x):
+    return x % 2 != 0
+
+# Use filter() to get a list of odd numbers
+odd_numbers = list(filter(is_odd, numbers))
+print(odd_numbers)  # Output: [1, 3, 5, 7, 9]
+```
+* In this example, the ```is_odd()``` function is used as the function argument to ```filter()```. The ```filter()``` function applies this function to each number in the numbers list, and returns an iterator containing only the odd numbers. <br>
+Code Example 2:
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+
+# Define a function to check if a number is even
+def is_even(number):
+  return number % 2 == 0
+
+# Apply filter() with the function and get an iterator
+even_numbers = filter(is_even, numbers)
+
+# Convert the iterator to a list (optional)
+print(list(even_numbers))  # Output: [2, 4, 6]
+
+```
+
+
+* The ```filter()``` function is a powerful tool for data processing and manipulation, as it allows you to easily select a subset of items from a larger sequence based on a specific criteria. It's often used in combination with other functions like map() and lambda to create concise and efficient code.
 
 <br>
-64. How do you create a dictionary from two lists in Python?
-65. What is the purpose of the os module in Python?
+65. How do you create a dictionary from two lists in Python?
+66. What is the purpose of the os module in Python?
 67. How do you check if a string contains a substring in Python?
 68. Explain the use of the assert statement in Python.
 69. How do you create an empty list, tuple, or dictionary in Python?
