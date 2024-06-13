@@ -208,7 +208,9 @@ This code:
 * For a more concise approach that is preferred by many programmers, the dictionary comprehension is the way to go.<br>
 
 65. What is the purpose of the os module in Python?<br>
-Ans: 
+Ans: The ```os``` module in Python provides a portable way to interact with the operating system.
+* It offers functions for various tasks related to file and directory management, process control, environment variables, and more.
+* This built-in module provides a platform-independent way of working with operating system-specific functionality. This means that you can write code that works across different operating systems (e.g., Windows, macOS, Linux) without having to worry about the underlying details of each system.
 
 
 <br>
