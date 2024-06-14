@@ -1,5 +1,7 @@
 
-71. Explain the difference between shallow and deep copy in Python dictionaries.
+71. Explain the difference between shallow and deep copy in Python dictionaries. <br>
+Ans: 
+<br>
 71. How do you convert a string to an integer or a float in Python?
 72. What is the purpose of the format() method in Python strings?
 73. How do you check if a file exists in Python?
