@@ -41,8 +41,46 @@ Usage:
 <br>
 
 
-71. How do you convert a string to an integer or a float in Python?
-72. What is the purpose of the format() method in Python strings?
+72. How do you convert a string to an integer or a float in Python?<br>
+Ans: You can convert a string to an integer or a float in Python using built-in functions: ```int(string)``` and ```float(string)```.<br>
+Code Example:
+```python
+# String to integer
+str_to_int = "42"
+int_value = int(str_to_int)
+print(int_value)  # Output: 42
+
+# String to float
+str_to_float = "3.14"
+float_value = float(str_to_float)
+print(float_value)  # Output: 3.14
+
+# If the string cannot be converted to an integer, the int() function will raise a ValueError exception.
+str_num = "123.45"
+
+# Convert to integer (raises ValueError for non-integers)
+# int_num = int(str_num)  # Uncomment to see the ValueError
+
+# Also, if the string contains non-numeric characters, the conversion will fail and raise a ValueError.
+str_with_non_numeric = "42.3.14"
+float_value = float(str_with_non_numeric)
+# ValueError: could not convert string to float: '42.3.14'
+```
+
+Note:
+*You can also convert strings that represent numeric values with leading or trailing whitespace, as the ```int()``` and ```float()``` functions will automatically strip the whitespace.<br>
+Code Example:
+```python
+str_with_whitespace = "  -10  "
+int_value = int(str_with_whitespace)
+print(int_value)  # Output: -10
+```
+
+* For something like ```'42.3.14'```, you may need to use additional string manipulation techniques, such as regular expressions, to extract the numeric part of the string before converting it to an integer or float.
+<br>
+
+
+73. What is the purpose of the format() method in Python strings?
 73. How do you check if a file exists in Python?
 74. Explain the difference between os.path.exists() and os.path.isfile() in Python
 75. What is the purpose of the pickle module in Python?
