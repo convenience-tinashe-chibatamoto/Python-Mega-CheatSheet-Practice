@@ -1,6 +1,43 @@
 
 71. Explain the difference between shallow and deep copy in Python dictionaries. <br>
-Ans: 
+Ans: In Python dictionaries, shallow copy and deep copy refer to how the contents of a dictionary are duplicated: <br>
+
+Shallow Copy:
+* Uses the built-in ```dict.copy()``` method.
+* Any changes made to the values (objects) in the original dictionary will also be reflected in the shallow copy, and vice versa.<br>
+Code Example:
+
+```python
+original_dict = {'a': [1, 2], 'b': 3}
+shallow_copy = original_dict.copy()
+
+# Modifying a mutable element in the shallow copy
+shallow_copy['a'].append(3)
+
+print("Original dictionary:", original_dict)  # Output: {'a': [1, 2, 3], 'b': 3}
+print("Shallow copy:", shallow_copy)  # Output: {'a': [1, 2, 3], 'b': 3}
+```
+
+Deep Copy:
+* Uses the ```copy.deepcopy()``` function from the ```copy``` module.
+* A deep copy creates a new object with a completely independent copy of the data.
+* Changes made to the values in the original dictionary or the deep copy won't affect each other. <br>
+Code Example:
+```python
+import copy
+
+original_dict = {'a': [1, 2], 'b': 3}
+deep_copy = copy.deepcopy(original_dict)
+
+# Modifying a mutable element in the deep copy
+deep_copy['a'].append(3)
+
+print("Original dictionary:", original_dict)  # Output: {'a': [1, 2], 'b': 3}
+print("Deep copy:", deep_copy)  # Output: {'a': [1, 2, 3], 'b': 3}
+```
+Usage:
+* Use a shallow copy when you only need a new reference to the existing data and modifications in one will affect the other. (e.g., temporary modifications)
+* Use a deep copy when you need to ensure that changes made to the copy do not affect the original (e.g., passing data to functions that might modify it)
 <br>
 
 
