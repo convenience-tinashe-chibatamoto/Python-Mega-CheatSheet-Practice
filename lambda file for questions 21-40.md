@@ -149,12 +149,33 @@ else:
 
 Note that:
 * Both methods only check for the existence of the path, not necessarily if it's a file or a directory. You can use functions like ```os.path.isfile()``` or ```Path.is_file()``` for more specific checks.
-* However, in almost all conceivable cases, it makes sense to assume that a filepath wouldn't exist if there was no file for it to reference.
-* These methods that use ```.isfile``` check for existence based on file system permissions. If you don't have permission to access the file, it might return ```False``` even if the file exists, so just checking the path makes sense.
+* However, in almost all conceivable cases, it makes sense to assume that a filepath wouldn't exist if there was no file for it to reference. In reality, there's actually no path to a non-existent file, so the path is valid proof of a file's existence.
+* These methods that use ```.isfile``` check for existence based on file system permissions. If you don't have permission to access the file, it might return ```False``` even if the file exists, so just checking the path makes better sense.
 
 <br>
-74. Explain the difference between os.path.exists() and os.path.isfile() in Python
-75. What is the purpose of the pickle module in Python?
+
+75. Explain the difference between os.path.exists() and os.path.isfile() in Python<br>
+Answer is just above, on 74. But to recap, here it is again:
+* Use ```os.path.exists()``` when you only need to know if a path refers to any existing entry in the file system (file or directory).
+* Use ```os.path.isfile()``` when you specifically need to confirm the path points to a regular file and not a directory or another file type. Note that file permissions apply here too. And emphasis on "regular" file.
+
+Qn: I see emphasis on "regular" file. What does that mean? What is, and what isn't, a regular file?<br>
+Ans:
+* In the context of computer file systems, a regular file is the most basic type of file. It's a linear sequence of bytes that stores data and can be accessed sequentially. It's the kind of file you typically use to store text documents, images, videos, executable programs, etc.
+* Here are some examples of regular files:Text files (.txt, .html, .py), Image files (.jpg, .png, .bmp), Document files (.docx, .pdf), Executable programs (.exe on Windows, .out or .sh on Unix-based systems), Video files (.mp4, .avi), etc etc.<br>
+
+In contrast, there are other types of files that are not considered "regular files" in the file system context. These include: 
+* Directories: Directories (or folders) are not regular files. They are special types of files that serve as containers for other files and directories, providing a hierarchical structure to the file system.
+* Device files: Device files, also known as special files or character devices, represent physical or logical devices in the file system, such as hard drives, printers, or network interfaces. They are not regular data files.
+* Symbolic links: Symbolic links (or symlinks) are special files that act as pointers to other files or directories, allowing you to access the target file or directory through the symbolic link. They don't store data themselves but act as references to the actual location of the data.
+* Named pipes: Named pipes are a type of special file used for inter-process communication, allowing data to be passed between processes.
+* Sockets: Sockets are a type of special file used for network communication, allowing processes to exchange data over a network.<br>
+
+* In summary, "regular files" refer to the most common type of files that contain arbitrary data (these are the types of files that most users work with on a daily basis), as opposed to other specialized file types found in file systems.
+
+<br>
+
+76. What is the purpose of the pickle module in Python?
 76. How do you get the current working directory in Python?
 77. Explain the difference between a list and a tuple comprehension in Python…
 78. What is the purpose of the is operator in Python?
