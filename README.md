@@ -2755,7 +2755,7 @@ print(int_value)  # Output: -10
 * For something like ```'42.3.14'```, you may need to use additional string manipulation techniques, such as regular expressions, to extract the numeric part of the string before converting it to an integer or float.
 <br>
 
-73. What is the purpose of the format() method in Python strings?<br.
+73. What is the purpose of the format() method in Python strings?<br>.
 Ans: The ```format()``` method in Python strings is used to insert values into a string.
 * It provides a flexible and powerful way to format and insert values into a string, making it easier to create dynamic and customizable text output.<br>
 Code Example:
