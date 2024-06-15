@@ -79,9 +79,80 @@ print(int_value)  # Output: -10
 * For something like ```'42.3.14'```, you may need to use additional string manipulation techniques, such as regular expressions, to extract the numeric part of the string before converting it to an integer or float.
 <br>
 
+73. What is the purpose of the format() method in Python strings?<br.
+Ans: The ```format()``` method in Python strings is used to insert values into a string.
+* It provides a flexible and powerful way to format and insert values into a string, making it easier to create dynamic and customizable text output.<br>
+Code Example:
 
-73. What is the purpose of the format() method in Python strings?
-73. How do you check if a file exists in Python?
+```python
+# Example Usages
+
+name = "Alice"
+age = 25
+print("My name is {} and I'm {} years old.".format(name, age))
+# Output: My name is Alice and I'm 25 years old.
+
+
+print("{} is {}.".format("Python", "awesome"))
+# Output: Python is awesome.
+
+print("I love {language} and it's {adjective}.".format(language="Python", adjective="awesome"))
+# Output: I love Python and it's awesome.
+
+
+pi = 3.14159
+print("The value of pi is {:.2f}".format(pi))
+# Output: The value of pi is 3.14
+
+# Nested formatting
+person = {"name": "Alice", "age": 25}
+print("My name is {0[name]} and I'm {0[age]} years old.".format(person))
+# Output: My name is Alice and I'm 25 years old.
+```
+
+* While ```format()``` is a useful tool, it's generally recommended to use ```f-strings``` (introduced in Python 3.6) for most modern string formatting needs. F-strings provide a more concise and readable syntax.
+
+<br>
+74. How do you check if a file exists in Python?<br>
+Ans: There are two main ways to check if a file exists in Python:
+
+Using the ```os.path.exists()``` function from the ```os``` module:
+* This is the more widely used approach.
+* You need to import the ```os``` module then specify the path as a string.
+* ```os.path.exists(file_path)``` takes the path to the file as an argument and returns ```True``` if the file exists, ```False``` otherwise.<br>
+Code Example:
+```python
+import os
+
+file_path = "path/to/your/file.txt"
+if os.path.exists(file_path):
+    print("The file exists.")
+else:
+    print("The file does not exist.")
+```
+
+Using the ```pathlib``` module:
+* It offers a more modern and object-oriented way to handle file paths, especially when dealing with multiple files and directories.
+* ```file_path.exists()``` checks if the ```path``` object refers to an existing file and returns ```True``` if it does, ```False``` otherwise.
+Code Example:
+```python
+from pathlib import Path
+
+file_path = "path/to/your/file.txt"
+if Path(file_path).exists():
+    print("The file exists.")
+else:
+    print("The file does not exist.")
+```
+
+* Both approaches can handle relative and absolute paths.
+
+Note that:
+* Both methods only check for the existence of the path, not necessarily if it's a file or a directory. You can use functions like ```os.path.isfile()``` or ```Path.is_file()``` for more specific checks.
+* However, in almost all conceivable cases, it makes sense to assume that a filepath wouldn't exist if there was no file for it to reference.
+* These methods that use ```.isfile``` check for existence based on file system permissions. If you don't have permission to access the file, it might return ```False``` even if the file exists, so just checking the path makes sense.
+
+<br>
 74. Explain the difference between os.path.exists() and os.path.isfile() in Python
 75. What is the purpose of the pickle module in Python?
 76. How do you get the current working directory in Python?
