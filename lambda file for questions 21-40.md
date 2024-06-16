@@ -3,11 +3,11 @@
 76. How do you get the current working directory in Python?<br>
 77. Explain the difference between a list and a tuple comprehension in Python. <br>
 78. What is the purpose of the is operator in Python? <br>
-79. How do you convert a list of strings to a single string in Python?
-80. Explain the use of the reduce() function in Python.
-81. How do you convert a string to a list in Python?
-82. What is the purpose of the min() and max() functions in Python?
-83. How do you convert a string to a datetime object in Python?
+79. How do you convert a list of strings to a single string in Python? <br>
+80. Explain the use of the reduce() function in Python. <br>
+81. How do you convert a string to a list in Python? <br>
+82. What is the purpose of the min() and max() functions in Python? <br>
+83. How do you convert a string to a datetime object in Python? <br>
 84. Explain the difference between shallow and deep copy in Python lists.
 85. What is the purpose of the locals() and globals() functions in Python?
 86. How do you write a multiline string in Python?
