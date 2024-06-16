@@ -1,8 +1,8 @@
 
-76. What is the purpose of the pickle module in Python?
-76. How do you get the current working directory in Python?
-77. Explain the difference between a list and a tuple comprehension in Python…
-78. What is the purpose of the is operator in Python?
+76. What is the purpose of the pickle module in Python?<br>
+76. How do you get the current working directory in Python?<br>
+77. Explain the difference between a list and a tuple comprehension in Python. <br>
+78. What is the purpose of the is operator in Python? <br>
 79. How do you convert a list of strings to a single string in Python?
 80. Explain the use of the reduce() function in Python.
 81. How do you convert a string to a list in Python?
