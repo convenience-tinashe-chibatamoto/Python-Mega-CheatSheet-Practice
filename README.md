@@ -2851,16 +2851,192 @@ In contrast, there are other types of files that are not considered "regular fil
 
 <br>
 
-76. What is the purpose of the pickle module in Python?
-77. How do you get the current working directory in Python?
-78. Explain the difference between a list and a tuple comprehension in Python…
-82. What is the purpose of the is operator in Python?
-83. How do you convert a list of strings to a single string in Python?
-84. Explain the use of the reduce() function in Python.
-85. How do you convert a string to a list in Python?
-86. What is the purpose of the min() and max() functions in Python?
-87. How do you convert a string to a datetime object in Python?
-88. Explain the difference between shallow and deep copy in Python lists.
+
+76. What is the purpose of the pickle module in Python?<br>
+Ans: The ```pickle``` module in Python is used for serializing and deserializing Python object structures.
+* It lets you convert Python objects (like lists, dictionaries, or even custom classes) into a format that can be stored on disk, transmitted over a network, or used later in your program.<br>
+Code Example:
+
+```python
+import pickle
+
+# Define a simple class
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Create a Person object
+person = Person("John Doe", 35)
+
+# Serialize the object using pickle
+with open("person.pickle", "wb") as f:
+    pickle.dump(person, f)
+
+# Deserialize the object
+with open("person.pickle", "rb") as f:
+    loaded_person = pickle.load(f)
+
+# Print the deserialized object
+print(loaded_person.name)  # Output: John Doe
+print(loaded_person.age)   # Output: 35
+```
+* In this example, we first define a ```Person``` class, then create an instance of it. We then use the ```pickle.dump()``` function to serialize the ```person``` object and save it to a file named ```person.pickle```.
+* Later, we can load the serialized object back from the file using the ```pickle.load()``` function, and the deserialized object is stored in the ```loaded_person``` variable.
+* Finally, we print the values of the ```name``` and ```age``` attributes of the deserialized object to verify that the serialization and deserialization process was successful.
+* This is a basic example, but the ```pickle``` module can be used to handle lists, dictionaries and more complex data structures as well, beyond user-defined classes.
+* It's important to note that the serialized data contains the full state of the object, including any references to other objects, which can lead to potential security risks if the data is not from a trusted source.<br>
+
+77. How do you get the current working directory in Python?<br>
+Ans: There are two main ways to get the current working directory in Python:<br><br>
+
+Using the ```os.getcwd()``` method:
+* This is the most common and recommended approach.
+* It uses the ```os``` module and its ```getcwd()``` (get current working directory) function.  <br>
+Code Example:
+```python
+import os
+
+current_directory = os.getcwd()
+print(current_directory)
+
+# If you need to change the current working directory, you can use the os.chdir() function
+import os
+
+# Change the current working directory
+os.chdir("/path/to/new/directory")
+
+# Get the new current working directory
+current_directory = os.getcwd()
+print(current_directory)
+```
+
+Using the ```pathlib.Path.cwd()``` method (Python 3.4+):
+* It offers a more object-oriented approach to working with file paths.
+* Both methods will give you the same result, but the ```pathlib``` approach provides a more modern and flexible way to work with file paths in Python.<br>
+Code Example:
+
+```python
+from pathlib import Path
+
+current_directory = Path.cwd()
+print(current_directory)
+
+# If you need to change the current working directory, you can use the Path.cwd().chdir() method in pathlib:
+from pathlib import Path
+
+new_dir = Path("/path/to/new/directory")
+
+# Change the current working directory to the new_dir path
+Path.cwd().chdir(new_dir)
+print(f"Current working directory changed to: {new_dir}")
+
+```
+* You can use a ```try```-```except``` block to handle potential ```FileNotFoundError``` exceptions that might occur if the specified new_dir doesn't exist.
+<br>
+
+78. Explain the difference between a list comprehension and a tuple comprehension in Python. <br>
+Ans: In Python, both list comprehensions and tuple comprehensions are ways to create new sequences (lists or tuples) based on existing sequences or iterables. The main difference between them is the type of sequence they create.<br>
+List Comprehension:
+* Uses square brackets [].
+* Creates a new list.
+* Lists are mutable, meaning their elements can be changed after creation.
+
+Tuple Comprehension:
+* Uses parentheses ().
+* Creates a new tuple.
+* Tuples are immutable, meaning their elements cannot be modified after creation.<br>
+Code Example:
+
+```python
+# List comprehension syntax
+new_list = [expression for item in iterable if condition]
+
+# Tuple comprehension syntax
+new_tuple = (expression for item in iterable if condition)
+
+# List comprehension Example
+squares = [x**2 for x in range(5)]
+print(squares)  # Output: [0, 1, 4, 9, 16]
+
+# Tuple comprehension Example
+squares_tuple = (x**2 for x in range(5))
+print(squares_tuple)  # Output: <generator object <genexpr> at 0x7f6a1c0b0cd0>
+print(tuple(squares_tuple))  # Output: (0, 1, 4, 9, 16)
+
+```
+
+* Note:
+
+While Python doesn't have a dedicated tuple comprehension syntax, you can achieve the same result using a generator expression with parentheses and convert it to a tuple using ```tuple()```. However, list comprehensions are generally considered more readable for creating new lists.
+<br>
+
+79. What is the purpose of the is operator in Python? <br>
+Ans: The ```is``` operator in Python is an identity operator used to used to check if two variables refer to the same object in memory.
+* It's not for Value Comparison (unlike what ```==``` does).
+* The is operator is commonly used to compare singleton objects, such as ```None```, ```True```, and ```False```, which are unique instances in Python.<br>
+Code Example:
+
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = a
+
+print(a is b)  # False, a and b are different objects
+print(a is c)  # True, a and c refer to the same object
+
+# Another Example:
+x = None
+y = None
+
+print(x is y)  # True, x and y refer to the same None object
+```
+<br>
+
+80. How do you convert a list of strings to a single string in Python? <br>
+Ans: There are two main ways to convert a list of strings into a single string in Python:<br><br>
+
+Using the ```join()``` method:
+* This is the most common and efficient way.
+* The ```join()``` method is a built-in method of strings in Python.
+* It takes an iterable (like a list) as an argument and joins the elements of the iterable into a single string, using the separator you specify as the argument to ```join()```.<br>
+Code Example:
+
+```python
+my_list = ["This", "is", "a", "list", "of", "strings"]
+joined_string = " ".join(my_list)  # Join with spaces between words
+
+print(joined_string)  # Output: This is a list of strings
+
+```
+* In this example, ```" ".join(my_list)``` joins the elements of ```my_list``` with a space ```(" ")``` between each element. You can change the separator to any string you want.<br><br>
+
+
+Using a ```for``` loop:
+* While less common than ```join()```, you can also use a ```for``` loop to iterate through the list and concatenate the elements into a new string.<br>
+Code Example:
+
+```python
+my_list = ["This", "is", "a", "list", "of", "strings"]
+joined_string = ""
+
+for word in my_list:
+  joined_string += word + " "  # Add space between words
+
+print(joined_string)  # Output: This is a list of strings
+
+# This code iterates through each word in my_list, adds it to the joined_string with a space, and then builds the final string.
+
+```
+* For readability and efficiency, using the ```join()``` method is generally preferred.
+* If you need more control over the string formatting, you can use the ```for``` loop approach.<br>
+
+
+81. Explain the use of the reduce() function in Python.
+82. How do you convert a string to a list in Python?
+83. What is the purpose of the min() and max() functions in Python?
+84. How do you convert a string to a datetime object in Python?
+85. Explain the difference between shallow and deep copy in Python lists.
 89. What is the purpose of the locals() and globals() functions in Python?
 90. How do you write a multiline string in Python?
 91. What is the purpose of the split() method in Python strings?
