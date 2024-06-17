@@ -113,18 +113,35 @@ print(tuple(squares_tuple))  # Output: (0, 1, 4, 9, 16)
 
 ```
 
-* Note: Note:
+* Note:
 
 While Python doesn't have a dedicated tuple comprehension syntax, you can achieve the same result using a generator expression with parentheses and convert it to a tuple using ```tuple()```. However, list comprehensions are generally considered more readable for creating new lists.
 <br>
 
 79. What is the purpose of the is operator in Python? <br>
-Ans: 
+Ans: The ```is``` operator in Python is an identity operator used to used to check if two variables refer to the same object in memory.
+* It's not for Value Comparison (unlike what ```==``` does).
+* The is operator is commonly used to compare singleton objects, such as ```None```, ```True```, and ```False```, which are unique instances in Python.<br>
+Code Example:
 
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = a
+
+print(a is b)  # False, a and b are different objects
+print(a is c)  # True, a and c refer to the same object
+
+# Another Example:
+x = None
+y = None
+
+print(x is y)  # True, x and y refer to the same None object
+```
 <br>
 
-79. How do you convert a list of strings to a single string in Python? <br>
-80. Explain the use of the reduce() function in Python. <br>
+80. How do you convert a list of strings to a single string in Python? <br>
+81. Explain the use of the reduce() function in Python. <br>
 81. How do you convert a string to a list in Python? <br>
 82. What is the purpose of the min() and max() functions in Python? <br>
 83. How do you convert a string to a datetime object in Python? <br>
