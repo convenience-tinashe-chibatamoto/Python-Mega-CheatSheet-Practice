@@ -9,7 +9,41 @@ Ans:
 
 
 <br>
-82. What is the purpose of the min() and max() functions in Python? <br>
+
+83. What is the purpose of the min() and max() functions in Python? <br>
+Ans: The ```min()``` and max() functions in Python are used to find the smallest and largest elements in an iterable, respectively.
+
+The ```min()``` Function:
+* Returns the smallest element from an iterable (list, tuple, string, etc.).
+* For strings, it uses lexicographic ordering (alphabetical order based on character codes).<br>
+Code Example:
+
+```python
+print(min(5, 2, 8, 1))  # Output: 1
+print(min([10, 3, 7, 2]))  # Output: 2
+print(min("hello"))  # Output: 'e'
+
+# For letters
+letters = ["a", "c", "b"]
+
+first_letter = min(letters)  # first_letter = "a" (lexicographically smallest)
+last_letter = max(letters)  # last_letter = "c" (lexicographically largest)
+```
+
+The ```max()``` function:
+* Returns the largest element from an iterable.
+* Similar to ```min()```, it uses lexicographic ordering for strings.<br>
+Code Example:
+
+```python
+print(max(5, 2, 8, 1))  # Output: 8
+print(max([10, 3, 7, 2]))  # Output: 10
+print(max("hello"))  # Output: 'o' (lexicographically largest)
+```
+
+* Remember that ```min()``` and ```max()``` for strings use lexicographic ordering, which might differ from numerical ordering.
+
+<br>
 83. How do you convert a string to a datetime object in Python? <br>
 84. Explain the difference between shallow and deep copy in Python lists.
 85. What is the purpose of the locals() and globals() functions in Python?
