@@ -94,8 +94,68 @@ print(max("hello"))  # Output: 'o' (lexicographically largest)
 * Remember that ```min()``` and ```max()``` for strings use lexicographic ordering, which might differ from numerical ordering.
 
 <br>
+
 84. How do you convert a string to a datetime object in Python? <br>
-85. Explain the difference between shallow and deep copy in Python lists.
+Ans: There are two main ways to convert a string to a datetime object in Python:<br><br>
+
+Using ```datetime.strptime()``` :
+* This method is from the built-in ```datetime module``` and is specifically designed for parsing strings into ```datetime``` objects.
+* It takes two arguments:The string to be converted, and a format string that defines the format of the input string.<br>
+Code Example:
+
+```python
+from datetime import datetime
+
+string_date = "2023-04-13 10:30:00"
+datetime_object = datetime.strptime(string_date, "%Y-%m-%d %H:%M:%S")
+print(datetime_object) # Output 2023-04-13 10:30:00
+
+# You can also access the individual components of the datetime object using its attributes:
+
+print(datetime_object.year)  # Output: 2023
+print(datetime_object.month)  # Output: 4
+print(datetime_object.day)  # Output: 13
+print(datetime_object.hour)  # Output: 10
+print(datetime_object.minute)  # Output: 30
+print(datetime_object.second)  # Output: 0
+
+# Another example
+import datetime
+
+date_str = "2023-06-17 10:30:00"
+format_str = "%Y-%m-%d %H:%M:%S"
+datetime_obj = datetime.datetime.strptime(date_str, format_str)
+
+print(datetime_obj) # Output: 2023-06-17 10:30:00
+
+```
+
+Using ```pd.to_datetime()``` with ```pandas``` installed:
+* If you are working with pandas, you can use the ```pd.to_datetime()``` function to convert strings to datetime objects.
+* This function is more flexible than ```datetime.strptime()``` as it can automatically infer the format of the string in some cases.<br>
+Code Example:
+
+```python
+import pandas as pd
+
+date_str = "2023-06-17"
+datetime_obj = pd.to_datetime(date_str)
+
+print(datetime_obj) # Output: 2023-06-17 00:00:00
+
+```
+Usage
+* Use ```datetime.strptime()``` if you know the exact format of your string beforehand. This method is more precise and efficient.
+* Use ```pd.to_datetime()``` if you are unsure about the format of your string or if you are working with pandas DataFrames. It can handle various formats and offers more convenience.
+
+
+<br>
+
+85. Explain the difference between shallow and deep copy in Python lists.<br>
+Ans: Already explained above.
+
+<br>
+
 85. What is the purpose of the locals() and globals() functions in Python?
 86. How do you write a multiline string in Python?
 87. What is the purpose of the split() method in Python strings?
