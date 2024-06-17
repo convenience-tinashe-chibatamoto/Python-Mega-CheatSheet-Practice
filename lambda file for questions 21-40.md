@@ -5,9 +5,59 @@ Ans: The ```reduce()``` function in Python, although present in Python 2, has be
 <br>
 
 82. How do you convert a string to a list in Python? <br>
-Ans:
+Ans: There are several ways to convert a string to a list in Python, depending on how you want to split the string:<br><br>
+
+Using ```list()```:
+* This method converts each character in the string to a separate element in the new list.
+* This produces a list of individual characters.<br>
+
+Code Example
+
+```python
+my_string = "Hello, world!"
+my_list = list(my_string)
+print(my_list)  # Output: ['H', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd', '!']
+
+```
 
 
+Using ```split()```:
+* This method splits the string into a list of substrings based on a specified separator (delimiter).
+* If no separator is provided, it splits by whitespace (spaces, tabs, newlines) as default.
+* You can specify a custom separator as an argument to ```split()```.<br>
+Code Example:
+
+```python
+# Split by spaces
+words = "This is a string".split()
+print(words)  # Output: ['This', 'is', 'a', 'string']
+
+# Split by comma
+蔬果 = "apple,banana,kiwi".split(",")  # "蔬果" means "vegetables and fruits" in Chinese
+print(蔬果)  # Output: ['apple', 'banana', 'kiwi']
+
+```
+
+
+Using list comprehension (Python 2.7+):
+* This method offers a concise way to create a list based on an expression.<br>
+Code Example:
+
+```python
+# Split by spaces with list comprehension
+words = [char for char in "This is a string"]
+print(words)  # Output: ['T', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 's', 't', 'r', 'i', 'n', 'g']
+
+
+my_string = "Hello, world!"
+my_list = [char for char in my_string]
+print(my_list)  # Output: ['H', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd', '!']
+
+```
+
+* Use ```list()``` if you want each character as a separate element.
+* Use ```split()``` if you want to split the string into substrings based on a delimiter.
+* Use list comprehension for a concise approach to splitting or creating a list based on an expression.
 <br>
 
 83. What is the purpose of the min() and max() functions in Python? <br>
@@ -44,8 +94,8 @@ print(max("hello"))  # Output: 'o' (lexicographically largest)
 * Remember that ```min()``` and ```max()``` for strings use lexicographic ordering, which might differ from numerical ordering.
 
 <br>
-83. How do you convert a string to a datetime object in Python? <br>
-84. Explain the difference between shallow and deep copy in Python lists.
+84. How do you convert a string to a datetime object in Python? <br>
+85. Explain the difference between shallow and deep copy in Python lists.
 85. What is the purpose of the locals() and globals() functions in Python?
 86. How do you write a multiline string in Python?
 87. What is the purpose of the split() method in Python strings?
