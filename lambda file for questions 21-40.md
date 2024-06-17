@@ -1,6 +1,14 @@
 
 81. Explain the use of the reduce() function in Python. <br>
-81. How do you convert a string to a list in Python? <br>
+Ans: The ```reduce()``` function in Python, although present in Python 2, has been deprecated since Python 3 in favor of more functional programming approaches using constructs like ```for``` loops and list comprehensions.
+* While understanding ```reduce()``` can be helpful for historical context, it's generally recommended to use more modern constructs for better readability, performance and maintainability in your Python code.
+<br>
+
+82. How do you convert a string to a list in Python? <br>
+Ans:
+
+
+<br>
 82. What is the purpose of the min() and max() functions in Python? <br>
 83. How do you convert a string to a datetime object in Python? <br>
 84. Explain the difference between shallow and deep copy in Python lists.
