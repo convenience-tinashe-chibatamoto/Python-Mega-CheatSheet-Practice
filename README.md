@@ -3179,7 +3179,7 @@ print(datetime_obj) # Output: 2023-06-17 00:00:00
 ```
 Usage
 * Use ```datetime.strptime()``` if you know the exact format of your string beforehand. This method is more precise and efficient.
-* Use ```pd.to_datetime()``` if you are unsure about the format of your string or if you are working with pandas DataFrames. It can handle various formats and offers more convenience.
+* Use ```pd.to_datetime()``` if you are unsure about the format of your string or if you are working with ```pandas``` DataFrames. It can handle various formats and offers more convenience.
 
 
 <br>
