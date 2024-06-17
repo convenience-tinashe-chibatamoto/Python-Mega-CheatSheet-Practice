@@ -35,8 +35,94 @@ print(loaded_person.age)   # Output: 35
 * It's important to note that the serialized data contains the full state of the object, including any references to other objects, which can lead to potential security risks if the data is not from a trusted source.<br>
 
 77. How do you get the current working directory in Python?<br>
-77. Explain the difference between a list and a tuple comprehension in Python. <br>
-78. What is the purpose of the is operator in Python? <br>
+Ans: There are two main ways to get the current working directory in Python:<br><br>
+
+Using the ```os.getcwd()``` method:
+* This is the most common and recommended approach.
+* It uses the ```os``` module and its ```getcwd()``` (get current working directory) function.  <br>
+Code Example:
+```python
+import os
+
+current_directory = os.getcwd()
+print(current_directory)
+
+# If you need to change the current working directory, you can use the os.chdir() function
+import os
+
+# Change the current working directory
+os.chdir("/path/to/new/directory")
+
+# Get the new current working directory
+current_directory = os.getcwd()
+print(current_directory)
+```
+
+Using the ```pathlib.Path.cwd()``` method (Python 3.4+):
+* It offers a more object-oriented approach to working with file paths.
+* Both methods will give you the same result, but the ```pathlib``` approach provides a more modern and flexible way to work with file paths in Python.<br>
+Code Example:
+
+```python
+from pathlib import Path
+
+current_directory = Path.cwd()
+print(current_directory)
+
+# If you need to change the current working directory, you can use the Path.cwd().chdir() method in pathlib:
+from pathlib import Path
+
+new_dir = Path("/path/to/new/directory")
+
+# Change the current working directory to the new_dir path
+Path.cwd().chdir(new_dir)
+print(f"Current working directory changed to: {new_dir}")
+
+```
+* You can use a ```try```-```except``` block to handle potential ```FileNotFoundError``` exceptions that might occur if the specified new_dir doesn't exist.
+<br>
+
+78. Explain the difference between a list comprehension and a tuple comprehension in Python. <br>
+Ans: In Python, both list comprehensions and tuple comprehensions are ways to create new sequences (lists or tuples) based on existing sequences or iterables. The main difference between them is the type of sequence they create.<br>
+List Comprehension:
+* Uses square brackets [].
+* Creates a new list.
+* Lists are mutable, meaning their elements can be changed after creation.
+
+Tuple Comprehension:
+* Uses parentheses ().
+* Creates a new tuple.
+* Tuples are immutable, meaning their elements cannot be modified after creation.<br>
+Code Example:
+
+```python
+# List comprehension syntax
+new_list = [expression for item in iterable if condition]
+
+# Tuple comprehension syntax
+new_tuple = (expression for item in iterable if condition)
+
+# List comprehension Example
+squares = [x**2 for x in range(5)]
+print(squares)  # Output: [0, 1, 4, 9, 16]
+
+# Tuple comprehension Example
+squares_tuple = (x**2 for x in range(5))
+print(squares_tuple)  # Output: <generator object <genexpr> at 0x7f6a1c0b0cd0>
+print(tuple(squares_tuple))  # Output: (0, 1, 4, 9, 16)
+
+```
+
+* Note: Note:
+
+While Python doesn't have a dedicated tuple comprehension syntax, you can achieve the same result using a generator expression with parentheses and convert it to a tuple using ```tuple()```. However, list comprehensions are generally considered more readable for creating new lists.
+<br>
+
+79. What is the purpose of the is operator in Python? <br>
+Ans: 
+
+<br>
+
 79. How do you convert a list of strings to a single string in Python? <br>
 80. Explain the use of the reduce() function in Python. <br>
 81. How do you convert a string to a list in Python? <br>
