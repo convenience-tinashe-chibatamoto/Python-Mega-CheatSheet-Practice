@@ -254,7 +254,10 @@ The key purpose of the ```finally``` block is to:
 It is often used in conjunction with the ```try``` and ```except``` blocks to create a comprehensive exception handling mechanism in your Python code.
 
 <br>
-95. How do you reverse a list in Python?<br><br>
+95. How do you reverse a list in Python?<br>
+Ans:
+
+<br>
 95. What is the purpose of the del statement in Python?<br><br>
 96. Explain the difference between the os.system() and subprocess.run() functions in Python.<br><br>
 97. How do you split a string into a list of substrings in Python?<br><br>
