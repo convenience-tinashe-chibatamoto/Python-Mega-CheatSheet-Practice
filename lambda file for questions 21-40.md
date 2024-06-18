@@ -61,6 +61,42 @@ my_function()
 <br>
 
 87. How do you write a multiline string in Python?<br>
+Ans: In Python, you can write a multiline string using three single quotes ```(''')``` or three double quotes ```("""")```.
+* This is the most common and recommended way to create multiline strings.
+* The text within these quotes will be treated as a single string, even if it spans multiple lines.<br>
+Code Example:
+
+```python
+multiline_string = """This is a multiline string.
+You can write multiple lines of text here.
+And it will be treated as a single string."""
+
+print(multiline_string)
+
+
+# Output
+This is a multiline string.
+You can write multiple lines of text here.
+And it will be treated as a single string.
+```
+<br>
+
+ Another way is to use string concatenation with newline characters:
+ * You can also create a multiline string by concatenating multiple strings using the ```+``` operator and adding newline characters ```(\n)``` within each string.<br>
+ Code Example:
+
+```python
+multiline_string = "This is a multiline string. \n" + "You can write multiple lines of text here. \n" + "And it will be treated as a single string."
+
+print(multiline_string)
+
+# Output
+This is a multiline string.
+You can write multiple lines of text here.
+And it will be treated as a single string.
+```
+
+
 
 
 
