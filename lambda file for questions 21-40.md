@@ -52,14 +52,56 @@ The main use cases for ```bytes``` and ```bytearray``` in Python include:
 * Use ```bytearray``` when you need to create or modify binary data during your program's execution.
 * They are their own unique data types.<br>
 
-In summary, the bytes and bytearray data types in Python provide a way to work with binary data, which is essential for many low-level programming tasks and system-level operations.
+In summary, the ```bytes``` and ```bytearray``` data types in Python provide a way to work with binary data, which is essential for many low-level programming tasks and system-level operations.
 
 <br>
-90. What is the purpose of the round() function in Python?<br><br>
-91. How do you create a dictionary with default values in Python?<br><br>
-92. Explain the difference between os.path.isdir() and os.path.isfile() in Python.<br><br>
-93. What is the purpose of the finally block in Python exception handling?<br><br>
-94. How do you reverse a list in Python?<br><br>
+91. What is the purpose of the round() function in Python?<br>
+Ans: The ```round()``` function in Python is used to round a number to a specified number of decimal places.
+* It takes two arguments: ```number``` (required): The number you want to round which can be an integer or a floating-point number; ```ndigits``` (optional): The number of decimal places to round the number to. If not specified, it defaults to 0, and the number is rounded to the nearest integer.<br>
+Code Example:
+
+```python
+# Rounding to the nearest integer
+print(round(3.14159))  # Output: 3
+print(round(4.6))      # Output: 5
+
+# Rounding to a specific number of decimal places
+print(round(3.14159, 2))  # Output: 3.14
+print(round(1.2345, 3))   # Output: 1.235
+print(round(1.2345, 0))   # Output: 1.0
+
+# Rounding negative numbers
+print(round(-3.14159, 2))  # Output: -3.14
+
+# Another Example
+# Round a float to nearest integer
+number1 = 2.5
+rounded_int = round(number1)
+print(number1, "rounded to nearest integer:", rounded_int)  # Output: 2.5 rounded to nearest integer: 3
+
+# Round a float to two decimal places
+number2 = 3.14159
+rounded_two_decimals = round(number2, 2)
+print(number2, "rounded to two decimals:", rounded_two_decimals)  # Output: 3.14159 rounded to two decimals: 3.14
+
+# Round a negative number
+number3 = -1.75
+rounded_negative = round(number3)
+print(number3, "rounded to nearest integer:", rounded_negative)  # Output: -1.75 rounded to nearest integer: -2
+
+```
+* If the number is exactly in the middle between two rounding points, the rounding behavior depends on the Python version. In Python 3, it rounds to the nearest even number (also called banker's rounding).
+
+
+<br>
+92. How do you create a dictionary with default values in Python?<br>
+Ans:
+
+
+<br>
+93. Explain the difference between os.path.isdir() and os.path.isfile() in Python.<br><br>
+94. What is the purpose of the finally block in Python exception handling?<br><br>
+95. How do you reverse a list in Python?<br><br>
 95. What is the purpose of the del statement in Python?<br><br>
 96. Explain the difference between the os.system() and subprocess.run() functions in Python.<br><br>
 97. How do you split a string into a list of substrings in Python?<br><br>
