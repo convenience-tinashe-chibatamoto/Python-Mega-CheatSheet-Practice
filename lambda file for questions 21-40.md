@@ -255,7 +255,57 @@ It is often used in conjunction with the ```try``` and ```except``` blocks to cr
 
 <br>
 95. How do you reverse a list in Python?<br>
-Ans:
+Ans: There are three main ways to reverse a list in Python:<br>
+
+Using the ```reverse()``` method: 
+* This is the most concise and efficient way to reverse a list in-place.
+* The ```reverse()``` method modifies the original list, so be aware of that if you need to preserve the original order.<br>
+Code Example:
+```python
+my_list = [1, 2, 3, 4, 5]
+my_list.reverse()
+print(my_list)  # Output: [5, 4, 3, 2, 1]
+
+```
+
+Using list slicing with a step of ```-1```: 
+* This method creates a new reversed list without modifying the original one.
+* Slicing with a step of ```-1``` iterates through the list in reverse order.<br>
+Code Example:
+```python
+my_list = [1, 2, 3, 4, 5]
+reversed_list = my_list[::-1]
+print(reversed_list)  # Output: [5, 4, 3, 2, 1]
+
+```
+
+Using a ```for``` loop: 
+* This method is less efficient than the other two, but it can be useful if you need to perform additional operations while reversing the list.
+* This method iterates through the original list and inserts each element at the beginning of the new list, effectively reversing the order.<br>
+Code Example:
+```python
+my_list = [1, 2, 3, 4, 5]
+reversed_list = []
+for i in range(len(my_list) - 1, -1, -1):
+  reversed_list.append(my_list[i])
+print(reversed_list)  # Output: [5, 4, 3, 2, 1]
+
+# len(my_list) - 1 is the stop value, which means the loop will stop just before this value. (indices start from 0. So, since the list has 5 elements, the last element has an index of 4.)
+# -1 is the start value, which means the loop will start from the end of the list.
+# -1 is the step value, which means the loop will decrement by 1 each time.
+
+
+# Another example:
+
+my_list = [1, 2, 3, 4, 5]
+reversed_list = []
+for item in my_list:
+    reversed_list.insert(0, item)
+print(reversed_list)
+# Output: [5, 4, 3, 2, 1]
+
+```
+
 
 <br>
 95. What is the purpose of the del statement in Python?<br><br>
