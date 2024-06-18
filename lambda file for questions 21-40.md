@@ -1,6 +1,45 @@
 
-86. What is the purpose of the locals() and globals() functions in Python?
-87. How do you write a multiline string in Python?
+86. What is the purpose of the locals() and globals() functions in Python?<br>
+Ans: In Python, the ```locals()``` and ```globals()``` are built-in functions that are used to manage the scope of variables within your code.<br>
+
+```globals()```: 
+* This function returns a dictionary containing all the symbol names and their values in the current global scope.
+* The global scope refers to the variables defined outside of any functions or classes in your program.<br>
+
+```locals()```: 
+* This function returns a dictionary containing all the symbol names and their values in the current local scope.
+* The local scope is typically a function or a block of code defined with curly braces ```{}```. Variables created inside a function are only accessible within that function.<br>
+
+Code Example:
+```python
+x = 10
+
+def my_func():
+  y = 20
+  print("Inside function:")
+  print("x =", globals()['x'])  # Access global x
+  print("y =", locals()['y'])  # Access local y
+
+# Output before calling the function
+print("Before function:")
+print("x =", x)  # Output: x = 10
+
+my_func()
+
+# Output after calling the function
+print("After function:")
+print("x =", x)  # Output: x = 10
+
+```
+* As you can see, the value of ```x``` remains unchanged throughout the program because it's a global variable. The local variable ```y``` is only accessible within the function ```my_func()```.
+
+<br>
+
+87. How do you write a multiline string in Python?<br>
+
+
+
+<br>
 88. What is the purpose of the split() method in Python strings?
 89. How do you check if a number is even or odd in Python?
 90. Explain the purpose of the bytes and bytearray data types in Python.
