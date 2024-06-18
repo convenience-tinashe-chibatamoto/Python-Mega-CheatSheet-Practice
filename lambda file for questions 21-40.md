@@ -219,7 +219,41 @@ This code will check if the path ```"my_folder/data.txt"``` exists and what type
 * In summary, ```os.path.isdir()``` is used to determine if a given path is a directory, while ```os.path.isfile()``` is used to determine if a given path is a regular file. These functions are commonly used in file and directory operations in Python.
 <br>
 
-94. What is the purpose of the finally block in Python exception handling?<br><br>
+94. What is the purpose of the finally block in Python exception handling?<br>
+Ans: Already provided before. But here it is to reiterate:
+* In Python, the ```finally``` block is used in exception handling to specify a block of code that will be executed regardless of whether an exception is raised or not.
+* The primary purpose of the ```finally``` block is to ensure that certain cleanup or resource-releasing actions are performed, regardless of the outcome of the code in the try block.
+* The syntax for using the finally block is as follows:<br>
+```python
+try:
+    # code that might raise an exception
+except Exception as e:
+    # handle the exception
+finally:
+    # code that will be executed regardless of whether an exception is raised or not
+```
+
+
+Code Example:
+```python
+try:
+    file = open("file.txt", "r")
+    content = file.read()
+    print(content)
+except FileNotFoundError:
+    print("File not found.")
+finally:
+    file.close()
+    print("File closed.")
+```
+The key purpose of the ```finally``` block is to:
+* Ensure Cleanup: The ```finally``` block is used to perform necessary cleanup operations, such as closing files, releasing database connections, or freeing system resources. This ensures that the resources are properly released, even if an exception is raised.
+* Maintain Code Reliability: By ensuring that cleanup code is always executed, the ```finally``` block helps maintain the reliability and robustness of the application, preventing potential resource leaks or other issues that could occur if the cleanup code were not executed.
+* Separation of Concerns: The ```finally``` block allows you to separate the exception handling logic from the cleanup logic, making the code more modular and easier to maintain.<br>
+
+It is often used in conjunction with the ```try``` and ```except``` blocks to create a comprehensive exception handling mechanism in your Python code.
+
+<br>
 95. How do you reverse a list in Python?<br><br>
 95. What is the purpose of the del statement in Python?<br><br>
 96. Explain the difference between the os.system() and subprocess.run() functions in Python.<br><br>
