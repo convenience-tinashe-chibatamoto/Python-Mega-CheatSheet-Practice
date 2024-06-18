@@ -33,6 +33,31 @@ print("x =", x)  # Output: x = 10
 ```
 * As you can see, the value of ```x``` remains unchanged throughout the program because it's a global variable. The local variable ```y``` is only accessible within the function ```my_func()```.
 
+Code Example 2:
+```python
+# locals
+def my_function():
+    x = 10
+    y = 20
+    print(locals())
+
+my_function()
+# Output: {'x': 10, 'y': 20, '__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7f6a8c0b8640>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': 'example.py', '__cached__': None}
+
+# globals
+x = 10
+
+def my_function():
+    y = 20
+    print(globals())
+    print(locals())
+
+my_function()
+# Output:
+# {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7f6a8c0b8640>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': 'example.py', '__cached__': None, 'x': 10, 'my_function': <function my_function at 0x7f6a8c0b8d30>}
+# {'y': 20}
+```
+
 <br>
 
 87. How do you write a multiline string in Python?<br>
