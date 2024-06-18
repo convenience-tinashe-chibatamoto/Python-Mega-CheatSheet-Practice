@@ -48,6 +48,7 @@ The main use cases for ```bytes``` and ```bytearray``` in Python include:
 * Cryptography and security: Handling and manipulating encrypted data, such as hashes, signatures, or encryption keys.
 * Data processing: Working with binary data formats, such as serialized data or machine learning models.
 
+When to use which:
 * Use ```bytes``` when you have fixed binary data that you don't need to modify. It's more memory-efficient and secure since it's immutable.
 * Use ```bytearray``` when you need to create or modify binary data during your program's execution.
 * They are their own unique data types.<br>
