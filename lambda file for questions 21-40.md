@@ -96,13 +96,103 @@ You can write multiple lines of text here.
 And it will be treated as a single string.
 ```
 
-
-
-
+Usage:
+* Using triple quotes is generally preferred for readability and maintainability. It makes your code more concise and easier to understand, especially for longer strings.
+* String concatenation with newline characters might be useful in specific cases, such as when you need to dynamically construct a string based on user input or other variables. However, it can lead to less readable code for simple multiline strings.
 
 <br>
-88. What is the purpose of the split() method in Python strings?
-89. How do you check if a number is even or odd in Python?
+
+88. What is the purpose of the split() method in Python strings?<br>
+Ans: The ```split()``` method in Python is used to split a string into a list of substrings based on a specified separator.
+* By default, it uses whitespace (spaces, tabs, newlines) as the delimiter if you don't specify one.
+* It always returns a list, where each element is a substring from the original string separated by the delimiter.<br>
+Code Example:
+
+```python
+sentence = "This is a sentence with multiple words."
+words = sentence.split()
+print(words)  # Output: ['This', 'is', 'a', 'sentence', 'with', 'multiple', 'words.']
+
+# Another Example
+csv_data = "name,age,city"
+fields = csv_data.split(",")
+print(fields)  # Output: ['name', 'age', 'city']
+
+
+# More Examples
+
+# Split a string using the default whitespace separator
+text = "The quick brown fox jumps over the lazy dog."
+words = text.split()
+print(words)
+# Output: ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog.']
+
+# Split a string using a custom separator
+data = "apple,banana,cherry,date"
+fruits = data.split(",")
+print(fruits)
+# Output: ['apple', 'banana', 'cherry', 'date']
+
+# Split a string using a custom separator and limit the number of splits
+path = "/usr/local/bin/python3"
+parts = path.split("/", 1)
+print(parts)
+# Output: ['', 'usr', 'local/bin/python3']
+
+```
+* The ```split()``` method can be used to extract specific parts of a string, which can be useful for tasks like data cleaning, reshaping, or transformation.
+
+<br>
+
+89. How do you check if a number is even or odd in Python?<br>
+Ans: There are a few different ways to check if a number is even or odd in Python.<br>
+
+Using the modulo operator ```(%)```:
+* This is the most common and efficient way. The modulo operator ```(%)``` returns the remainder after a division operation.
+* A number is even if the remainder of dividing it by ```2``` is ```0```. A number is odd if the remainder of dividing it by ```2``` is not ```0```.<br>
+Code Example:
+
+```python
+num = int(input("Enter a number: "))
+
+if num % 2 == 0:
+    print(f"{num} is even")
+else:
+    print(f"{num} is odd")
+```
+* We first take input from the user and convert it to an integer using ```int()```. We then use the modulo operator ```(num % 2)``` to find the remainder when the number is divided by ```2```.<br>
+
+
+Using Bitwise AND operator ```(&)```: (Less common but interesting)
+* This method is less common but utilizes a bitwise operation. It checks the least significant bit (LSB) of the binary representation of the number.
+* If the LSB is ```0```, the number is even. If the LSB is ```1```, the number is odd.<br>
+Code Example:
+```python
+num = int(input("Enter a number: "))
+
+if num & 1 == 0:
+    print(f"{num} is even")
+else:
+    print(f"{num} is odd")
+
+```
+
+Using the built-in ```is_even()``` and ```is_odd()``` functions from the ```math``` module:
+* The ```is_even()``` and ```is_odd()``` functions from the math module can be used to check if a number is even or odd.<br>
+Code Example:
+```python
+num = int(input("Enter a number: "))
+
+if math.is_even(num):
+    print(f"{num} is even")
+else:
+    print(f"{num} is odd")
+```
+* All three methods will give the same result, but the choice of method may depend on personal preference or the specific needs of your code. The modulo operator method is the most common and straightforward way to check if a number is even or odd in Python.
+* The use of the ```math``` module tends to be more readable in this instance. It's a standard library module that comes with Python by default. You don't need to perform any separate installation to use it, you just need to import it.
+
+<br>
+
 90. Explain the purpose of the bytes and bytearray data types in Python.
 90. What is the purpose of the round() function in Python?
 91. How do you create a dictionary with default values in Python?
