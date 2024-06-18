@@ -96,8 +96,94 @@ print(number3, "rounded to nearest integer:", rounded_negative)  # Output: -1.75
 
 <br>
 92. How do you create a dictionary with default values in Python?<br>
-Ans:
+Ans: In Python, you can create a dictionary with default values using a few different methods:<br>
 
+Using the ```defaultdict``` class from the ```collections``` module:
+* The ```defaultdict``` class allows you to provide a default value for keys that don't exist in the dictionary.<br>
+Code Example:
+
+```python
+from collections import defaultdict
+
+# Create a defaultdict with a default value of 0
+my_dict = defaultdict(int)
+my_dict['apple'] += 1
+my_dict['banana'] += 1
+print(my_dict)
+# Output: defaultdict(<class 'int'>, {'apple': 1, 'banana': 1})
+```
+
+Using a dictionary comprehension with the ```get()``` method:
+* You can use a dictionary comprehension to create a dictionary with default values by using the ```get()``` method to provide a default value for keys that don't exist.<br>
+Code Example:
+```python
+# Create a dictionary with default value of 0
+my_dict = {key: 0 for key in ['apple', 'banana', 'cherry']}
+my_dict['apple'] += 1
+my_dict['banana'] += 1
+print(my_dict)
+# Output: {'apple': 1, 'banana': 1, 'cherry': 0}
+```
+
+Using the ```setdefault()``` method:
+* The ```setdefault()``` method can be used to set a default value for a key if it doesn't exist in the dictionary.<br>
+Code Example:
+```python
+# Create a dictionary with default value of 0
+my_dict = {}
+my_dict.setdefault('apple', 0)
+my_dict.setdefault('banana', 0)
+my_dict['apple'] += 1
+my_dict['banana'] += 1
+print(my_dict)
+# Output: {'apple': 1, 'banana': 1}
+```
+
+Using the ```dict.fromkeys()``` method:
+* This method provides a more concise way to create a dictionary with all keys set to a specific default value.<br>
+Code Example:
+```python
+default_value = 0
+
+# Create a dictionary with all keys set to default value
+my_dict = dict.fromkeys(["name", "age", "city"], default_value)
+
+print(my_dict)  # Output: {'name': 0, 'age': 0, 'city': 0}
+
+```
+* We define a default_value to be assigned to all keys.
+* We use the ```dict.fromkeys()``` method to create the dictionary.
+* The first argument is a list of keys.
+* The second argument (optional) is the default value to assign to each key. If not provided, it defaults to ```None```.
+
+
+ Using a ```for``` loop and conditional assignment:
+ * This approach iterates through a list of keys and assigns a default value to each key if it doesn't exist in the dictionary.<br>
+ Code Example:
+```python
+default_value = "default"
+
+# Create an empty dictionary
+my_dict = {}
+
+# List of keys
+keys = ["name", "age", "city"]
+
+# Iterate through keys and assign default value if key is missing
+for key in keys:
+  my_dict[key] = my_dict.get(key, default_value)
+
+print(my_dict)  # Output: {'name': 'default', 'age': 'default', 'city': 'default'}
+```
+* We define a ```default_value``` to be assigned to missing keys.
+* We create an empty dictionary ```my_dict```.
+* We define a list of keys that we want in the dictionary, and then loop through each key in the list.
+* Inside the loop, we use the ```get()``` method to retrieve the value for the current key. If the key exists, ```get()``` returns the associated value. If the key doesn't exist, ```get()``` returns the second argument provided (the ```default_value``` in this case).
+* We then assign the result of ```get()``` back to the same key in the dictionary using square brackets ```[]```. This ensures that the key is added to the dictionary with the default value if it was missing before.
+
+Usage:
+* If you want all keys to have the same default value, the ```dict.fromkeys()``` method is more concise.
+* If you need to set different default values for different keys, use the ```for``` loop approach.
 
 <br>
 93. Explain the difference between os.path.isdir() and os.path.isfile() in Python.<br><br>
