@@ -186,7 +186,39 @@ Usage:
 * If you need to set different default values for different keys, use the ```for``` loop approach.
 
 <br>
-93. Explain the difference between os.path.isdir() and os.path.isfile() in Python.<br><br>
+93. Explain the difference between os.path.isdir() and os.path.isfile() in Python.<br>
+
+Ans: The ```os.path.isdir()``` and ```os.path.isfile()``` functions in Python's ```os.path``` module are both used to check the type of a path, but they target different file system elements:<br>
+
+* ```os.path.isdir(path)```: This function checks if the given path refers to a directory. It returns ```True``` if the path is a directory and ```False``` otherwise.
+* ```os.path.isfile(path)```: This function checks if the given path refers to a regular file. It returns ```True``` if the path is a file and ```False``` otherwise.<br>
+Code Example:
+```python
+import os
+
+# Define a path
+path = "my_folder/data.txt"
+
+# Check if the path is a directory
+if os.path.isdir(path):
+  print(path, "is a directory.")
+else:
+  print(path, "is not a directory.")
+
+# Check if the path is a file
+if os.path.isfile(path):
+  print(path, "is a file.")
+else:
+  print(path, "is not a file.")
+
+```
+This code will check if the path ```"my_folder/data.txt"``` exists and what type of file system entry it is (directory or file).<br>
+
+* Both functions follow symbolic links. This means that if the path points to a symbolic link that resolves to a directory or file, the functions will return ```True``` for ```isdir()``` or ```isfile()``` accordingly.
+* These functions only check for the existence and type of the path. They don't guarantee access permissions or the validity of the content.
+* In summary, ```os.path.isdir()``` is used to determine if a given path is a directory, while ```os.path.isfile()``` is used to determine if a given path is a regular file. These functions are commonly used in file and directory operations in Python.
+<br>
+
 94. What is the purpose of the finally block in Python exception handling?<br><br>
 95. How do you reverse a list in Python?<br><br>
 95. What is the purpose of the del statement in Python?<br><br>
