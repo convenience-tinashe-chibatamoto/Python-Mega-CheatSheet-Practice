@@ -1,4 +1,4 @@
-# Python Interview Prep: Q and Ans:
+# Python Mega Practice: 100 Q and As:
 
 1. What is Python?<br>
 Ans: Python is a high-level, interpreted programming language known for its simplicity and readability.
